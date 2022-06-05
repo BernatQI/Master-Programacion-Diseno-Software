@@ -1,10 +1,13 @@
 # Connect4
+Universo Santa Tecla  
+[uSantaTecla@gmail.com](mailto:uSantaTecla@gmail.com)  
 
-Universo Santa Tecla
+## index
 
-uSantaTecla@gmail.com
+* [domainModel](#domainModel)  
+    * [vocabulary](#vocabulary)  
+    * [initialState](#initialState)  
+    * [finalState](#finalState)
+    * [instructions](#instructions)  
 
-## Index
-
-- domainModel
-    - vocabulary
+## domainModel 
