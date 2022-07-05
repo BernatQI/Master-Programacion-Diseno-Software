@@ -19,7 +19,9 @@ Universo Santa Tecla
 [Youtube](https://www.youtube.com/watch?v=JBSbiilzg9U)
 ### vocabulary
 
-![Vocabulario](./docs/images/diagrama-clases-uml-conecta4-v2.png)  
+![Vocabulario](./docs/images/diagrama-clases-uml-conecta4.png)
+Version 2
+![Vocabulario](./docs/images/diagrama-clases-uml-conecta4-v2.png)
   
 ### initialState  
   
