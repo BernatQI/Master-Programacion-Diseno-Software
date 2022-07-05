@@ -35,4 +35,4 @@ Universo Santa Tecla
   
 ![Instrucciones](./docs/images/instructions-state-conecta4.svg)  
   
-![Instrucciones]()  
+![Instrucciones](./docs/images/instructions-activity-conecta4.svg)  
