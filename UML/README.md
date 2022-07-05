@@ -33,6 +33,6 @@ Universo Santa Tecla
   
 ### instructions  
   
-![Instrucciones]()  
+![Instrucciones](./docs/images/instructions-states-conecta4.svg)  
   
 ![Instrucciones]()  

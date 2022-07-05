@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="367px" preserveAspectRatio="none" style="width:327px;height:367px;background:#FFFFFF;" version="1.1" viewBox="0 0 327 367" width="327px" zoomAndPan="magnify"><defs/><g><g id="State1"><rect fill="#F1F1F1" height="50" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="50" x="87.1539" y="87"/><line style="stroke:#181818;stroke-width:0.5;" x1="87.1539" x2="137.1539" y1="113.2969" y2="113.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="110.1539" y="104.9951"> </text></g><g id="State2"><rect fill="#F1F1F1" height="50" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="50" x="47.1539" y="214"/><line style="stroke:#181818;stroke-width:0.5;" x1="47.1539" x2="97.1539" y1="240.2969" y2="240.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="70.1539" y="231.9951"> </text></g><ellipse cx="112.1539" cy="16" fill="#222222" rx="10" ry="10" style="stroke:none;stroke-width:1.0;"/><ellipse cx="137.1539" cy="351" fill="none" rx="10" ry="10" style="stroke:#222222;stroke-width:1.0;"/><ellipse cx="137.6539" cy="351.5" fill="#222222" rx="6" ry="6" style="stroke:none;stroke-width:1.0;"/><!--MD5=[60533a5dc91355c93bf187ba4549d745]
+link *start to State1--><g id="link_*start_State1"><path d="M112.1539,26.013 C112.1539,38.698 112.1539,62.409 112.1539,81.57 " fill="none" id="*start-to-State1" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="112.1539,86.84,116.1539,77.84,112.1539,81.84,108.1539,77.84,112.1539,86.84" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[dc702cd49c4e27e6abb2620dc4bb28d8]
+link State1 to State2--><g id="link_State1_State2"><path d="M86.8044,119.572 C64.0589,126.963 32.0375,141.42 17.1538,167 C6,186.17 24.2211,205.957 42.6173,219.756 " fill="none" id="State1-to-State2" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="46.7815,222.782,41.8508,214.2563,42.7362,219.8434,37.1491,220.7288,46.7815,222.782" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="50" x="18.1538" y="180.0669">put Red</text></g><!--MD5=[9ca92f0828cef308805b33a10f0728b8]
+link State2 to State1--><g id="link_State2_State1"><path d="M79.8425,213.973 C86.4207,193.416 95.9068,163.772 102.8998,141.919 " fill="none" id="State2-to-State1" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="104.4415,137.101,97.8882,144.4532,102.9172,141.863,105.5074,146.892,104.4415,137.101" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="66" x="96.1539" y="180.0669">put Yellow</text></g><!--MD5=[37ebb224bae70bf8df0e6bab9d19d55b]
+link State2 to *end--><g id="link_State2_*end"><path d="M64.9123,264.2493 C62.0282,278.7509 61.0527,297.0149 69.1539,311 C80.5534,330.6793 106.0459,341.2847 122.3749,346.2771 " fill="none" id="State2-to-*end" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="127.5279,347.7599,119.9852,341.4268,122.7229,346.3771,117.7726,349.1147,127.5279,347.7599" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="106" x="70.1539" y="307.0669">[isConecta4Red]</text></g><!--MD5=[ca1046a354e184ac9d197a073cc82934]
+link State1 to *end--><g id="link_State1_*end"><path d="M137.3149,129.153 C149.7489,138.586 163.6619,151.652 171.1539,167 C199.2949,224.653 207.4758,252.495 181.1539,311 C174.8338,325.0463 160.6778,336.0834 150.1188,342.7788 " fill="none" id="State1-to-*end" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="145.5619,345.5448,155.331,344.2945,149.8361,342.9505,151.1802,337.4556,145.5619,345.5448" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="122" x="197.1539" y="243.5669">[isConecta4Yellow]</text></g><!--MD5=[ad0cb00424fbf9d3a9064bb4d9dabe1e]
+@startuml
+state State1 as " "
+state State2 as " "
+
+[*] - -> State1
+
+State1 - -> State2 : put Red
+State2 - -> State1 : put Yellow
+State2 - -> [*] : [isConecta4Red]
+State1 - -> [*] : [isConecta4Yellow]
+@enduml
+
+PlantUML version 1.2022.7beta2(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
