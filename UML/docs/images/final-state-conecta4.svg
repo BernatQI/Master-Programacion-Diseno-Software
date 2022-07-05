@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="385px" preserveAspectRatio="none" style="width:1117px;height:385px;background:#FFFFFF;" version="1.1" viewBox="0 0 1117 385" width="1117px" zoomAndPan="magnify"><defs/><g><rect height="26.2969" id="_title" style="stroke:#00000000;stroke-width:1.0;fill:none;" width="189" x="457" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="179" x="462" y="22.9951">Conecta4 State Model</text><g id="elem_Board"><rect fill="#F1F1F1" height="36.2969" style="stroke:#181818;stroke-width:0.5;" width="56" x="532" y="140.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="539" y="155.292">Board</text><line style="stroke:#181818;stroke-width:0.5;" x1="533" x2="587" y1="160.5938" y2="160.5938"/></g><g id="elem_Conecta4"><rect fill="#F1F1F1" height="36.2969" style="stroke:#181818;stroke-width:0.5;" width="82" x="519" y="44.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="68" x="526" y="59.292">Conecta4</text><line style="stroke:#181818;stroke-width:0.5;" x1="520" x2="600" y1="64.5938" y2="64.5938"/></g><g id="elem_Row1"><rect fill="#F1F1F1" height="142.375" style="stroke:#181818;stroke-width:0.5;" width="156" x="7" y="236.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="39" x="65.5" y="251.292">Row1</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="162" y1="256.5938" y2="256.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="144" x="13" y="273.5889">Column1 = "Empty"</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="143" x="13" y="289.8857">Column2 = "Empty"</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="144" x="13" y="306.1826">Column3 = "Empty"</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="143" x="13" y="322.4795">Column4 = "Empty"</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="144" x="13" y="338.7764">Column5 = "Empty"</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="144" x="13" y="355.0732">Column6 = "Empty"</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="144" x="13" y="371.3701">Column7 = "Empty"</text></g><g id="elem_Row2"><rect fill="#F1F1F1" height="142.375" style="stroke:#181818;stroke-width:0.5;" width="156" x="198" y="236.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="38" x="257" y="251.292">Row2</text><line style="stroke:#181818;stroke-width:0.5;" x1="199" x2="353" y1="256.5938" y2="256.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="144" x="204" y="273.5889">Column1 = "Empty"</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="143" x="204" y="289.8857">Column2 = "Empty"</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="144" x="204" y="306.1826">Column3 = "Empty"</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="143" x="204" y="322.4795">Column4 = "Empty"</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="144" x="204" y="338.7764">Column5 = "Empty"</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="124" x="204" y="355.0732">Column6 = "Red"</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="142" x="204" y="371.3701">Column7 = "Yellow"</text></g><g id="elem_Row3"><rect fill="#F1F1F1" height="142.375" style="stroke:#181818;stroke-width:0.5;" width="154" x="389" y="236.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="39" x="446.5" y="251.292">Row3</text><line style="stroke:#181818;stroke-width:0.5;" x1="390" x2="542" y1="256.5938" y2="256.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="142" x="395" y="273.5889">Column1 = "Yellow"</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="123" x="395" y="289.8857">Column2 = "Red"</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="142" x="395" y="306.1826">Column3 = "Yellow"</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="123" x="395" y="322.4795">Column4 = "Red"</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="142" x="395" y="338.7764">Column5 = "Yellow"</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="124" x="395" y="355.0732">Column6 = "Red"</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="124" x="395" y="371.3701">Column7 = "Red"</text></g><g id="elem_Row4"><rect fill="#F1F1F1" height="142.375" style="stroke:#181818;stroke-width:0.5;" width="154" x="578" y="236.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="38" x="636" y="251.292">Row4</text><line style="stroke:#181818;stroke-width:0.5;" x1="579" x2="731" y1="256.5938" y2="256.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="124" x="584" y="273.5889">Column1 = "Red"</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="141" x="584" y="289.8857">Column2 = "Yellow"</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="124" x="584" y="306.1826">Column3 = "Red"</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="141" x="584" y="322.4795">Column4 = "Yellow"</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="124" x="584" y="338.7764">Column5 = "Red"</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="124" x="584" y="355.0732">Column6 = "Red"</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="142" x="584" y="371.3701">Column7 = "Yellow"</text></g><g id="elem_Row5"><rect fill="#F1F1F1" height="142.375" style="stroke:#181818;stroke-width:0.5;" width="154" x="767" y="236.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="39" x="824.5" y="251.292">Row5</text><line style="stroke:#181818;stroke-width:0.5;" x1="768" x2="920" y1="256.5938" y2="256.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="142" x="773" y="273.5889">Column1 = "Yellow"</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="123" x="773" y="289.8857">Column2 = "Red"</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="142" x="773" y="306.1826">Column3 = "Yellow"</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="123" x="773" y="322.4795">Column4 = "Red"</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="124" x="773" y="338.7764">Column5 = "Red"</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="142" x="773" y="355.0732">Column6 = "Yellow"</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="142" x="773" y="371.3701">Column7 = "Yellow"</text></g><g id="elem_Row6"><rect fill="#F1F1F1" height="142.375" style="stroke:#181818;stroke-width:0.5;" width="154" x="956" y="236.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="39" x="1013.5" y="251.292">Row6</text><line style="stroke:#181818;stroke-width:0.5;" x1="957" x2="1109" y1="256.5938" y2="256.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="124" x="962" y="273.5889">Column1 = "Red"</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="123" x="962" y="289.8857">Column2 = "Red"</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="142" x="962" y="306.1826">Column3 = "Yellow"</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="141" x="962" y="322.4795">Column4 = "Yellow"</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="124" x="962" y="338.7764">Column5 = "Red"</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="124" x="962" y="355.0732">Column6 = "Red"</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="142" x="962" y="371.3701">Column7 = "Yellow"</text></g><!--MD5=[e018ed0913258b803264571def57fa62]
+link Conecta4 to Board--><g id="link_Conecta4_Board"><path codeLine="64" d="M560,92.5379 C560,92.5379 560,116.4159 560,127.1059 " fill="none" id="Conecta4-Board" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="560,140.1649,564,131.1649,560,135.1649,556,131.1649,560,140.1649" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="560" x2="560" y1="135.1649" y2="127.1649"/><polygon fill="#181818" points="560,80.5379,556,86.5379,560,92.5379,564,86.5379,560,80.5379" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[67cfdaf8d87a575458e29aba8b2d3ac2]
+link Board to Row1--><g id="link_Board_Row1"><path codeLine="66" d="M519.5916,161.7524 C519.5916,161.7524 295.661,184.9959 180,236.2969 C178.332,237.0369 176.665,237.8099 175.001,238.6129 " fill="none" id="Board-Row1" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="163.256,244.7819,173.0838,244.1375,167.6824,242.4566,169.3633,237.0552,163.256,244.7819" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="167.6824" x2="174.765" y1="242.4566" y2="238.7369"/><polygon fill="#181818" points="531.559,160.8689,525.2808,157.3215,519.5916,161.7524,525.8698,165.2998,531.559,160.8689" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[7863fc81cb21f870fc2986d0dd97db3c]
+link Board to Row2--><g id="link_Board_Row2"><path codeLine="67" d="M520.4166,172.1922 C520.4166,172.1922 419.731,208.9779 371,236.2969 C369.065,237.3819 367.124,238.4999 365.18,239.6469 " fill="none" id="Board-Row2" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="354.052,246.4959,363.8132,245.1849,358.3101,243.8751,359.62,238.372,354.052,246.4959" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="358.3101" x2="365.123" y1="243.8751" y2="239.6819"/><polygon fill="#181818" points="531.778,168.3299,524.8098,166.4739,520.4166,172.1922,527.3847,174.0482,531.778,168.3299" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[9eb1c0611c32f4e10cb5590e71197fa1]
+link Board to Row3--><g id="link_Board_Row3"><path codeLine="68" d="M542.568,186.5565 C542.568,186.5565 526.554,211.6009 517.997,224.9829 " fill="none" id="Board-Row3" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="510.781,236.2669,518.9991,230.8389,513.4744,232.0543,512.259,226.5295,510.781,236.2669" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="513.4744" x2="517.7845" y1="232.0543" y2="225.3149"/><polygon fill="#181818" points="549.033,176.4469,542.4306,179.3467,542.568,186.5565,549.1704,183.6567,549.033,176.4469" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[0c289a0f90df3226a7d9586b62b24371]
+link Board to Row4--><g id="link_Board_Row4"><path codeLine="69" d="M577.5979,186.525 C577.5979,186.525 593.802,211.6009 602.45,224.9829 " fill="none" id="Board-Row4" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="609.743,236.2669,608.2178,226.5368,607.0293,232.0674,601.4987,230.8788,609.743,236.2669" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="607.0293" x2="602.6865" y1="232.0674" y2="225.3484"/><polygon fill="#181818" points="571.084,176.4469,570.9816,183.6573,577.5979,186.525,577.7003,179.3146,571.084,176.4469" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[a1a1d213d883d1db34e6ec7f38a481b2]
+link Board to Row5--><g id="link_Board_Row5"><path codeLine="70" d="M599.4496,171.9763 C599.4496,171.9763 700.953,208.6969 750,236.2969 C751.833,237.3279 753.671,238.3909 755.511,239.4789 " fill="none" id="Board-Row5" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="766.806,246.4679,761.2574,238.3308,762.5541,243.837,757.0479,245.1337,766.806,246.4679" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="762.5541" x2="755.751" y1="243.837" y2="239.6279"/><polygon fill="#181818" points="588.074,168.1559,592.4883,173.858,599.4496,171.9763,595.0353,166.2742,588.074,168.1559" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[2c3f259ba2cdf2b97045bc0fe8d748e4]
+link Board to Row6--><g id="link_Board_Row6"><path codeLine="71" d="M600.3541,161.7142 C600.3541,161.7142 823.775,184.8039 939,236.2969 C940.771,237.0879 942.54,237.9179 944.305,238.7809 " fill="none" id="Board-Row6" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="955.874,244.9349,949.8063,237.1771,951.4595,242.587,946.0497,244.2402,955.874,244.9349" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="951.4595" x2="944.3965" y1="242.587" y2="238.8299"/><polygon fill="#181818" points="588.386,160.8399,594.0786,165.2664,600.3541,161.7142,594.6615,157.2877,588.386,160.8399" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[5b4011f218d6a6831c4215940a37cab9]
+@startuml
+allowmixing
+
+title Conecta4 State Model
+
+object Board
+
+object Conecta4
+
+object Row1{
+  Column1 = "Empty"
+  Column2 = "Empty"
+  Column3 = "Empty"
+  Column4 = "Empty"
+  Column5 = "Empty"
+  Column6 = "Empty"
+  Column7 = "Empty"
+}
+object Row2{
+  Column1 = "Empty"
+  Column2 = "Empty"
+  Column3 = "Empty"
+  Column4 = "Empty"
+  Column5 = "Empty"
+  Column6 = "Red"
+  Column7 = "Yellow"
+}
+object Row3{
+  Column1 = "Yellow"
+  Column2 = "Red"
+  Column3 = "Yellow"
+  Column4 = "Red"
+  Column5 = "Yellow"
+  Column6 = "Red"
+  Column7 = "Red"
+}
+object Row4{
+  Column1 = "Red"
+  Column2 = "Yellow"
+  Column3 = "Red"
+  Column4 = "Yellow"
+  Column5 = "Red"
+  Column6 = "Red"
+  Column7 = "Yellow"
+}
+object Row5{
+  Column1 = "Yellow"
+  Column2 = "Red"
+  Column3 = "Yellow"
+  Column4 = "Red"
+  Column5 = "Red"
+  Column6 = "Yellow"
+  Column7 = "Yellow"
+}
+object Row6{
+  Column1 = "Red"
+  Column2 = "Red"
+  Column3 = "Yellow"
+  Column4 = "Yellow"
+  Column5 = "Red"
+  Column6 = "Red"
+  Column7 = "Yellow"
+}
+
+Conecta4 *-down-> Board
+
+Board *-down-> Row1
+Board *-down-> Row2
+Board *-down-> Row3
+Board *-down-> Row4
+Board *-down-> Row5
+Board *-down-> Row6
+@enduml
+
+PlantUML version 1.2022.7beta2(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
