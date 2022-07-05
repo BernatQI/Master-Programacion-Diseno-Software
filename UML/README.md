@@ -25,7 +25,7 @@ Universo Santa Tecla
   
 ![Estado_inicial](./docs/images/initial-state-conecta4.svg) 
 #### Version 2
-![Vocabulario](./docs/images/diagrama-clases-uml-conecta4-v2.png) 
+![Vocabulario](./docs/images/initial-state-conecta4-v2.png) 
   
 ### finalState 
 
