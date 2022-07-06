@@ -22,7 +22,8 @@ Universo Santa Tecla
 ![Vocabulario](./docs/images/diagrama-clases-uml-conecta4-v2.png)
   
 ### initialState  
-  
+
+#### Version 1
 ![Estado_inicial](./docs/images/initial-state-conecta4.svg) 
 #### Version 2
 ![Estado_inicial](./docs/images/initial-state-conecta4-v2.svg) 
@@ -34,5 +35,8 @@ Universo Santa Tecla
 ### instructions  
   
 ![Instrucciones](./docs/images/instructions-state-conecta4.svg)  
-  
-![Instrucciones](./docs/images/instructions-activity-conecta4.svg)  
+
+#### Version 1  
+![Instrucciones](./docs/images/instructions-activity-conecta4.svg) 
+#### Version 2 
+![Instrucciones](./docs/images/instructions-activity-conecta4-v2.svg) 
