@@ -36,7 +36,7 @@ Universo Santa Tecla
   
 ![Instrucciones](./docs/images/instructions-state-conecta4.svg)  
 
-  #### Version 1  
+  #### Version 1
 ![Instrucciones](./docs/images/instructions-activity-conecta4.svg) 
-  #### Version 2 
+  #### Version 2
 ![Instrucciones](./docs/images/instructions-activity-conecta4-v2.svg) 
