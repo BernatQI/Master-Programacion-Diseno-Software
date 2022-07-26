@@ -50,6 +50,8 @@ A && !B || !A && B
 
 ### Realiza un modelo (...esencial ... aproximadamente, no más de 20 tipos de entidad y algún diagrama de actividad o estados para algún proceso) de este mismo master de Programación y Diseño del Software
 
+#### Diagrama de Clases
+
 ![Master_MPDS_PlantUML](/UML-PlantUML/Ejercicios%20Tema%20PlantUML/master-mpds.svg)
 
 ~~~~
@@ -93,6 +95,36 @@ Rol --> Exposition
 
 Project --> Active
 Test --> Active
+
+@enduml
+~~~~
+
+#### Diagrama de Actividad
+
+![Master_MPDS_PlantUML](/UML-PlantUML/Ejercicios%20Tema%20PlantUML/master-mpds-actividad.svg)
+
+~~~~
+@startuml
+
+Title Master MPDS
+
+start
+
+  :Exposition 1;
+  :Exposition 1.a;
+  :Exposition 1.b;
+  :n <- 2;
+repeat
+    :Evaluation Project n;
+  :Exposition n+1.a;
+    :Evaluation Test n;
+  :Exposition n+1.b;
+  :n <- n + 1;
+repeat while () is (n < 52)
+:Evaluation Project 52;
+:Evaluation Test 52;
+:Certification Exam;
+stop
 
 @enduml
 ~~~~
