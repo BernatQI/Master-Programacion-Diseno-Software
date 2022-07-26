@@ -2,10 +2,7 @@
 
 ## Modela con UML el cuadro de "Las Meninas de Velázquez" de tal forma que se observe qué diferencias existen con otros cuadros en los que el observador no se siente dentro de la escena (Pista: relaciones entre observador, personajes y posiciones)
 
-![Meninas_PlantUML](../../Conocimiento/Ejercicios%20Tema%20Conocimiento/plantuml-meninas.png)
-
-### Versión 2
-![Meninas_PlantUML2](/UML-PlantUML/Ejercicios%20Tema%20PlantUML/meninas-plantuml.-2png.png)
+![Meninas_PlantUML](/plantuml-meninas3.png)
 
 ~~~~
 @startuml
@@ -29,13 +26,13 @@ Position *-down-> Depth
 Position *-down-> POV
 
 Observer .-down-> POV
-King o-up-> POV
-Queen o-up-> POV
+POV o-down-> King
+POV o-down-> Queen
 
-Court o-up-> Front
-Artist o-up-> Front
+Front o-down-> Court
+Front o-down-> Artist
 
-JoséNieto o-up-> Depth
+Depth o-down-> JoséNieto
 
 @enduml
 ~~~~
