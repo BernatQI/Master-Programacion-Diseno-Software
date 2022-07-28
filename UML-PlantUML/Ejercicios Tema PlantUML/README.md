@@ -128,3 +128,7 @@ stop
 
 @enduml
 ~~~~
+
+### Relaciona, con aproximadamente 50 palabras, las unidades de Patrones y Conocimiento vistos anteriormente
+
+Mediante una exposición etimológica y genética de los conceptos fundamentales para el estudio y comprensión de la profesión de la programación y diseño de software, conecta los conceptos (Patrones, Objetos, Clases, Algoritmos, Tipos de Datos y de Clasificación, Modelo del Dominio, etc) de forma progresiva, iterativa y recursiva. Primero holísticamente y posteriormente se lleva al ámbito del software y la informática.
