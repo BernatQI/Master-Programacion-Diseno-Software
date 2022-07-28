@@ -1,4 +1,4 @@
-# Ejercicios Tema Conocimiento
+# Ejercicios Tema Complejidad
 
 ### Expón un escenario donde un proceso se realice de todas las formas posibles combinando in/eficacia y in/eficiencia. Por ejemplo, comprar pan: trae pan o sustituto en poco tiempo y buen precio; trea o o sustituto pero a veces tardas años en volver o se gasta 100 veces más; ...
 
