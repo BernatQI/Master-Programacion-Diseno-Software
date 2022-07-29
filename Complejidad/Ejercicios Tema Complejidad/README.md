@@ -21,6 +21,6 @@
 
 ### Describe un sistema complejo de tu elección indicando brevemente la jerarquía de módulos con su abstracción y encapsulación (... quizás con un diagrama sea más breve) y un sistema complejo que no tenga las características mencionadas
 
-![Sistema_Complejo](/Complejidad/Ejercicios%20Tema%20Complejidad/ejercicio-complejidad-ejemplo-jerarquia-sistema-complejo.svg)
+![Sistema_Complejo](/Complejidad/Ejercicios%20Tema%20Complejidad/img/ejercicio-complejidad-ejemplo-jerarquia-sistema-complejo.svg)
 
 ### Relaciona, con aproximadamente 50 palabras, las unidades de Conocimiento y Complejidad vistos anteriormente
