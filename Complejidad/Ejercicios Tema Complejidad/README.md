@@ -24,3 +24,5 @@
 ![Sistema_Complejo](/Complejidad/Ejercicios%20Tema%20Complejidad/img/ejercicio-complejidad-ejemplo-jerarquia-sistema-complejo.svg)
 
 ### Relaciona, con aproximadamente 50 palabras, las unidades de Conocimiento y Complejidad vistos anteriormente
+
+- Un sistema complejo excede nuestra capacidad cognitiva, para gestionarlo de una forma simple, lo separamos en módulos y los clasificamos de forma jerárquica. Cada módulo es una abstracción de la información más importantes que encapsula los detalles, de forma cohesiva entre ellos (los detalles), para que se acople muy poco o nada con los otros módulos.
