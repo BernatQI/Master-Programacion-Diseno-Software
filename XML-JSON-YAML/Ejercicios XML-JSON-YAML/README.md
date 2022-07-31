@@ -6,6 +6,7 @@
 
 ### Edita el yaml correspondiente para la transmisión de esta información: https://www.planttext.com/api/plantuml/svg/FOqn2e0m40JxUyNMGXhB899dHBkBMWHY3fApKl-kWbhj30oigyf5jpKHJObhXSTEh2M6JSKYPlsjjGWYQU5CvrSFxuv47jrXp4qUZJ4z1bXCaZX8OOsIYToIv-Vf0W00
 
+~~~~
 classes:
     class: X
         to: Y
@@ -18,6 +19,7 @@ classes:
     - atributo2: boolean
     class: Y
     class: Z
+~~~~
 
 ### ¿Tendría sentido un documento con estructura de xml cuya información (ubicada entre las etiquetas de abrir y cerrar) respetara a su vez la estructura de json o yaml? Razona la respuesta y, en caso afirmativo, expón un posible escenario
 
