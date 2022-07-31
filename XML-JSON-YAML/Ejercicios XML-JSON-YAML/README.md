@@ -25,7 +25,7 @@ Sí, tendría sentido que una entrada de datos en formato XML sea procesada proc
 
 Ejemplo:
 
-#### XML
+#### INPUT -> XML
 
 ~~~~
 <object>
@@ -40,7 +40,7 @@ Ejemplo:
 
 --------
 
-#### JSON
+#### OUTPUT -> JSON
 
 ~~~~
 {
@@ -53,7 +53,7 @@ Ejemplo:
 
 --------
 
-#### YAML
+#### OUTPUT -> YAML
 
 ~~~~
 property1: information1
