@@ -27,6 +27,7 @@ Ejemplo:
 
 #### XML
 
+~~~~
 <object>
     <key>property1</key>
     <value>information1</value>
@@ -35,24 +36,31 @@ Ejemplo:
     <key>property2</key>
     <value>information2</value>
 </object>
+~~~~
 
 --------
 
 #### JSON
 
+~~~~
 {
     "property1" : "information1"
 }
 {
     "property2" : "information2"
 }
+~~~~
 
 --------
 
 #### YAML
 
+~~~~
 property1: information1
 property2: information2
+~~~~
+
+--------
 
 ### Sabiendo que el factorial de 0 es 1 y en cualquier otro caso n es n * factorial(n-1) y que potencia de una base elevado a 0 es 1 y en cualquier otro caso una base elevada a e es b* potencia(b, e-1) y que la suma de un número mas 0 es el número y en cualquier otro caso un numero más n es la suma del siguiente al número más n-1 ... escribe un documento json para estructurar este tipo de definiciones
 
