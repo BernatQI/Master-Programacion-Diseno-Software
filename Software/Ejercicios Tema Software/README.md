@@ -16,20 +16,22 @@ class Dataware
 class Middleware
 class Peopleware
 
-Peopleware .down.> Hardware
-Peopleware .down.> Software
+Peopleware -down-> Hardware
+Peopleware -down-> Software
 Software o-right-> Hardware
 
 Dataware -up-|> Software
 Middleware -up-|> Software
 Firmware -up-|> Software
 
+Firmware -up-> Hardware
+
 @enduml
 ~~~~
 
 ### Comenta en qué medida es correcta la definición de software de la IEEE en el estándar 729: "Es el conjunto de los programas de cómputo, procedimientos, reglas, documentación y datos asociados, que forman parte de las operaciones de un sistema de computación"
 
-
+- 
 
 ### Desarrolla por qué una aplicación de hoja de cálculo es un gestor (altas, bajas, modificaciones y consultas) de un sistema de información
 
