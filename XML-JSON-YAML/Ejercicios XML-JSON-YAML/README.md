@@ -95,7 +95,7 @@ property2: information2
     <element>Elemeno 3</element>
 </array>
 ~~~~
-- Podemos crear colecciones heterogeneas anidando elementos con distinta etiqueta:
+- Podemos crear colecciones heterogéneas anidando elementos con distinta etiqueta:
 ~~~~
 <object>
     <name>Juan</name>
