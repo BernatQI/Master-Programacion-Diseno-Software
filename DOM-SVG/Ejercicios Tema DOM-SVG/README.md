@@ -38,3 +38,12 @@
 ~~~~
 
 ### Cuántos y cuáles son los nodos del arbol DOM del siguiente documento XML: https://raw.githubusercontent.com/USantaTecla-tech-xml/src/master/4-como/1-documentoBienFormado/2-atributos/elementoMixtoV1.xml
+
+- 13 nodos en total
+
+- 1 nodo "documento"
+- 1 nodo "xml"
+- 1 nodo "elementoMixto"
+- 2 nodos "subElemento"
+- 3 nodos "atributo"
+- 5 nodos "texto"
