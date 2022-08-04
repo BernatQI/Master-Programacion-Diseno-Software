@@ -28,7 +28,7 @@
 
 ### Escribe un documento SVG para mostrar un cuadrado que encierra un círculo
 
-![Ejercicio_SVG](/DOM-SVG/Ejercicios%20Tema%20DOM-SVG/svg/ejercicio-svg.html)
+![Ejercicio_SVG](/DOM-SVG/Ejercicios%20Tema%20DOM-SVG/svg/ejercicio-svg.svg)
 
 ~~~~
 <svg width="300px" height="300px" version="1.1" xmlns="http://www.w3.org/2000/svg">
