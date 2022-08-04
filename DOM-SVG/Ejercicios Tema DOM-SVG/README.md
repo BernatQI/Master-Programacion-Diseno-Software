@@ -41,9 +41,9 @@
 
 - 13 nodos en total
 
-- 1 nodo "documento"
-- 1 nodo "xml"
-- 1 nodo "elementoMixto"
-- 2 nodos "subElemento"
-- 3 nodos "atributo"
-- 5 nodos "texto"
+    - 1 nodo "documento"
+    - 1 nodo "xml"
+    - 1 nodo "elementoMixto"
+    - 2 nodos "subElemento"
+    - 3 nodos "atributo"
+    - 5 nodos "texto"
