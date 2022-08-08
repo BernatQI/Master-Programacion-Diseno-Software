@@ -14,8 +14,12 @@
 
 ### Determina todos los posibles órdenes de evaluación de la siguiente expresión "1*2+3*4+5*6"
 
-- (1*2) + (3*4) + (5*6)
+~~~~
+(1*2) + (3*4) + (5*6)
+~~~~
 
 ### Determina todos los posibles órdenes de evaluación de la siguiente expresión "true&&false||false&&true||true&&false"
 
-- (true&&false) || (false&&true) || (true&&false)
+~~~~
+(true&&false) || (false&&true) || (true&&false)
+~~~~
