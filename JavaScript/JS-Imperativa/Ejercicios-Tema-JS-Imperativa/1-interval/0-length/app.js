@@ -5,4 +5,4 @@ const minInterval = console.readNumber('Introduce el mínimo del intervalo:');
 const maxInterval = console.readNumber('Introduce el máximo del intervalo:');
 
 
-console.writeln(`La longitud del intervalo [${minInterval}, ${maxInterval}] es ${maxInterval - minInterval}`);
+console.writeln(`La longitud del intervalo [${minInterval},${maxInterval}] es ${maxInterval - minInterval}`);

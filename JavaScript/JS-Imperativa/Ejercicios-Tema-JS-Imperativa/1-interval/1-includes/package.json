@@ -1,0 +1,16 @@
+{
+  "name": "1-includes",
+  "version": "1.0.0",
+  "description": "~~~~\r Introduce el mínimo del intervalo: 4\r Introduce el máximo del intervalo (superior o igual al mínimo): 9\r Introduce un punto: 2",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "console-mpds": "^1.0.4"
+  },
+  "devDependencies": {}
+}
