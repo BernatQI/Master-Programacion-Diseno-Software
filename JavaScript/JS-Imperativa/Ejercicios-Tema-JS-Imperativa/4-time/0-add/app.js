@@ -14,7 +14,7 @@ const secondSeconds = console.readNumber(`Dame los segundos:`);
 const sumHours = firstHours + secondHours;
 const sumMinutes = firstMinutes + secondMinutes;
 
-const totalTime = (firstSeconds + secondSeconds) + ((sumMinutes) * 60) + ((sumHours) * 3600);
+const totalTime = (firstSeconds + secondSeconds) + (sumMinutes * 60) + (sumHours * 3600);
 const extraMinute = firstSeconds + secondSeconds > 59 ? 1 : 0;
 const extraHour = sumMinutes + extraMinute > 59 ? 1 : 0;
 
