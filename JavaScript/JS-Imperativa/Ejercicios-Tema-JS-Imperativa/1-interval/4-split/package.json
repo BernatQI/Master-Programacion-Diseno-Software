@@ -1,7 +1,7 @@
 {
   "name": "4-split",
   "version": "1.0.0",
-  "description": "",
+  "description": "~~~~\r Introduce el mínimo del intervalo: 4\r Introduce el máximo del intervalo (superior o igual al mínimo): -10\r Error!!! El máximo debe ser superior o igual al máximo\r Introduce el mínimo del intervalo: 4\r Introduce el máximo del intervalo (superior o igual al mínimo): 10\r Introduce una cantidad positiva de intervalos: -3\r Error!!! La cantidad debe ser positiva\r Introduce una cantidad positiva de intervalos: 0\r Error!!! La cantidad debe ser positiva\r Introduce una cantidad positiva de intervalos: 3",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,5 +11,6 @@
   "license": "ISC",
   "dependencies": {
     "console-mpds": "^1.0.4"
-  }
+  },
+  "devDependencies": {}
 }

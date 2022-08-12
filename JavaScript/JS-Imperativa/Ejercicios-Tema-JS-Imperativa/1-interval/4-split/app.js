@@ -7,4 +7,6 @@ const numIntervals = console.readNumber('Introduce una cantidad positiva de inte
 
 const length = (maxInterval - minInterval) / numIntervals;
 
-console.writeln(`Error`);
+console.writeln(`Error`);const { Console } = require("console-mpds");
+const console = new Console();
+
