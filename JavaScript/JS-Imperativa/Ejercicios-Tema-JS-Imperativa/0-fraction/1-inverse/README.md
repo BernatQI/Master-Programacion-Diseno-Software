@@ -5,6 +5,7 @@ Introduce el denominador de la fracción: 18
 
 La fracción 3/18 = 1/6 invertida es la fracción 6/1
 ~~~~
+~~~~
 Introduce el numerador de la fracción: 2
 Introduce el denominador de la fracción: 5
 
