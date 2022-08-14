@@ -8,16 +8,20 @@ let mcdNumerator = [];
 let mcdDenominator = [];
 
 for(let i = 2; i <= numerator; i++) {
-    if(numerator % i == 0 && i < numerator){
-        mcdNumerator += [`${i},`];
-    }else if (numerator % i == 0 && i == numerator) {
-        mcdNumerator += [`${i}`];
+    if(numerator % i == 0) {
+        if(i < numerator) {
+            mcdNumerator += [`${i},`];
+        }else if (i == numerator) {
+            mcdNumerator += [`${i}`];
+        }
     }
 
-    if(denominator % i == 0 && i < denominator){
-        mcdDenominator += [`${i},`];
-    }else if (denominator % i == 0 && i == denominator) {
-        mcdDenominator += [`${i}`];
+    if(denominator % i == 0) {
+        if(i < denominator) {
+            mcdDenominator += [`${i},`];
+        }else if (i == denominator) {
+            mcdDenominator += [`${i}`];
+        }
     }
 }
 
