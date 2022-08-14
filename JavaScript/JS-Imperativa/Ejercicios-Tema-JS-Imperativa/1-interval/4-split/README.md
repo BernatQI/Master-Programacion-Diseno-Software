@@ -1,3 +1,5 @@
+- Validando datos del usuario: mínimo menor o igual que el máximo
+
 ~~~~
 Introduce el mínimo del intervalo: 4
 Introduce el máximo del intervalo (superior o igual al mínimo): -10
