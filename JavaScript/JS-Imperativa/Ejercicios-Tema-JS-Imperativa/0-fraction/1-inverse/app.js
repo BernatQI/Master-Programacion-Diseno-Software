@@ -4,34 +4,34 @@ const console = new Console();
 const numerator = console.readNumber(`Introduce el numerador de la fracción:`);
 const denominator = console.readNumber(`Introduce el denominador de la fracción:`);
 
-let mcdNumerator = [];
-let mcdDenominator = [];
+let gcdNumerator = [];
+let gcdDenominator = [];
 
 for(let i = 2; i <= numerator; i++) {
     if(numerator % i == 0) {
         if(i < numerator) {
-            mcdNumerator += [`${i},`];
+            gcdNumerator += [`${i},`];
         }else if (i == numerator) {
-            mcdNumerator += [`${i}`];
+            gcdNumerator += [`${i}`];
         }
     }
 
     if(denominator % i == 0) {
         if(i < denominator) {
-            mcdDenominator += [`${i},`];
+            gcdDenominator += [`${i},`];
         }else if (i == denominator) {
-            mcdDenominator += [`${i}`];
+            gcdDenominator += [`${i}`];
         }
     }
 }
 
-let mcd = 1;
-for(let i = 0; i < mcdNumerator.length; i++) {
-    for(let j = 0; j < mcdDenominator.length; j++) {
-        if(mcdNumerator[i] == mcdDenominator[j]) {
-            mcd *= mcdNumerator[i];
+let gcd = 1;
+for(let i = 0; i < gcdNumerator.length; i++) {
+    for(let j = 0; j < gcdDenominator.length; j++) {
+        if(gcdNumerator[i] == gcdDenominator[j]) {
+            gcd *= gcdNumerator[i];
         }
     }
 }
 
-console.writeln(`La fracción ${numerator}/${denominator} = ${numerator/mcd}/${denominator/mcd} invertida es la fracción ${denominator/mcd}/${numerator/mcd}`);
+console.writeln(`La fracción ${numerator}/${denominator} = ${numerator/gcd}/${denominator/gcd} invertida es la fracción ${denominator/gcd}/${numerator/gcd}`);
