@@ -5,7 +5,6 @@ const sentence = console.readString('Dame una frase:');
 
 let char = '';
 
-
 const consonants = ['a', 'A', 'á', 'Á', 'à', 'À', 'e', 'E', 'é', 'É', 'è', 'È', 'i', 'I', 'í', 'Í', 'ì', 'Ì', 'o', 'O', 'ó', 'Ó', 'ò', 'Ò', 'u', 'U', 'ú', 'Ú', 'ù', 'Ù', 'b', 'B', 'c', 'C', 'd', 'D', 'f', 'F', 'g', 'G', 'h', 'H', 'j', 'J', 'k', 'K', 'l', 'L', 'm', 'M', 'n', 'N', 'ñ', 'Ñ', 'p', 'P', 'q', 'Q', 'r', 'R', 's', 'S', 't', 'T', 'v', 'V', 'w', 'W', 'x', 'X', 'y', 'X', 'z', 'Z'];
 
 for(let i = 0; i < sentence.length; i++) {
