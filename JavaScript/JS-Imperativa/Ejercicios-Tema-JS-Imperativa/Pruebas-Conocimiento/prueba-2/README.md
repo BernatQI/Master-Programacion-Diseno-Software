@@ -66,10 +66,52 @@ console.writeln(`"${sentence}" ${isPalindrome ? 'Sí' : 'No'} es un palíndromo`
 
 - Escribe un código que determine si una serie de números positivos (terminada en 0) está ordenada ascendentemente
 
+~~~~
+const { Console } = require("console-mpds");
+const console = new Console();
 
+let numbers = [];
+let singleNumber
+do{
+    singleNumber = console.readNumber(`Dame un númer entre 1 y 9 (Escribe 0 para terminar):`);
+    if(singleNumber != 0) {
+        numbers += [singleNumber];
+    }
+}while(singleNumber != 0);
+
+let isAscendent = true;
+let number;
+for(let i = 1; i < numbers.length && isAscendent == true; i++) {
+    number = numbers[i - 1];
+    isAscendent = ++number == numbers[i];
+}
+
+console.writeln(`La serie "${numbers}" ${isAscendent ? 'SI' : 'NO'} es ascendente`);
+~~~~
 
 - Escribe un código para "adivinar" el número del usuario en 0 y 1.000.000 inclusives mediante la búsqueda binaria: ¿es igual o mayor que 500.000? Mayor; ¿es igual o mayor que 750.000? ... Igual
 
+~~~~
+const { Console } = require("console-mpds");
+const console = new Console();
 
+const userNumber = console.readNumber(`Dame el número de usuario (entre 0 y 1.000.000):`);
+let numberRequest;
+
+do {
+    numberRequest = console.readNumber(`¿Qué número quieres comprobar (entre 0 y 1.000.000)?:`);
+    
+    if(numberRequest < userNumber) {
+        console.writeln(`¿es igual o mayor que ${numberRequest}? Mayor`);
+        console.writeln(`Por favor, prueba un número mayor.`);
+    }else if(numberRequest > userNumber) {
+        console.writeln(`¿es igual o mayor que ${numberRequest}? Menor`);
+        numberRequest = console.writeln(`Por favor, prueba un número menor.`);
+    }else{
+        console.writeln(`¿es igual o mayor que ${numberRequest}? Igual`);
+        console.writeln(`\n¡¡¡ENHORABUENA!!!`);
+    }
+}while(numberRequest !== userNumber);
+~~~~
 
 - Escribe un código que a partir de un número de filas y columnas muestre por pantalla una retícula correspondiente de cuadrados de 5x5 asteriscos rellenos de puntos
