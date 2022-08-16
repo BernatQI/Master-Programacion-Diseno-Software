@@ -1,11 +1,11 @@
 const { Console } = require("console-mpds");
 const console = new Console();
 
-const rowOut = '* * * * *';
-const rowIn = '*.......*';
-
 const columns = console.readNumber(`¿Cuántas columnas quieres?:`);
 const rows = console.readNumber(`¿Cuántas filas quieres?:`);
+
+const rowOut = '* * * * *';
+const rowIn = '*.......*';
 
 let row0 = '';
 let row1 = '';
