@@ -2,7 +2,7 @@ const { Console } = require("console-mpds");
 const console = new Console();
 
 let numbers = [];
-let singleNumber
+let singleNumber;
 do{
     singleNumber = console.readNumber(`Dame un númer entre 1 y 9 (Escribe 0 para terminar):`);
     if(singleNumber != 0) {
