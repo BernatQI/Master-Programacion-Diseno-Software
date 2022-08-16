@@ -11,10 +11,10 @@ do{
 }while(singleNumber != 0);
 
 let isAscendent = true;
-let number;
+let previousNumber;
 for(let i = 1; i < numbers.length && isAscendent == true; i++) {
-    number = numbers[i - 1];
-    isAscendent = ++number == numbers[i];
+    previousNumber = numbers[i - 1];
+    isAscendent = ++previousNumber == numbers[i];
 }
 
 console.writeln(`La serie "${numbers}" ${isAscendent ? 'SI' : 'NO'} es ascendente`);
