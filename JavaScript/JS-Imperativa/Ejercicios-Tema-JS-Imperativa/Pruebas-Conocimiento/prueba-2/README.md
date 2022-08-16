@@ -147,3 +147,28 @@ ${row3}
 ${row4}`);
 }
 ~~~~
+
+### ¿Qué diferencias existen entre una expresión y una sentencia?
+
+- Una Expresión es una combinación de operandos (literales, variables y constantes) y operadores (prefijos, infijos, sufijos y ternarios) cuya evaluación devuelve un valor de tipo primitivo.
+
+- Las sentencias contienen expresiones que pueden ser simples mediante la mención de los datos o literales, o expresiones compuestas mediante la combinación de operadores. Sirven para Crear, modificar, eliminar o consultar datos.
+
+- La expresión develve un valor de tipo primitivo, mientras la sentencia evalúa expresiones.
+
+### ¿Qué criterio aplicas para escoger entre una sentencia while y do/while?
+
+- Escojo la sentencia "while" si necesito que se ejecute de "0" a "n" veces.
+- Escojo la sentencia "do/while" si necesito que se ejecute de "1" a "n" veces.
+
+### ¿Qué criterio aplicas para escoger entre una sentencia for y otra iterativa?
+
+- Escojo la sentencia "for" cuando quiero que se ejecute un número concreto de veces.
+
+### ¿Qué diferencias existen entre los valores de tipo primitivo y los valores que no son de tipo primitivo, como los arrays?
+
+- En JavaScript los "arrays" son objetos que contienen valores heterogeneos de tipo primitivo.
+
+### ¿Qué diferencias existen entre los valores de tipo string y de tipo array?
+
+- Los valores de tipo string son valores primitivos inmutables, mientras que los "arrays" son ebjetos que contienen valores heterogeneos de tipo primitivo (por ejemplo, de tipo "string").
