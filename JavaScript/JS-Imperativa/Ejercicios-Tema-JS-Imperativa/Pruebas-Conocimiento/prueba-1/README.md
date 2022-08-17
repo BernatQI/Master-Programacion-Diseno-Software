@@ -167,7 +167,7 @@ ${row4}`);
 
 ### ¿Qué diferencias existen entre los valores de tipo string y de tipo array?
 
-- Los valores de tipo string son valores primitivos inmutables, mientras que los "arrays" son ebjetos que contienen valores heterogeneos de tipo primitivo (por ejemplo, de tipo "string").
+- Los valores de tipo string son valores primitivos inmutables y no tienen propiedades (excepto "length" en el string), mientras que los "arrays" son ebjetos que pueden tener valores heterogeneos de tipo primitivo (por ejemplo, de tipo "string") u objeto.
 
 ### ¿Qué diferencias existen entre los valores de tipo primitivo y los valores que no son de tipo primitivo, como los arrays?
 
