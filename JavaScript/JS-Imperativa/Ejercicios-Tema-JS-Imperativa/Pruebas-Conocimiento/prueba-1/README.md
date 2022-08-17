@@ -1,4 +1,4 @@
-- Escribe un código que determine si una cadenas de caracteres es un palíndromo, sin considerar espacios intermedios ni acentos de la cadena. P.e.: "Dabale arroz a la zorra el abad" sí es un palímdromo
+### Escribe un código que determine si una cadenas de caracteres es un palíndromo, sin considerar espacios intermedios ni acentos de la cadena. P.e.: "Dabale arroz a la zorra el abad" sí es un palímdromo
 
 ~~~~
 const sentence = console.readString('Dame una frase:');
@@ -114,7 +114,7 @@ do {
 }while(numberRequest !== userNumber);
 ~~~~
 
-- Escribe un código que a partir de un número de filas y columnas muestre por pantalla una retícula correspondiente de cuadrados de 5x5 asteriscos rellenos de puntos
+### Escribe un código que a partir de un número de filas y columnas muestre por pantalla una retícula correspondiente de cuadrados de 5x5 asteriscos rellenos de puntos
 
 ~~~~
 const { Console } = require("console-mpds");
@@ -154,7 +154,7 @@ ${row4}`);
 
 - Las sentencias contienen expresiones que pueden ser simples mediante la mención de los datos o literales, o expresiones compuestas mediante la combinación de operadores. Sirven para Crear, modificar, eliminar o consultar datos.
 
-- La expresión develve un valor de tipo primitivo, mientras la sentencia evalúa expresiones.
+- Una expresión se evalúa y siempre develve un valor (mayormente de tipo primitivo), mentras que la sentencia ejecuta una acción (evalúa expresiones). Una expresión no puede contener sentencias, pero sí al revés.
 
 ### ¿Qué criterio aplicas para escoger entre una sentencia while y do/while?
 
@@ -165,10 +165,10 @@ ${row4}`);
 
 - Escojo la sentencia "for" cuando quiero que se ejecute un número concreto de veces.
 
-### ¿Qué diferencias existen entre los valores de tipo primitivo y los valores que no son de tipo primitivo, como los arrays?
-
-- En JavaScript los "arrays" son objetos que contienen valores heterogeneos de tipo primitivo.
-
 ### ¿Qué diferencias existen entre los valores de tipo string y de tipo array?
 
 - Los valores de tipo string son valores primitivos inmutables, mientras que los "arrays" son ebjetos que contienen valores heterogeneos de tipo primitivo (por ejemplo, de tipo "string").
+
+### ¿Qué diferencias existen entre los valores de tipo primitivo y los valores que no son de tipo primitivo, como los arrays?
+
+- En JavaScript los "arrays" son objetos que contienen valores heterogeneos de tipo primitivo.
