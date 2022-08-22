@@ -8,7 +8,7 @@
 ### Define el nombre y la responsabilidad "detallada" (cálculo/consulta o acción/alta+baja+modificación en memoria o RAM video) de dos funciones que no tengan parámetros pero sí retono
 
 - getDate(), muestra (devuelve/retorna) la fecha actual sin necesidad de pasarle parámetros. Consulta la fecha internamente (sistema operativo, API, etc) y la devuelve.
-- [isResumed()](https://github.com/USantaTecla-tech-javascript/game-ticTacToe/blob/master/1-programacionOrientadoProcesos/v0.0/app.js), retorna un valor, pero o tiene parámetros.
+- [isResumed()](https://github.com/USantaTecla-tech-javascript/game-ticTacToe/blob/master/1-programacionOrientadoProcesos/v0.0/app.js), retorna un valor, pero no tiene parámetros.
 
 ### Define el nombre y la responsabilidad "detallada" (cálculo/consulta o acción/alta+baja+modificación en memoria o RAM video) de tres funciones que sí tengan parámetros pero no retono
 
