@@ -24,4 +24,4 @@
 - [read(titile)](https://github.com/USantaTecla-tech-javascript/game-ticTacToe/blob/master/1-programacionOrientadoProcesos/v0.0/app.js), recibe el parámetro "title", imprime el valor de "title", solicita al usuario un número, evalúa si el número dado es menor que "1" o mayor que "3", y finalmente retorna el valor de "position" válido - "1".
 
 ### Define el nombre y la responsabilidad "detallada" de una función que realice un cálculo/consulta y una acción/alta+baja+modificación en memoria o RAM video con libertad en presencia o no de parametros y retorno
-- 
+- editUserStatus(userId, newStatus), recibe los parámetros "userId" y "newStatus", busca en memoria el usuario por su "userId" y modifica su "satus" con el valor de "newStatus" recibido como parámetro.
