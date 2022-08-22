@@ -3,19 +3,24 @@
 ### Define el nombre y la responsabilidad "detallada" (cálculo/consulta o acción/alta+baja+modificación en memoria o RAM video) de una función que no tenga parámetros ni retono
 
 - [playTicTacToe()](https://github.com/USantaTecla-tech-javascript/game-ticTacToe/blob/master/1-programacionOrientadoProcesos/v0.0/app.js), inicia una partida sin necesidad de pasarle parámetros, y no retorna nada. Consulta el estado de la partida, modifica el estado de la partida, imprime el estado de la partida y notifica el final de la partida.
-- printAbout(), imprime información ("strings") sin necesidad de pasarle parámetros, y no retorna nada. Consulta la información "About us" y la imprime.
+- printAbout(), consulta la información "About us" y la imprime ("string") sin necesidad de pasarle parámetros, y no retorna nada..
 
 ### Define el nombre y la responsabilidad "detallada" (cálculo/consulta o acción/alta+baja+modificación en memoria o RAM video) de dos funciones que no tengan parámetros pero sí retono
 
-- getDate(), muestra (devuelve/retorna) la fecha actual sin necesidad de pasarle parámetros. Consulta la fecha interna o externamente (sistema operativo, API, etc) y la devuelve.
-- [isResumed()](https://github.com/USantaTecla-tech-javascript/game-ticTacToe/blob/master/1-programacionOrientadoProcesos/v0.0/app.js), retorna un valor, pero no tiene parámetros.
+- getDate(), Consulta la fecha interna o externamente (sistema operativo, API, etc) y la devuelve/retorna sin necesidad de pasarle parámetros.
+- [isResumed()](https://github.com/USantaTecla-tech-javascript/game-ticTacToe/blob/master/1-programacionOrientadoProcesos/v0.0/app.js), retorna si player quiere jugar otra partida, pero no tiene parámetros.
 
 ### Define el nombre y la responsabilidad "detallada" (cálculo/consulta o acción/alta+baja+modificación en memoria o RAM video) de tres funciones que sí tengan parámetros pero no retono
 
-
+- [writelnTokens(tokens)](https://github.com/USantaTecla-tech-javascript/game-ticTacToe/blob/master/1-programacionOrientadoProcesos/v0.0/app.js), recibe como parámetro el estado actual de "tokens" y lo imprime, sin retornar nada.
+- [placeToken(tokens, turn)](https://github.com/USantaTecla-tech-javascript/game-ticTacToe/blob/master/1-programacionOrientadoProcesos/v0.0/app.js), recibe como parámetros el estado actual de "tokens" y "turn". Consulta e imprime para quien es el turno actual, consulta el número de "tokens" actuales, para solicitar añadir uno nuevo o mover uno añadido, y finalmente modifica el estado de "tokens".
+- setStatus(user), una función que recibe el parámetro "user" y modifica el "status" del usuario ("user"), la función no retorna nada.
 
 ### Define el nombre y la responsabilidad "detallada" (cálculo/consulta o acción/alta+baja+modificación en memoria o RAM video) de cuatro funciones que sí tenga parámetros y retono
 
-
+- [nextTurn(turn)](https://github.com/USantaTecla-tech-javascript/game-ticTacToe/blob/master/1-programacionOrientadoProcesos/v0.0/app.js), recibe el parámetro "turn" y devuelve un valor de tipo booleano después de evaluar si "turn" + 1 es módulo de "MAX_PLAYERS".
+- [isOccupied(tokens, row, column, turn)](https://github.com/USantaTecla-tech-javascript/game-ticTacToe/blob/master/1-programacionOrientadoProcesos/v0.0/app.js), recibe los parámetros "tokens", "row", "column" y "turn" y devuelve un valor de tipo booleano después de evaluar si el valor de "tokens\[row][column]" es igual al valor que retorna la ejecución de la función "getToken(turn)".
+- 
+- 
 
 ### Define el nombre y la responsabilidad "detallada" de una función que realice un cálculo/consulta y una acción/alta+baja+modificación en memoria o RAM video con libertad en presencia o no de parametros y retorno
