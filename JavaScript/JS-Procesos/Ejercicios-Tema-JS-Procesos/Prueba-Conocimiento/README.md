@@ -19,8 +19,9 @@
 ### Define el nombre y la responsabilidad "detallada" (cálculo/consulta o acción/alta+baja+modificación en memoria o RAM video) de cuatro funciones que sí tenga parámetros y retono
 
 - [nextTurn(turn)](https://github.com/USantaTecla-tech-javascript/game-ticTacToe/blob/master/1-programacionOrientadoProcesos/v0.0/app.js), recibe el parámetro "turn" y devuelve un valor de tipo booleano después de evaluar si "turn" + 1 es módulo de "MAX_PLAYERS".
-- [isOccupied(tokens, row, column, turn)](https://github.com/USantaTecla-tech-javascript/game-ticTacToe/blob/master/1-programacionOrientadoProcesos/v0.0/app.js), recibe los parámetros "tokens", "row", "column" y "turn" y devuelve un valor de tipo booleano después de evaluar si el valor de "tokens\[row][column]" es igual al valor que retorna la ejecución de la función "getToken(turn)".
-- 
-- 
+- [isOccupied(tokens, row, column, turn)](https://github.com/USantaTecla-tech-javascript/game-ticTacToe/blob/master/1-programacionOrientadoProcesos/v0.0/app.js), recibe los parámetros "tokens", "row", "column" y "turn" y devuelve un valor de tipo booleano después de evaluar si el valor de "tokens\[row][column]" es igual al valor que retorna la evaluación de la función "getToken(turn)".
+- [isEmpty(tokens, row, column)](https://github.com/USantaTecla-tech-javascript/game-ticTacToe/blob/master/1-programacionOrientadoProcesos/v0.0/app.js), recibe los parámetros "tokens", "row" y "column", y devuelve un valor de tipo booleano después de evaluar si "tokens\[row][column]" "TOKEN_EMPTY".
+- [read(titile)](https://github.com/USantaTecla-tech-javascript/game-ticTacToe/blob/master/1-programacionOrientadoProcesos/v0.0/app.js), recibe el parámetro "title", imprime el valor de "title", solicita al usuario un número, evalúa si el número dado es menor que "1" o mayor que "3", y finalmente retorna el valor de "position" válido - "1".
 
 ### Define el nombre y la responsabilidad "detallada" de una función que realice un cálculo/consulta y una acción/alta+baja+modificación en memoria o RAM video con libertad en presencia o no de parametros y retorno
+- 
