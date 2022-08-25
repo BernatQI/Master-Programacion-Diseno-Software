@@ -46,14 +46,17 @@ function playMasterMind() {
                 }else{
                     return true;
                 }
+
                 function isValidColors() {
+                    let countValids = 0;
                     for(let i = 0; i < combination.length; i++) {
                         for(let j = 0; j < COLORS.length; j++) {
                             if(combination[i] === COLORS[j]) {
-                                return true;
+                                countValids++;
                             }
                         }
                     }
+                    return countValids === 4;
                 }
             }
         }
@@ -67,16 +70,15 @@ function playMasterMind() {
         }
 
         function isSuccess(combination) {
-
             let blacks = 0;
             let countFound = [];
             for (i = 0; i < combination.length; i++) {
                 for (j = 0; j < combination.length; j++) {
                     if (combination[i] === SECRET_COMBINATION[i] && i === j) {
-                        countFound[i] = combination[i];
+                        countFound[i] = true;
                         blacks++;
                     }else{
-                        countFound[i] = 0;
+                        countFound[i] = false;
                     }
                 }
             }
@@ -84,8 +86,7 @@ function playMasterMind() {
             let whites = 0;
             for (i = 0; i < combination.length; i++) {
                 for (j = 0; j < combination.length; j++) {
-                    if (combination[i] === SECRET_COMBINATION[j] && combination[i] !== SECRET_COMBINATION[i] && countFound[j] === 0) {
-                        countFound[i] = combination[i];
+                    if (combination[i] === SECRET_COMBINATION[j] && combination[i] !== SECRET_COMBINATION[i] && countFound[i] !== true) {
                         whites++;
                     }
                 }
