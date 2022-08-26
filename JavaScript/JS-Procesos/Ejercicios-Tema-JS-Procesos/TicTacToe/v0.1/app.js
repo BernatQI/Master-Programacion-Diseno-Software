@@ -5,16 +5,23 @@ playTicTacToe();
 
 function playTicTacToe() {
     console.writeln(`\n------------- TicTacToe -------------\n`);
+    const PLAYERS = getPlayers();
+
+    function getPlayers() {
+        console.writeln(`Elige tipo de player:\n\t1. Human\n\t2. Machine\n`);
+        const playerX = console.readNumber(`Player X: `) === 1 ? 'human' : 'machine';
+        const playerY = console.readNumber(`Player Y: `) === 1 ? 'human' : 'machine';
+        return [playerX, playerY];
+    }
 
   do {
-    playGame();
+    playGame(PLAYERS);
   } while (isResumed());
 
   function playGame() {
     const MAX_PLAYERS = 2;
     const MAX_TOKENS = 3;
     const TOKEN_EMPTY = ` `;
-    const placeToken = getPlayersMode(placeTokenHuman, placeTokenMachine);
     let tokens = [
       [TOKEN_EMPTY, TOKEN_EMPTY, TOKEN_EMPTY],
       [TOKEN_EMPTY, TOKEN_EMPTY, TOKEN_EMPTY],
@@ -22,7 +29,6 @@ function playTicTacToe() {
     ];
     let turn = 0;
     let winner;
-
     do {
       writelnTokens(tokens);
       placeToken(tokens, turn);
@@ -34,23 +40,17 @@ function playTicTacToe() {
     writelnTokens(tokens);
     console.writeln(`Victoria para ${getToken(turn)}`);
 
-    function getPlayersMode(placeTokenHuman, placeTokenMachine) {
-        console.writeln(`Elige tipo de player:\n\t1. Human\n\t2. Machine\n`);
-        const playerX = console.readNumber(`Player X: `) === 1 ? placeTokenHuman : placeTokenMachine;
-        const playerY = console.readNumber(`Player Y: `) === 1 ? placeTokenHuman : placeTokenMachine;
-        return [playerX, playerY];
-    }
-    function placeTokenHuman(tokens, turn) {
+    function placeToken(tokens, turn) {
       let presentTurn = getToken(turn);
+      console.writeln(`Turno para ${presentTurn}`);
       let error;
       let originRow;
       let originColumn;
       const movement = getNumTokens(tokens) === MAX_PLAYERS * MAX_TOKENS;
-      console.writeln(`Turno para ${presentTurn}`);
       if (movement) {
         do {
-          originRow = read(`Fila origen`);
-          originColumn = read(`Columna origen`);
+          originRow = read(`Fila origen`, presentTurn);
+          originColumn = read(`Columna origen`, presentTurn);
           error = !isOccupied(tokens, originRow, originColumn, turn);
           if (error) {
             console.writeln(`No hay una ficha de la propiedad de ${presentTurn}`);
@@ -60,41 +60,8 @@ function playTicTacToe() {
       let targetRow;
       let targetColumn;
       do {
-        targetRow = read(`Fila destino`);
-        targetColumn = read(`Columna destino`);
-        error = !isEmpty(tokens, targetRow, targetColumn);
-        if (error) {
-          console.writeln(`Indique una celda vacía`);
-        }
-      } while (error);
-      if (movement) {
-        tokens[originRow][originColumn] = TOKEN_EMPTY;
-      }
-      tokens[targetRow][targetColumn] = getToken(turn);
-    }
-
-    function placeTokenMachine(tokens, turn) {
-      let presentTurn = getToken(turn);
-      let error;
-      let originRow;
-      let originColumn;
-      const movement = getNumTokens(tokens) === MAX_PLAYERS * MAX_TOKENS;
-      console.writeln(`Turno para ${presentTurn}`);
-      if (movement) {
-        do {
-          originRow = Math.floor(Math.random() * MAX_TOKENS) + 1;
-          originColumn = Math.floor(Math.random() * MAX_TOKENS) + 1;
-          error = !isOccupied(tokens, originRow, originColumn, turn);
-          if (error) {
-            console.writeln(`No hay una ficha de la propiedad de ${presentTurn}`);
-          }
-        } while (error);
-      }
-      let targetRow;
-      let targetColumn;
-      do {
-        targetRow = Math.floor(Math.random() * MAX_TOKENS) + 1;
-        targetColumn = Math.floor(Math.random() * MAX_TOKENS) + 1;
+        targetRow = read(`Fila destino`, presentTurn);
+        targetColumn = read(`Columna destino`, presentTurn);
         error = !isEmpty(tokens, targetRow, targetColumn);
         if (error) {
           console.writeln(`Indique una celda vacía`);
@@ -117,11 +84,18 @@ function playTicTacToe() {
       }
       return MAX_TOKENS ** 2 - empties;
     }
-    function read(title) {
+
+    function read(title, presentTurn) {
         let position;
         let error;
+        let playerType = presentTurn === 'X' ? PLAYERS[0] : PLAYERS[1];
         do {
-        position = console.readNumber(`${title}: `);
+        if(playerType === 'human') {
+            position = console.readNumber(`${title}: `);
+        }else{
+            console.writeln(`${title}: `);
+            position = Math.floor(Math.random() * MAX_TOKENS) + 1;
+        }
         error = position < 1 || 3 < position;
         if (error) {
             console.writeln(`Por favor un numero entre 1 y ${MAX_TOKENS} inclusives`)
