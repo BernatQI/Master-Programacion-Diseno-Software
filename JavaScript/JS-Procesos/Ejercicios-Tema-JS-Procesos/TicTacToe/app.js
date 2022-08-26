@@ -40,6 +40,7 @@ function playTicTacToe() {
         const playerY = console.readNumber(`Player Y: `) === 1 ? placeTokenHuman : placeTokenMachine;
         return [playerX, playerY];
     }
+
     function placeTokenHuman(tokens, turn) {
       let presentTurn = getToken(turn);
       let error;
@@ -117,6 +118,7 @@ function playTicTacToe() {
       }
       return MAX_TOKENS ** 2 - empties;
     }
+
     function read(title) {
         let position;
         let error;
@@ -212,5 +214,4 @@ function playTicTacToe() {
     } while (error);
     return result;
   }
-
 }
