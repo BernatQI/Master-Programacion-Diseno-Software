@@ -35,17 +35,9 @@ function playTicTacToe() {
         console.writeln(`Victoria para ${getToken(turn)}`);
 
         function getPlayersMode(placeTokenHuman, placeTokenMachine) {
-            console.writeln(
-                `Elige tipo de player:\n\t1. Human\n\t2. Machine\n`
-            );
-            const playerX =
-                console.readNumber(`Player X: `) === 1
-                    ? placeTokenHuman
-                    : placeTokenMachine;
-            const playerY =
-                console.readNumber(`Player Y: `) === 1
-                    ? placeTokenHuman
-                    : placeTokenMachine;
+            console.writeln(`Elige tipo de player:\n\t1. Human\n\t2. Machine\n`);
+            const playerX = console.readNumber(`Player X: `) === 1 ? placeTokenHuman : placeTokenMachine;
+            const playerY = console.readNumber(`Player Y: `) === 1 ? placeTokenHuman : placeTokenMachine;
             return [playerX, playerY];
         }
 
@@ -62,9 +54,7 @@ function playTicTacToe() {
                     originColumn = read(`Columna origen`);
                     error = !isOccupied(tokens, originRow, originColumn, turn);
                     if (error) {
-                        console.writeln(
-                            `No hay una ficha de la propiedad de ${presentTurn}`
-                        );
+                        console.writeln(`No hay una ficha de la propiedad de ${presentTurn}`);
                     }
                 } while (error);
             }
@@ -97,9 +87,7 @@ function playTicTacToe() {
                     originColumn = Math.floor(Math.random() * MAX_TOKENS) + 1;
                     error = !isOccupied(tokens, originRow, originColumn, turn);
                     if (error) {
-                        console.writeln(
-                            `No hay una ficha de la propiedad de ${presentTurn}`
-                        );
+                        console.writeln(`No hay una ficha de la propiedad de ${presentTurn}`);
                     }
                 } while (error);
             }
@@ -138,9 +126,7 @@ function playTicTacToe() {
                 position = console.readNumber(`${title}: `);
                 error = position < 1 || 3 < position;
                 if (error) {
-                    console.writeln(
-                        `Por favor un numero entre 1 y ${MAX_TOKENS} inclusives`
-                    );
+                    console.writeln(`Por favor un numero entre 1 y ${MAX_TOKENS} inclusives`);
                 }
             } while (error);
             return position - 1;
