@@ -25,7 +25,7 @@ function playTicTacToe() {
 
         do {
             writelnTokens(tokens);
-            placeToken(tokens, turn);
+            placeToken[turn](tokens, turn);
             winner = isTicTacToe(tokens, turn);
             if (!winner) {
                 turn = nextTurn(turn);
