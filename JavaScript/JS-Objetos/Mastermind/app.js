@@ -22,7 +22,7 @@ function playMasterMind() {
 
       playGame: function () {
         console.writeln(`\n-----> MASTERMIND <-----\n`);
-        console.writeln(`Secret combination: ${this.SECRET_COMBINATION}`);
+        //console.writeln(`Secret combination: ${this.SECRET_COMBINATION}`);
         do {
           console.writeln(`\n${this.attempts} attempt(s):\n****`);
           for (PreviousCombinations of this.board) {
