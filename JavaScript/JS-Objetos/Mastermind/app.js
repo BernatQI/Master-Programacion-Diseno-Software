@@ -6,9 +6,9 @@ playMasterMind();
 function playMasterMind() {
   do {
     const game = initGame();
-    game.SECRET_COMBINATION = game.getSecretCombination(game.COLORS, game.MAX_COMBINATION);
     game.playGame();
-  } while (isResumed());
+    isResumed = game.isResumed();
+  } while (isResumed);
 
   function initGame() {
     let game = {
@@ -22,6 +22,7 @@ function playMasterMind() {
 
       playGame: function () {
         console.writeln(`\n-----> MASTERMIND <-----\n`);
+        this.setSecretCombination(this.COLORS, this.MAX_COMBINATION);
         //console.writeln(`Secret combination: ${this.SECRET_COMBINATION}`);
         do {
           console.writeln(`\n${this.attempts} attempt(s):\n****`);
@@ -66,12 +67,12 @@ function playMasterMind() {
         }
       },
 
-      getSecretCombination: function (colors, maxCombination) {
+      setSecretCombination: function (colors, maxCombination) {
         let secretCombination = [];
         for (let i = 0; i < maxCombination; i++) {
           secretCombination += colors[Math.floor(Math.random() * colors.length)];
         }
-        return secretCombination;
+        return this.SECRET_COMBINATION = secretCombination;;
       },
 
       isSuccess: function (combination) {
@@ -119,17 +120,17 @@ function playMasterMind() {
         }
         return this.winner;
       },
+
+      isResumed: function () {
+        const answer = console.readString(`Do you want to continue? (y/n):`);
+        if (answer === "y") {
+          return true;
+        } else {
+          console.writeln("\n¡¡¡HASTA LA VISTA!!!\n");
+          return false;
+        }
+      },
     };
     return game;
-  }
-
-  function isResumed() {
-    const answer = console.readString(`Do you want to continue? (y/n):`);
-    if (answer === "y") {
-      return true;
-    } else {
-      console.writeln("\n¡¡¡HASTA LA VISTA!!!\n");
-      return false;
-    }
   }
 }
