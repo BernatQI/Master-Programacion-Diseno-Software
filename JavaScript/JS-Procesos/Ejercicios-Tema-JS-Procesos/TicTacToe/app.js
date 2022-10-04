@@ -14,7 +14,7 @@ function playTicTacToe() {
         const MAX_PLAYERS = 2;
         const MAX_TOKENS = 3;
         const TOKEN_EMPTY = ` `;
-        const placeToken = getPlayersMode(placeTokenHuman, placeTokenMachine);
+        const placeToken = getPlayersMode();
         let tokens = [
             [TOKEN_EMPTY, TOKEN_EMPTY, TOKEN_EMPTY],
             [TOKEN_EMPTY, TOKEN_EMPTY, TOKEN_EMPTY],
@@ -34,77 +34,76 @@ function playTicTacToe() {
         writelnTokens(tokens);
         console.writeln(`Victoria para ${getToken(turn)}`);
 
-        function getPlayersMode(placeTokenHuman, placeTokenMachine) {
+        function getPlayersMode() {
             console.writeln(`Elige tipo de player:\n\t1. Human\n\t2. Machine\n`);
             const playerX = console.readNumber(`Player X: `) === 1 ? placeTokenHuman : placeTokenMachine;
             const playerY = console.readNumber(`Player Y: `) === 1 ? placeTokenHuman : placeTokenMachine;
             return [playerX, playerY];
-        }
 
-        function placeTokenHuman(tokens, turn) {
-            let presentTurn = getToken(turn);
-            let error;
-            let originRow;
-            let originColumn;
-            const movement = getNumTokens(tokens) === MAX_PLAYERS * MAX_TOKENS;
-            console.writeln(`Turno para ${presentTurn}`);
-            if (movement) {
+            function placeTokenHuman(tokens, turn) {
+                let error;
+                let originRow;
+                let originColumn;
+                const movement = getNumTokens(tokens) === MAX_PLAYERS * MAX_TOKENS;
+                console.writeln(`Turno para ${getToken(turn)}`);
+                if (movement) {
+                    do {
+                        originRow = read(`Fila origen`);
+                        originColumn = read(`Columna origen`);
+                        error = !isOccupied(tokens, originRow, originColumn, turn);
+                        if (error) {
+                            console.writeln(`No hay una ficha de la propiedad de ${getToken(turn)}`);
+                        }
+                    } while (error);
+                }
+                let targetRow;
+                let targetColumn;
                 do {
-                    originRow = read(`Fila origen`);
-                    originColumn = read(`Columna origen`);
-                    error = !isOccupied(tokens, originRow, originColumn, turn);
+                    targetRow = read(`Fila destino`);
+                    targetColumn = read(`Columna destino`);
+                    error = !isEmpty(tokens, targetRow, targetColumn);
                     if (error) {
-                        console.writeln(`No hay una ficha de la propiedad de ${presentTurn}`);
+                        console.writeln(`Indique una celda vacía`);
                     }
                 } while (error);
-            }
-            let targetRow;
-            let targetColumn;
-            do {
-                targetRow = read(`Fila destino`);
-                targetColumn = read(`Columna destino`);
-                error = !isEmpty(tokens, targetRow, targetColumn);
-                if (error) {
-                    console.writeln(`Indique una celda vacía`);
+                if (movement) {
+                    tokens[originRow][originColumn] = TOKEN_EMPTY;
                 }
-            } while (error);
-            if (movement) {
-                tokens[originRow][originColumn] = TOKEN_EMPTY;
+                tokens[targetRow][targetColumn] = getToken(turn);
             }
-            tokens[targetRow][targetColumn] = getToken(turn);
-        }
 
-        function placeTokenMachine(tokens, turn) {
-            let presentTurn = getToken(turn);
-            let error;
-            let originRow;
-            let originColumn;
-            const movement = getNumTokens(tokens) === MAX_PLAYERS * MAX_TOKENS;
-            console.writeln(`Turno para ${presentTurn}`);
-            if (movement) {
+            function placeTokenMachine(tokens, turn) {
+                let error;
+                let originRow;
+                let originColumn;
+                const getRandomToken = Math.floor(Math.random() * MAX_TOKENS) + 1;
+                const movement = getNumTokens(tokens) === MAX_PLAYERS * MAX_TOKENS;
+                console.writeln(`Turno para ${getToken(turn)}`);
+                if (movement) {
+                    do {
+                        originRow = getRandomToken
+                        originColumn = getRandomToken
+                        error = !isOccupied(tokens, originRow, originColumn, turn);
+                        if (error) {
+                            console.writeln(`No hay una ficha de la propiedad de ${getToken(turn)}`);
+                        }
+                    } while (error);
+                }
+                let targetRow;
+                let targetColumn;
                 do {
-                    originRow = Math.floor(Math.random() * MAX_TOKENS) + 1;
-                    originColumn = Math.floor(Math.random() * MAX_TOKENS) + 1;
-                    error = !isOccupied(tokens, originRow, originColumn, turn);
+                    targetRow = getRandomToken
+                    targetColumn = getRandomToken
+                    error = !isEmpty(tokens, targetRow, targetColumn);
                     if (error) {
-                        console.writeln(`No hay una ficha de la propiedad de ${presentTurn}`);
+                        console.writeln(`Indique una celda vacía`);
                     }
                 } while (error);
-            }
-            let targetRow;
-            let targetColumn;
-            do {
-                targetRow = Math.floor(Math.random() * MAX_TOKENS) + 1;
-                targetColumn = Math.floor(Math.random() * MAX_TOKENS) + 1;
-                error = !isEmpty(tokens, targetRow, targetColumn);
-                if (error) {
-                    console.writeln(`Indique una celda vacía`);
+                if (movement) {
+                    tokens[originRow][originColumn] = TOKEN_EMPTY;
                 }
-            } while (error);
-            if (movement) {
-                tokens[originRow][originColumn] = TOKEN_EMPTY;
+                tokens[targetRow][targetColumn] = getToken(turn);
             }
-            tokens[targetRow][targetColumn] = getToken(turn);
         }
 
         function getNumTokens(tokens) {
