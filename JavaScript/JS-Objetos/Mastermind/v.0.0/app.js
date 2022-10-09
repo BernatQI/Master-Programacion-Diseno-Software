@@ -72,7 +72,7 @@ function playMasterMind() {
         for (let i = 0; i < maxCombination; i++) {
           secretCombination += colors[Math.floor(Math.random() * colors.length)];
         }
-        return this.SECRET_COMBINATION = secretCombination;;
+        return this.SECRET_COMBINATION = secretCombination;
       },
 
       isSuccess: function (combination) {
