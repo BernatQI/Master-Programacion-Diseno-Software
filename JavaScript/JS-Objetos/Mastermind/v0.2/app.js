@@ -17,7 +17,7 @@ function initMastermind() {
 
   return {
     play() {
-      GameView.showTitle(game.TITLE);
+      GameView.showTitle(game.MESSAGES.TITLE);
 
       do{
         this.showBoard();
@@ -99,16 +99,18 @@ function initGame() {
 
   return {
     board: [],
-    TITLE: `\n\t---------> MASTERMIND <---------\n`,
-    COMBINATION_QUESTION: `Por favor, propón una combinación:`,
-    ERROR_MSG: {
-      errorLength: `Error, debes proponer una combinación de 4 colores.\n`,
-      errorColor: `Error, los colores válidos son: ${VALID_COLORS}\n`,
-      errorRepeatedColor: `Error, no puedes repetir colores.\n`,
+    MESSAGES: {
+      TITLE: `\n\t---------> MASTERMIND <---------\n`,
+      COMBINATION_QUESTION: `Por favor, propón una combinación:`,
+      ERROR_MSG: {
+        errorLength: `Error, debes proponer una combinación de 4 colores.\n`,
+        errorColor: `Error, los colores válidos son: ${VALID_COLORS}\n`,
+        errorRepeatedColor: `Error, no puedes repetir colores.\n`,
+      },
+      WINNER: `¡¡¡GANASTE!!! Enhorabuena`,
+      LOSER: `Perdiste, la próxima partida lo harás mejor`,
+      PLAY_AGAIN_QUESTION: `¿Quieres jugar otra partida?`
     },
-    WINNER: `¡¡¡GANASTE!!! Enhorabuena`,
-    LOSER: `Perdiste, la próxima partida lo harás mejor`,
-    PLAY_AGAIN_QUESTION: `¿Quieres jugar otra partida?`,
 
     getMaxColors() {
       return MAX_COLORS;
@@ -162,13 +164,13 @@ function initGame() {
       if(validator.isValidLength(combination)) {
         if(validator.isValidColors(combination)) {
           if(validator.isRepeatedColor(combination)) {
-            errors.push(this.ERROR_MSG.errorRepeatedColor);
+            errors.push(this.MESSAGES.ERROR_MSG.errorRepeatedColor);
           }
         }else{
-          errors.push(this.ERROR_MSG.errorColor);
+          errors.push(this.MESSAGES.ERROR_MSG.errorColor);
         }
       }else{
-        errors.push(this.ERROR_MSG.errorLength);
+        errors.push(this.MESSAGES.ERROR_MSG.errorLength);
       }
 
       return errors;
@@ -202,7 +204,7 @@ function initGameView() {
 
     askCombination() {
 
-      return console.readString(game.COMBINATION_QUESTION);
+      return console.readString(game.MESSAGES.COMBINATION_QUESTION);
     },
 
     showCombinationErrors(errors) {
@@ -211,9 +213,9 @@ function initGameView() {
 
     showResult(result) {
       if(result) {
-        console.writeln(game.WINNER);
+        console.writeln(game.MESSAGES.WINNER);
       }else{
-        console.writeln(game.LOSER);
+        console.writeln(game.MESSAGES.LOSER);
       }
     },
 
@@ -221,7 +223,7 @@ function initGameView() {
       let answer;
       let error;
       do{
-        answer = console.readString(game.PLAY_AGAIN_QUESTION);
+        answer = console.readString(game.MESSAGES.PLAY_AGAIN_QUESTION);
         error = answer !== `si` && answer !== `no`;
         if(error) {
           console.writeln(`Por favor, responde "si" o "no"`);
