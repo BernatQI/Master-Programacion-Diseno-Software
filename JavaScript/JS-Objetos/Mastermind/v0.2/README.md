@@ -1,5 +1,6 @@
 ![Diagrama_PlantUML_Mastermind_v02](/JavaScript/JS-Objetos/Mastermind/v0.2/uml-mastermind-v02.svg)
 
+~~~~
 @startuml
 startMastermind --> Mastermind
 Mastermind o--> GameView
@@ -52,3 +53,4 @@ SecretCombination : -Array secretCombination
 SecretCombination : +getSecretCombination()
 
 @enduml
+~~~~
