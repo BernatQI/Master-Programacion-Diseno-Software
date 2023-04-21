@@ -1,3 +1,0 @@
-# Ejercicio Programación Orientada a Procesos
-
-- Copiar el código de [TicTacToe](https://github.com/USantaTecla-tech-javascript/game-ticTacToe/blob/master/1-programacionOrientadoProcesos/v0.0/app.js) y crear una función de orden superior que permita escoger, al inicio de la partida, si se quiere jugar una pertida con dos personas, con una persona contra la máquina o la máquina contra la máquina. También hay que programar el código para el juego que realiza la máquina. 
