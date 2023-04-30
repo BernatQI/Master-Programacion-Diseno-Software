@@ -11,6 +11,5 @@
   "dependencies": {
     "console-mpds": "^1.0.4"
   },
-  "devDependencies": {},
-  "description": ""
+  "description": "![Diagrama_PlantUML_Mastermind_v02](/JavaScript/JS-Objetos/Mastermind/v0.2/uml-mastermind-v02.svg)"
 }
