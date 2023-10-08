@@ -14,4 +14,4 @@
 [Youtube](https://www.youtube.com/watch?v=JBSbiilzg9U)
 ### vocabulary
 
-![vocabulary](./images/uml-classes-connect4.png)
+![vocabulary](./images/structure-diagrams/classes-diagram.plantuml)
