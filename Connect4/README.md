@@ -15,4 +15,4 @@
 ## UML
 ### Class Diagram
 
-![vocabulary](./images/class-diagram.svg)
+![vocabulary](./images/class-diagram.png)
