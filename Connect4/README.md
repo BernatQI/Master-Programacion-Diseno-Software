@@ -14,4 +14,4 @@
 [Youtube](https://www.youtube.com/watch?v=JBSbiilzg9U)
 ### vocabulary
 
-![vocabulary](./images/structure-diagrams/class-diagram.png)
+![vocabulary](./images/class-diagram.png)
