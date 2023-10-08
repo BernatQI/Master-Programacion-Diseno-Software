@@ -5,13 +5,14 @@
 * [domainModel](#domainModel)  
     * [vocabulary](#vocabulary)   
 
-## domainModel  
+## Domain Model  
 
 ![connect4](./images/connect4.jpg)  
 
 [WIKI](https://es.wikipedia.org/wiki/Conecta_4)
 
 [Youtube](https://www.youtube.com/watch?v=JBSbiilzg9U)
-### vocabulary
+## UML
+### Class Diagram
 
-![vocabulary](./images/class-diagram.png)
+![vocabulary](./images/class-diagram.svg)
