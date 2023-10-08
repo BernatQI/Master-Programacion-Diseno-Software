@@ -22,4 +22,5 @@ Player ..> Token
 Game *--> Token
 Board *--> Coordenate
 
+
 @enduml
