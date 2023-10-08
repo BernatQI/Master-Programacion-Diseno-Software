@@ -18,7 +18,8 @@ Game *--> Board
 Game *--> Turn
 Game .-> BoardView
 BoardView .> Board
-BoardView ..> Token
+Player ..> Token
+Game *--> Token
 Board *--> Coordenate
 
 @enduml
