@@ -1,0 +1,46 @@
+<<<<<<< HEAD
+=======
+@startuml "Classes Diagram"
+
+class Connect4 {
+  game
+
+  init()
+  playAgain()
+}
+class Game {
+  players
+  board
+
+  play()
+  isWinner()
+  isOver()
+}
+class GameView {
+
+}
+class Coordenate {
+
+}
+class Board {
+  reset()
+  putToken()
+}
+class BoardView {
+  show()
+}
+class Players {
+  colors
+
+  getPlayer()
+}
+
+Connect4 *--> Game
+Game -> Players
+Game *--> Board
+Game --> BoardView
+GameView <. Game
+Board ..> Coordenate
+
+@enduml
+>>>>>>> f2f9657 (Classes diagram update)
