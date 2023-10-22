@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 @startuml "Classes Diagram"
 
 class Connect4 {
@@ -15,9 +13,6 @@ class Game {
   play()
   isWinner()
   isOver()
-}
-class GameView {
-
 }
 class Coordenate {
 
@@ -39,8 +34,6 @@ Connect4 *--> Game
 Game -> Players
 Game *--> Board
 Game --> BoardView
-GameView <. Game
 Board ..> Coordenate
 
 @enduml
->>>>>>> f2f9657 (Classes diagram update)
