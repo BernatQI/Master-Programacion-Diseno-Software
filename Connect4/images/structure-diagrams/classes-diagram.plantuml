@@ -17,9 +17,9 @@ class Game {
   isOver()
   changeTurn()
 }
-' class GameView {
-
-' }
+class GameView {
+  MESSAGES
+}
 class Board {
   delimiter
   empty
