@@ -9,32 +9,58 @@ class Connect4 {
 class Game {
   players
   board
+  turn
+  colors
 
   play()
   isWinner()
   isOver()
+  changeTurn()
 }
-class Coordenate {
+' class GameView {
 
-}
+' }
 class Board {
+  delimiter
+  empty
+
   reset()
-  putToken()
 }
 class BoardView {
   show()
-  askColumn()
+}
+class Line {
+  north
+  northWest
+  west
+  southWest
+
+  shift()
+  isConnect4()
 }
 class Players {
-  colors
-
   getPlayer()
+}
+class PlayersView {
+  choosePlayers()
+}
+class HumanPlayer {
+  chooseColumn()
+  putToken()
+}
+class MachinePlayer {
+  chooseRandomColumn()
+  putToken()
 }
 
 Connect4 *--> Game
-Game --> Players
+' Game -> GameView
+PlayersView --> Players
+Game ..> PlayersView
 Game *--> Board
 Game --> BoardView
-Board ..> Coordenate
+Board ..> Line
+Players *--> HumanPlayer
+Players *--> MachinePlayer
 
 @enduml
