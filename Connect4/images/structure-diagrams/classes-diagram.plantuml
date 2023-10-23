@@ -23,7 +23,7 @@ class Board {
 }
 class BoardView {
   show()
-  askCoordenate()
+  askColumn()
 }
 class Players {
   colors
