@@ -5,7 +5,6 @@ const c4 = connect4();
 c4.init();
 
 function connect4() {
-
   const game = game();
   const gameView = gameView();
 
