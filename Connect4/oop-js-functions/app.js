@@ -13,29 +13,30 @@ function connect4() {
   return {
     init() {
       console.writeln(gameView.MESSAGES.head);
-      
+
       do {
         this.play();
-      }while (gameView.playAgain());
+      } while (gameView.playAgain());
       console.writeln('Bye!');
     },
     play() {
       board = game.board.reset();
       players = game.players.setPlayers(gameView.playersView.choosePlayers(game.COLORS));
-      
+      let column
+
       do {
         game.changeTurn();
         gameView.boardView.show(board);
-        console.writeln(`Turn: ${game.getTurn()}`);
-        players[game.getTurn()].chooseColumn();
-      }while (game.isOver());
+        column = game.board.chooseColumn(players[game.getTurn()], board);
+        board = game.board.putToken(column, board, game);
+      } while (game.isOver());
     }
   }
 }
 
 function Game() {
   let turn = 1;
-  
+
   return {
     NUMBER_PLAYERS: 2,
     COLORS: ['R', 'Y'],
@@ -60,7 +61,7 @@ function Game() {
 }
 
 function GameView() {
-  
+
   return {
     MESSAGES: Messages(),
     boardView: BoardView(),
@@ -82,20 +83,47 @@ function GameView() {
 
 function Board() {
   const NUMBER_ROWS = 6;
-  const delimeter = ' | ';
-  const empty = '_';
+  const DELIMITER = ' | ';
+  const EMPTY = '_';
 
   return {
+    line() {},
     reset() {
       let board = [];
 
-      board[0] = [` ${delimeter}`, `1${delimeter}`, `2${delimeter}`, `3${delimeter}`, `4${delimeter}`, `5${delimeter}`, `6${delimeter}`, `7${delimeter} \n`];	
+      board[0] = [` ${DELIMITER}`, `1${DELIMITER}`, `2${DELIMITER}`, `3${DELIMITER}`, `4${DELIMITER}`, `5${DELIMITER}`, `6${DELIMITER}`, `7${DELIMITER} \n`];
 
       for (let i = 1; i <= NUMBER_ROWS; i++) {
-        board[i] = [`${i}`, `${delimeter + empty}`, `${delimeter + empty}`, `${delimeter + empty}`, `${delimeter + empty}`, `${delimeter + empty}`, `${delimeter + empty}`, `${delimeter + empty + delimeter} \n`];
+        board[i] = [`${i}`, `${DELIMITER + EMPTY}`, `${DELIMITER + EMPTY}`, `${DELIMITER + EMPTY}`, `${DELIMITER + EMPTY}`, `${DELIMITER + EMPTY}`, `${DELIMITER + EMPTY}`, `${DELIMITER + EMPTY + DELIMITER} \n`];
       }
-      
+
       return board.reverse();
+    },
+    chooseColumn(player, board) {
+      let columnChosed;
+      do {
+        columnChosed = player.chooseColumn();
+      }while(this.isValidColumn(columnChosed, board));
+      return columnChosed;
+    },
+    isValidColumn(column, board) {
+      return column >= 1 && column <= 7 && !this.isFull(column, board);
+    },
+    isFull(column, board) {
+      return board[0][column] !== EMPTY;
+    },
+    putToken(column, board, game) {
+      let row = NUMBER_ROWS - 1;
+
+      do {
+        if (board[row][column] === EMPTY) {
+          board[row][column] = game.COLORS[game.getTurn()];
+        }else{
+          row--;
+        }
+      }while(board[row][column] !== EMPTY);
+
+      return board;
     }
   }
 }
@@ -136,42 +164,47 @@ function PlayersView() {
       colors.forEach((color, i) => {
         do {
           playerChoosed = console.readString(`Choose type of player for ${colors[i]} (answer "Human" or "Machine"):`);
-        } while (!this.isValidPlayersType(playerChoosed));
+        } while (!this.isValidPlayerType(playerChoosed));
         playersType.push(playerChoosed);
       });
 
       return playersType;
     },
-    isValidPlayersType(playersType) {
+    isValidPlayerType(playersType) {
       return playersType === 'Human' || playersType === 'Machine';
     }
   }
 }
 
 function HumanPlayer() {
+  let column;
 
   return {
     chooseColumn() {
-      console.writeln('Choose column: HumanPlayer');
+      do {
+        column = console.readString('Choose column (between 1 and 7):');
+      } while (this.isValidColumn(column));
     },
-    askColumn() {
-      
+    isValidColumn(column) {
+
     }
   }
 }
 
 function MachinePlayer() {
-  
+  let column;
+
   return {
     chooseColumn() {
-        console.writeln('Choose column: MachinePlayer');
-  
-      },
-      randomColumn() {
-  
-      }
+      column = this.randomColumn();
+      console.writeln(column);
+      return column;
+    },
+    randomColumn() {
+      return Math.floor(Math.random() * 7) + 1;
     }
   }
+}
 
 function Messages() {
 

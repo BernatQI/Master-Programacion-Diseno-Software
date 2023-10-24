@@ -36,6 +36,8 @@ class Board {
 
   reset()
   putToken()
+  isValidToken()
+  isFull()
 }
 class BoardView {
   show()
@@ -50,15 +52,15 @@ class Line {
   isConnect4()
 }
 class Players {
-  setPlayer()
+  getPlayer()
 }
 class PlayersView {
   choosePlayers()
-  chooseColumn()
+  isValidPlayerType()
 }
 class HumanPlayer {
   chooseColumn()
-  askColumn()
+  isValidColumn()
 }
 class MachinePlayer {
   chooseColumn()
