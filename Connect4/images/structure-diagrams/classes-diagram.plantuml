@@ -1,64 +1,80 @@
 @startuml "Classes Diagram"
 
 class Connect4 {
-  game
+  - game
+  - GameView
+  - board
+  - players
 
   init()
+  play()
   playAgain()
 }
 class Game {
-  players
-  board
-  turn
-  colors
+  + board
+  + players
+  + NUMBER_PLAYERS
+  + COLORS
 
-  play()
   isWinner()
   isOver()
   changeTurn()
 }
 class GameView {
-  MESSAGES
+  + MESSAGES
+  + boardView
+  + playersView
+
+  playAgain()
+  isValidAnswer()
 }
 class Board {
-  delimiter
-  empty
+  - DELIMITER
+  - EMPTY
+  - NUMBER_ROWS
+  + line
 
   reset()
+  putToken()
 }
 class BoardView {
   show()
 }
 class Line {
-  north
-  northWest
-  west
-  southWest
+  - north
+  - northWest
+  - west
+  - southWest
 
   shift()
   isConnect4()
 }
 class Players {
-  getPlayer()
+  setPlayer()
 }
 class PlayersView {
   choosePlayers()
+  chooseColumn()
 }
 class HumanPlayer {
   chooseColumn()
-  putToken()
+  askColumn()
 }
 class MachinePlayer {
-  chooseRandomColumn()
-  putToken()
+  chooseColumn()
+  randomColumn()
+}
+class Messages {
+
 }
 
 Connect4 *--> Game
-' Game -> GameView
-PlayersView --> Players
-Game ..> PlayersView
+Connect4 ..> GameView
+Game --> Players
 Game *--> Board
-Game --> BoardView
+GameView ..> BoardView
+GameView --> PlayersView
+Messages <. GameView
 Board ..> Line
 Players *--> HumanPlayer
 Players *--> MachinePlayer
