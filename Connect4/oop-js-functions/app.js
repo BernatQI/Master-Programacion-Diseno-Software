@@ -17,11 +17,11 @@ function connect4() {
       do {
         this.play();
       } while (gameView.playAgain());
-      console.writeln('Bye!');
+      console.writeln(gameView.MESSAGES.gameOver);
     },
     play() {
       board = game.board.reset();
-      players = game.players.setPlayers(gameView.playersView.choosePlayers(game.COLORS));
+      players = game.players.getPlayers(gameView.playersView.choosePlayers(game.COLORS));
       let column
 
       do {
@@ -29,8 +29,8 @@ function connect4() {
         gameView.boardView.show(board);
         column = game.board.chooseColumn(players[game.getTurn()], board);
         board = game.board.putToken(column, board, game);
-        gameView.boardView.show(board);
-      } while (game.isOver());
+        game.board.line.isConnect4(board, column, game.COLORS[game.getTurn()]);
+      } while (!game.isOver(board));
     }
   }
 }
@@ -43,20 +43,14 @@ function Game() {
     COLORS: ['R', 'Y'],
     board: Board(),
     players: Players(),
-    isWinner() {
-
-    },
-    isOver() {
-      return true;
+    isOver(board) {
+      return this.board.isFull(board);
     },
     getTurn() {
       return turn;
     },
     changeTurn() {
       turn === 0 ? turn = 1 : turn = 0;
-    },
-    setPlayers(playersType) {
-      let players = players;
     }
   }
 }
@@ -88,7 +82,7 @@ function Board() {
     NUMBER_ROWS: 6,
     DELIMITER: ' | ',
     EMPTY: '_',
-    line() {},
+    line: Line(),
     reset() {
       let board = [];
 
@@ -108,17 +102,35 @@ function Board() {
       return column;
     },
     isValidColumn(column, board) {
-      return column >= 1 && column <= 7 && !this.isFull(column, board);
+      return column >= 1 && column <= 7 && !this.isFullColumn(column, board);
     },
-    isFull(column, board) {
-      return board[this.NUMBER_ROWS][column] !== this.EMPTY;
+    isFull(board) {
+      let isFull = true;
+
+      for(let i = 1; i <= this.NUMBER_ROWS; i++) {
+        console.writeln(board[this.NUMBER_ROWS][i]);
+        if(board[this.NUMBER_ROWS][i] === this.EMPTY) {
+          isFull = false;
+          console.writeln('Column is not full yet.');
+        }else{
+          console.writeln('Column is full.');
+        }
+      }
+
+      return isFull;
+    },
+    isFullColumn(column, board) {
+      const isFull = board[this.NUMBER_ROWS][column] !== this.EMPTY;
+
+      if(isFull) console.writeln('Column is full, choose another one.');
+      
+      return isFull;
     },
     putToken(column, board, game) {
       let row = 1;
       let tokenStatus = false;
 
       do {
-        console.writeln(BoardView().show(board));
         if (board[row][column] === this.EMPTY) {
           board[row][column] = game.COLORS[game.getTurn()];
           tokenStatus = true;
@@ -149,7 +161,7 @@ function BoardView() {
 function Players() {
 
   return {
-    setPlayers(playerChoosed) {
+    getPlayers(playerChoosed) {
       let players = [];
 
       playerChoosed.forEach(player => {
@@ -215,9 +227,48 @@ function MachinePlayer() {
   }
 }
 
+function Line() {
+  const north = [0, 1];
+  const northWest = [-1, 1];
+  const west = [-1, 0];
+  const southWest = [-1, -1];
+  const DIRECTIONS = [north, northWest, west, southWest];
+
+  return {
+    getLine() {
+
+    },
+    shift() {
+
+    },
+    isConnect4(board, column) {
+      let row = this.getRow(board, column);
+      let isConnect4 = false;
+
+
+      
+      if (count === 4) {
+        isConnect4 = true;
+      }
+
+      return isConnect4;
+    },
+    getRow(board, column) {
+      let row = 1;
+
+      while(board[row][column] === Board().EMPTY) {
+        row++;
+      }
+
+      return row;
+    }
+  }
+}
+
 function Messages() {
 
   return {
-    head: `\t---> CONNECT 4 <---\n`
+    head: `\t---> CONNECT 4 <---\n`,
+    gameOver: `Game Over! Good Bye!`,
   }
 }

@@ -3,21 +3,19 @@
 class Connect4 {
   - game
   - GameView
-  - board
-  - players
 
   init()
   play()
-  playAgain()
 }
 class Game {
+  - turn
   + board
   + players
   + NUMBER_PLAYERS
   + COLORS
 
-  isWinner()
   isOver()
+  getTurn()
   changeTurn()
 }
 class GameView {
@@ -29,15 +27,17 @@ class GameView {
   isValidAnswer()
 }
 class Board {
-  - DELIMITER
-  - EMPTY
-  - NUMBER_ROWS
+  + DELIMITER
+  + EMPTY
+  + NUMBER_ROWS
   + line
 
   reset()
-  putToken()
-  isValidToken()
+  chooseColumn()
+  isValidColumn()
   isFull()
+  isFullColumn()
+  putToken()
 }
 class BoardView {
   show()
