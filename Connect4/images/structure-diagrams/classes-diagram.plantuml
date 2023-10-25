@@ -47,9 +47,12 @@ class Line {
   - northWest
   - west
   - southWest
+  - isConnect4
 
   shift()
   isConnect4()
+  getRow()
+  getLine()
 }
 class Players {
   getPlayer()

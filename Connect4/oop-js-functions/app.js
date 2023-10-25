@@ -29,7 +29,7 @@ function connect4() {
         gameView.boardView.show(board);
         column = game.board.chooseColumn(players[game.getTurn()], board);
         board = game.board.putToken(column, board, game);
-        game.board.line.isConnect4(board, column, game.COLORS[game.getTurn()]);
+        game.board.line.isConnect4(board, column);
       } while (!game.isOver(board));
     }
   }
@@ -44,7 +44,11 @@ function Game() {
     board: Board(),
     players: Players(),
     isOver(board) {
-      return this.board.isFull(board);
+      let isOver = this.board.isFull(board);
+      if (isOver) {
+        console.writeln('Game Over!');
+      }
+      return isOver;
     },
     getTurn() {
       return turn;
@@ -77,7 +81,7 @@ function GameView() {
 }
 
 function Board() {
-  
+
   return {
     NUMBER_ROWS: 6,
     DELIMITER: ' | ',
@@ -98,7 +102,7 @@ function Board() {
       let column;
       do {
         column = player.chooseColumn();
-      }while(!this.isValidColumn(column, board));
+      } while (!this.isValidColumn(column, board));
       return column;
     },
     isValidColumn(column, board) {
@@ -107,12 +111,11 @@ function Board() {
     isFull(board) {
       let isFull = true;
 
-      for(let i = 1; i <= this.NUMBER_ROWS; i++) {
-        console.writeln(board[this.NUMBER_ROWS][i]);
-        if(board[this.NUMBER_ROWS][i] === this.EMPTY) {
+      for (let i = 1; i <= this.NUMBER_ROWS; i++) {
+        if (board[this.NUMBER_ROWS][i] === this.EMPTY) {
           isFull = false;
           console.writeln('Column is not full yet.');
-        }else{
+        } else {
           console.writeln('Column is full.');
         }
       }
@@ -122,8 +125,8 @@ function Board() {
     isFullColumn(column, board) {
       const isFull = board[this.NUMBER_ROWS][column] !== this.EMPTY;
 
-      if(isFull) console.writeln('Column is full, choose another one.');
-      
+      if (isFull) console.writeln('Column is full, choose another one.');
+
       return isFull;
     },
     putToken(column, board, game) {
@@ -134,10 +137,10 @@ function Board() {
         if (board[row][column] === this.EMPTY) {
           board[row][column] = game.COLORS[game.getTurn()];
           tokenStatus = true;
-        }else{
+        } else {
           row++;
         }
-      }while(!tokenStatus);
+      } while (!tokenStatus);
 
       return board;
     }
@@ -233,34 +236,76 @@ function Line() {
   const west = [-1, 0];
   const southWest = [-1, -1];
   const DIRECTIONS = [north, northWest, west, southWest];
+  let isConnect4 = false;
+  let board;
+  let column;
 
   return {
-    getLine() {
+    getLine(coordenate, direction) {
+      let line = [];
+      let row = coordenate[0];
+      let column = coordenate[1];
 
-    },
-    shift() {
-
-    },
-    isConnect4(board, column) {
-      let row = this.getRow(board, column);
-      let isConnect4 = false;
-
-
-      
-      if (count === 4) {
-        isConnect4 = true;
+      for (let i = 0; i <= 3; i++) {
+        if (column < 1 || column > 7 || row < 1 || row > 6) {
+          break;
+        } else {
+          line.push(board[row][column]);
+          row += direction[0];
+          column += direction[1];
+        }
       }
+
+      return line;
+    },
+    shiftOppositeDirection(direction) {
+      let oppositeDirection = [];
+      direction.forEach((element, i) => {
+        oppositeDirection[i] = element * -1;
+      });
+      return oppositeDirection;
+    },
+    isConnect4(boardLine, columnLine) {
+      board = boardLine;
+      column = columnLine;
+      let row = this.getRow();
+      const coordenate = [row, column];
+
+      DIRECTIONS.forEach(direction => {
+        let line = this.getLine(coordenate, direction);
+        if (!isConnect4) {
+          this.isWinner(line);
+          for (let i = 0; i <= 3; i++) {
+            console.writeln(`Iteration ${i}: Line(${line})`);
+            line = this.shiftOppositeDirection(direction);
+            this.isWinner(line);
+          }
+        }
+      });
 
       return isConnect4;
     },
-    getRow(board, column) {
+    getRow() {
       let row = 1;
 
-      while(board[row][column] === Board().EMPTY) {
+      while (board[row][column] === Board().EMPTY) {
         row++;
       }
 
       return row;
+    },
+    isWinner(line) {
+      const firstToken = line[0];
+      let count = 0;
+      line.forEach(token => {
+        if (token === firstToken) {
+          count++;
+        }
+      });
+
+      if (count === 4) {
+        isConnect4 = true;
+      }
     }
   }
 }
@@ -269,6 +314,6 @@ function Messages() {
 
   return {
     head: `\t---> CONNECT 4 <---\n`,
-    gameOver: `Game Over! Good Bye!`,
+    gameOver: `Good Bye!`,
   }
 }
