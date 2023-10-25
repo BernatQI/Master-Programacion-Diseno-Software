@@ -29,6 +29,7 @@ function connect4() {
         gameView.boardView.show(board);
         column = game.board.chooseColumn(players[game.getTurn()], board);
         board = game.board.putToken(column, board, game);
+        gameView.boardView.show(board);
       } while (game.isOver());
     }
   }
@@ -46,7 +47,7 @@ function Game() {
 
     },
     isOver() {
-      return false;
+      return true;
     },
     getTurn() {
       return turn;
@@ -82,46 +83,49 @@ function GameView() {
 }
 
 function Board() {
-  const NUMBER_ROWS = 6;
-  const DELIMITER = ' | ';
-  const EMPTY = '_';
-
+  
   return {
+    NUMBER_ROWS: 6,
+    DELIMITER: ' | ',
+    EMPTY: '_',
     line() {},
     reset() {
       let board = [];
 
-      board[0] = [` ${DELIMITER}`, `1${DELIMITER}`, `2${DELIMITER}`, `3${DELIMITER}`, `4${DELIMITER}`, `5${DELIMITER}`, `6${DELIMITER}`, `7${DELIMITER} \n`];
+      board[0] = [` `, `1`, `2`, `3`, `4`, `5`, `6`, `7`];
 
-      for (let i = 1; i <= NUMBER_ROWS; i++) {
-        board[i] = [`${i}`, `${DELIMITER + EMPTY}`, `${DELIMITER + EMPTY}`, `${DELIMITER + EMPTY}`, `${DELIMITER + EMPTY}`, `${DELIMITER + EMPTY}`, `${DELIMITER + EMPTY}`, `${DELIMITER + EMPTY + DELIMITER} \n`];
+      for (let i = 1; i <= this.NUMBER_ROWS; i++) {
+        board[i] = [`${i}`, `${this.EMPTY}`, `${this.EMPTY}`, `${this.EMPTY}`, `${this.EMPTY}`, `${this.EMPTY}`, `${this.EMPTY}`, `${this.EMPTY}`];
       }
 
-      return board.reverse();
+      return board;
     },
     chooseColumn(player, board) {
-      let columnChosed;
+      let column;
       do {
-        columnChosed = player.chooseColumn();
-      }while(this.isValidColumn(columnChosed, board));
-      return columnChosed;
+        column = player.chooseColumn();
+      }while(!this.isValidColumn(column, board));
+      return column;
     },
     isValidColumn(column, board) {
       return column >= 1 && column <= 7 && !this.isFull(column, board);
     },
     isFull(column, board) {
-      return board[0][column] !== EMPTY;
+      return board[this.NUMBER_ROWS][column] !== this.EMPTY;
     },
     putToken(column, board, game) {
-      let row = NUMBER_ROWS - 1;
+      let row = 1;
+      let tokenStatus = false;
 
       do {
-        if (board[row][column] === EMPTY) {
+        console.writeln(BoardView().show(board));
+        if (board[row][column] === this.EMPTY) {
           board[row][column] = game.COLORS[game.getTurn()];
+          tokenStatus = true;
         }else{
-          row--;
+          row++;
         }
-      }while(board[row][column] !== EMPTY);
+      }while(!tokenStatus);
 
       return board;
     }
@@ -132,9 +136,12 @@ function BoardView() {
 
   return {
     show(board) {
+      board = board.reverse();
+      console.writeln(``);
       for (const row of board) {
-        console.writeln(row.join(''));
+        console.writeln(`${Board().DELIMITER}` + row.join(Board().DELIMITER) + `${Board().DELIMITER}\n`);
       }
+      board = board.reverse();
     }
   }
 }
@@ -146,7 +153,7 @@ function Players() {
       let players = [];
 
       playerChoosed.forEach(player => {
-        player === 'Human' ? players.push(HumanPlayer()) : players.push(MachinePlayer());
+        player === 1 ? players.push(HumanPlayer()) : players.push(MachinePlayer());
       });
 
       return players;
@@ -163,7 +170,7 @@ function PlayersView() {
 
       colors.forEach((color, i) => {
         do {
-          playerChoosed = console.readString(`Choose type of player for ${colors[i]} (answer "Human" or "Machine"):`);
+          playerChoosed = console.readNumber(`Choose type of player for ${colors[i]} (answer 1 for "Human" or 2 for "Machine"):`);
         } while (!this.isValidPlayerType(playerChoosed));
         playersType.push(playerChoosed);
       });
@@ -171,7 +178,7 @@ function PlayersView() {
       return playersType;
     },
     isValidPlayerType(playersType) {
-      return playersType === 'Human' || playersType === 'Machine';
+      return playersType === 1 || playersType === 2;
     }
   }
 }
@@ -181,27 +188,29 @@ function HumanPlayer() {
 
   return {
     chooseColumn() {
+      let column;
       do {
-        column = console.readString('Choose column (between 1 and 7):');
-      } while (this.isValidColumn(column));
+        column = console.readNumber('Choose column (between 1 and 7): ');
+      } while (!this.isValidColumn(column));
+
+      return column;
     },
     isValidColumn(column) {
-
+      return column >= 1 && column <= 7;
     }
   }
 }
 
 function MachinePlayer() {
-  let column;
 
   return {
     chooseColumn() {
-      column = this.randomColumn();
-      console.writeln(column);
+      let column = this.randomColumn();
       return column;
     },
     randomColumn() {
-      return Math.floor(Math.random() * 7) + 1;
+      let randomNumber = Math.floor(Math.random() * 7) + 1;
+      return randomNumber;
     }
   }
 }
