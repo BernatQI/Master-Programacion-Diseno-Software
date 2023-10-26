@@ -248,9 +248,9 @@ function Line() {
 
       for (let i = 0; i <= 3; i++) {
         if (column < 1 || column > 7 || row < 1 || row > 6) {
-          break;
+          line.push(666);
         } else {
-          line.push(board[row][column]);
+          line.push([row, column]);
           row += direction[0];
           column += direction[1];
         }
@@ -258,12 +258,12 @@ function Line() {
 
       return line;
     },
-    shiftOppositeDirection(direction) {
+    shiftOppositeDirection(direction, line) {
       let oppositeDirection = [];
       direction.forEach((element, i) => {
         oppositeDirection[i] = element * -1;
       });
-      return oppositeDirection;
+
     },
     isConnect4(boardLine, columnLine) {
       board = boardLine;
@@ -274,11 +274,10 @@ function Line() {
       DIRECTIONS.forEach(direction => {
         let line = this.getLine(coordenate, direction);
         if (!isConnect4) {
-          this.isWinner(line);
           for (let i = 0; i <= 3; i++) {
             console.writeln(`Iteration ${i}: Line(${line})`);
-            line = this.shiftOppositeDirection(direction);
             this.isWinner(line);
+            // line = this.shiftOppositeDirection(direction, line);
           }
         }
       });
@@ -295,16 +294,26 @@ function Line() {
       return row;
     },
     isWinner(line) {
-      const firstToken = line[0];
       let count = 0;
-      line.forEach(token => {
-        if (token === firstToken) {
+      let row;
+      let column;
+
+      for (let i = 0; i < 3; i++) {
+        row = line[i][0];
+        column = line[i][1];
+        if (
+          line[i] !== 666
+          && line[i + 1] !== 666
+          && board[row][column] === board[row + 1][column + 1]
+        ) {
+          console.writeln(count);
           count++;
         }
-      });
+      }
 
       if (count === 4) {
         isConnect4 = true;
+        console.writeln('Winneeeeeeeeeeeeeeeeer!');
       }
     }
   }
