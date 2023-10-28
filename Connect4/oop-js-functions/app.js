@@ -20,23 +20,26 @@ function connect4() {
       gameView.showMessage(messages.gameOver);
     },
     play() {
-      game.board.reset();
+      game.reset();
       game.players.setPlayers(gameView.playersView.choosePlayers(game.COLORS));
       let column
 
       gameView.boardView.show(game.board.getBoard());
       do {
         game.changeTurn();
+        console.writeln(`Player ${game.COLORS[game.getTurn()]} moves`);
         column = game.board.chooseColumn(game.players.getPlayers()[game.getTurn()], game.board.getBoard());
         game.board.putToken(column, game.COLORS[game.getTurn()]);
         gameView.boardView.show(game.board.getBoard());
-      } while (!game.isConnect4(column) || !game.board.isFullBoard());
+      } while (!game.isGameOver(column));
+
+      gameView.showMessage(game.isGameOver(column) ? `Player ${game.COLORS[game.getTurn()]} wins!` : `It's a tie!`);
     }
   }
 }
 
 function Game() {
-  let turn = 1;
+  let turn;
 
   return {
     NUMBER_WINNER_TOKENS: 4,
@@ -44,6 +47,10 @@ function Game() {
     COLORS: ['R', 'Y'],
     board: Board(),
     players: Players(),
+    reset() {
+      turn = 1;
+      this.board.reset();
+    },
     getTurn() {
       return turn;
     },
@@ -56,31 +63,30 @@ function Game() {
       let isConnect4 = false;
       let line = [];
       let coordenate;
+      let count;
 
-      this.board.line.DIRECTIONS.forEach((direction, i) => {
-        coordenate = coordenateOrigin;
-        let count = 0;
+      this.board.line.DIRECTIONS.forEach(direction => {
+        if (!isConnect4) {
+          coordenate = coordenateOrigin;
+          count = 0;
 
-        do {
-          
-                    line = this.board.line.getLine(coordenate, direction, board);
-          console.writeln(`Column & Row: ${coordenate[0]}, ${coordenate[1]}`);
-          console.writeln('Direction: ' + direction);
-          console.writeln('Line: ' + line);
+          do {
+            line = this.board.line.getLine(coordenate, direction, board);
 
-          if (this.board.line.isWinner(line)) {
-            isConnect4 = true;
-            console.writeln('Connect 4!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
-
-            return isConnect4;
-          } else {
-            coordenate = this.board.line.shift(coordenate, direction);
-          }
-          count++;
-        } while (count < this.NUMBER_WINNER_TOKENS && !isConnect4);
+            if (this.board.line.isWinner(line)) {
+              isConnect4 = true;
+            } else {
+              coordenate = this.board.line.shift(coordenate, direction);
+            }
+            count++;
+          } while (count < this.NUMBER_WINNER_TOKENS && !isConnect4);
+        }
       });
 
       return isConnect4;
+    },
+    isGameOver(column) {
+      return this.isConnect4(column) || this.board.isFullBoard();
     }
   }
 }
@@ -176,11 +182,14 @@ function Board() {
     getRow(column) {
       let row = 1;
 
-      while (board[row][column] === Board().EMPTY) {
-        row++;
+      if (this.isValidColumn(column, board)) {
+
+        while (board[row][column] !== Board().EMPTY) {
+          row++;
+        }
       }
 
-      return row;
+      return row - 1;
     }
   }
 }
@@ -285,7 +294,7 @@ function Line() {
       let row = coordenate[1];
 
       for (let i = 0; i < 4; i++) {
-        if (this.isValidCoordenate(row, column)) {
+        if (this.isValidCoordenate(column, row)) {
           line.push(board[row][column]);
           column += direction[0];
           row += direction[1];
@@ -293,8 +302,11 @@ function Line() {
           return false;
         }
       }
-
+      
       return line;
+    },
+    isValidCoordenate(column, row) {
+      return 0 < row && row <= 6 && 0 < column && column <= 7;
     },
     shift(coordenate, direction) {
       let column = coordenate[0];
@@ -312,15 +324,11 @@ function Line() {
 
       for (let i = 0; i <= 3; i++) {
         if (line[i] !== empty && line[i] === line[i + 1]) {
-          console.writeln(`Count: ${counts}`);
           counts++;
         }
       }
 
       return counts === 3;
-    },
-    isValidCoordenate(column, row) {
-      return row > 0 && row < 6 && column > 0 && column < 7;
     },
     getOppositeDirection(direction) {
       let oppositeDirection = [];

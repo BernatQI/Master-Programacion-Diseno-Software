@@ -9,14 +9,17 @@ class Connect4 {
 }
 class Game {
   - turn
-  + board
-  + players
+  + NUMBER_WINNER_TOKENS
   + NUMBER_PLAYERS
   + COLORS
+  + board
+  + players
 
-  isOver()
+  reset()
   getTurn()
   changeTurn()
+  isConnect4()
+  isGameOver()
 }
 class GameView {
   + MESSAGES
@@ -25,6 +28,7 @@ class GameView {
 
   playAgain()
   isValidAnswer()
+  showMessage()
 }
 class Board {
   - board
@@ -36,22 +40,16 @@ class Board {
   reset()
   chooseColumn()
   isValidColumn()
-  isFull()
   isFullColumn()
+  isFullBoard()
   putToken()
   getRow()
 }
 class BoardView {
   show()
 }
-class Line {
-  - DIRECTIONS
-
-  getLine()
-  shift()
-  isConnect4()
-}
 class Players {
+  setPlayer()
   getPlayer()
 }
 class PlayersView {
@@ -66,8 +64,18 @@ class MachinePlayer {
   chooseColumn()
   randomColumn()
 }
-class Messages {
+class Line {
+  - DIRECTIONS
 
+  getLine()
+  isValidCoordenate()
+  shift()
+  isWinner()
+  getOppositeDirection()
+}
+class Messages {
+  + head
+  + gameOver
 }
 
 Connect4 *--> Game
