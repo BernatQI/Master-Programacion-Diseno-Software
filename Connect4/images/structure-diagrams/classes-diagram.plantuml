@@ -27,6 +27,7 @@ class GameView {
   isValidAnswer()
 }
 class Board {
+  - board
   + DELIMITER
   + EMPTY
   + NUMBER_ROWS
@@ -38,21 +39,17 @@ class Board {
   isFull()
   isFullColumn()
   putToken()
+  getRow()
 }
 class BoardView {
   show()
 }
 class Line {
-  - north
-  - northWest
-  - west
-  - southWest
-  - isConnect4
+  - DIRECTIONS
 
+  getLine()
   shift()
   isConnect4()
-  getRow()
-  getLine()
 }
 class Players {
   getPlayer()
