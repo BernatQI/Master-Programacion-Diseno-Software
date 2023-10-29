@@ -1,0 +1,39 @@
+@startuml "Object Diagram"
+
+object c4 {
+  - game = Game()
+  - gameView = GameView()
+  - messages = Messages()
+}
+object game {
+  - turn = 1
+  + NUMBER_WINNER_TOKENS = 4
+  + NUMBER_PLAYERS = 2
+  + COLORS = [`R`, `Y`]
+  + board = Board()
+  + players = Players()
+}
+object board {
+  - board = [
+    [` `, `1`, `2`, `3`, `4`, `5`, `6`, `7`],
+    [ `1`, `_`, `_`, `_`, `_`, `_`, `_`, `_`],
+    [ `2`, `_`, `_`, `_`, `_`, `_`, `_`, `_`],
+    [ `3`, `_`, `_`, `_`, `_`, `_`, `R`, `_`],
+    [ `4`, `_`, `R`, `_`, `R`, `R`, `Y`, `_`],
+    [ `5`, `_`, `Y`, `Y`, `Y`, `R`, `Y`, `_`],
+    [ `6`, `R`, `Y`, `R`, `R`, `R`, `Y`, `_`]
+    ]
+  + NUMBER_ROWS = 6
+  + NUMBER_COLUMNS = 7
+  + DELIMITER = `|`
+  + EMPTY_CELL = `_`
+  + line = Line()
+}
+object players {
+  - players = [HumanPlayer, HumanPlayer]
+}
+c4 *--> game
+game *--> board
+game *--> players
+
+@enduml
