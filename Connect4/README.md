@@ -1,5 +1,6 @@
 # Connect4
 ## Versions
-### OOP JS Functions
 
-[OOP JS Functions](./oop-js-functions/)
+### OOP JS with Functions
+
+[OOP JS with Functions (Code & UML)](./oop-js-functions/)

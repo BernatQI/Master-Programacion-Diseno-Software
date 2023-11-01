@@ -16,4 +16,4 @@
 ## UML
 ### Class Diagram
 
-![vocabulary](./images/class-diagram.png)
+![vocabulary](./UML/images/class-diagram.png)
