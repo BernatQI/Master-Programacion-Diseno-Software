@@ -16,7 +16,7 @@
 
 [Youtube](https://www.youtube.com/watch?v=JBSbiilzg9U)
 
-## UML(ClassDiagram)
+## UML
 ### Class Diagram
 
 ![ClassDiagram](./UML/images/class-diagram.png)
