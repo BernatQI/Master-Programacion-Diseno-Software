@@ -2,8 +2,11 @@
 
 ## index
 
-* [domainModel](#domainModel)  
-    * [vocabulary](#vocabulary)   
+* [Domain Model](#connect4)  
+* [UML](#classDiagram)
+    * [Class Diagram](#classDiagram)
+    * [Object Diagram](#ObjectDiagram)
+    * [Deployment Diagram](#DeploymentDiagram)
 
 ## Domain Model  
 
@@ -16,15 +19,15 @@
 ## UML
 ### Class Diagram
 
-![UML Class Diagram](./UML/images/class-diagram.png)
+![classDiagram](./UML/images/class-diagram.png)
 
 
 ### Object Diagram
 #### Initial Objects (before first move)
-![UML Object Diagram](./UML/images/object-diagram-before-first-move.png)
+![ObjectDiagram](./UML/images/object-diagram-before-first-move.png)
 
 #### Final Objects (before last move)
-![UML Object Diagram](./UML/images/object-diagram-before-last-move.png)
+![ObjectDiagram](./UML/images/object-diagram-before-last-move.png)
 
 ### Deployment Diagram
-![UML Deployment Diagram](./UML/images/deployment-diagram.png)
+![UMLDeploymentDiagram](./UML/images/deployment-diagram.png)
