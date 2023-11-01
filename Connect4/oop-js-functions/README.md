@@ -10,7 +10,7 @@
 
 ## Domain Model  
 
-![connect4](../images/connect4.jpg)  
+![#connect4](../images/connect4.jpg)  
 
 [WIKI](https://es.wikipedia.org/wiki/Conecta_4)
 
@@ -19,15 +19,15 @@
 ## UML
 ### Class Diagram
 
-![classDiagram](./UML/images/class-diagram.png)
+![#classDiagram](./UML/images/class-diagram.png)
 
 
 ### Object Diagram
 #### Initial Objects (before first move)
-![ObjectDiagram](./UML/images/object-diagram-before-first-move.png)
+![#ObjectDiagram](./UML/images/object-diagram-before-first-move.png)
 
 #### Final Objects (before last move)
 ![ObjectDiagram](./UML/images/object-diagram-before-last-move.png)
 
 ### Deployment Diagram
-![UMLDeploymentDiagram](./UML/images/deployment-diagram.png)
+![#UMLDeploymentDiagram](./UML/images/deployment-diagram.png)
