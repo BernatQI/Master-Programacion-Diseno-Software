@@ -1,0 +1,16 @@
+@startuml "Activity Diagram - Play"
+
+start
+:Reset;
+:Choose players;
+:Set players;
+:Show board;
+repeat
+:Change turn;
+:Show turn;
+:Choose column;
+:Put token;
+:Show board;
+repeat while (Is game over) is (false)
+stop
+@enduml

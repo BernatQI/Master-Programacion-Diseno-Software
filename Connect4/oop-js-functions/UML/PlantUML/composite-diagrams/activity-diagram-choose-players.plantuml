@@ -1,0 +1,11 @@
+@startuml "Activity Diagram - Choose players"
+
+start
+repeat
+:Choose player "R";
+repeat while (Is valid player type) is (false)
+repeat
+:Choose player "Y";
+repeat while (Is valid player type) is (false)
+stop
+@enduml

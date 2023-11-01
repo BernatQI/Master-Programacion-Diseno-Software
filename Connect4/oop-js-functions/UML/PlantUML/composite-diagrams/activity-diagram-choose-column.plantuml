@@ -1,0 +1,8 @@
+@startuml "Activity Diagram - Choose column"
+
+start
+repeat
+:Choose column;
+repeat while (Is valid column) is (false)
+stop
+@enduml

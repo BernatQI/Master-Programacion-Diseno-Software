@@ -35,3 +35,16 @@
 
 ### Component Diagram
 ![ComponentDiagram](./UML/images/component-diagram.png)
+
+### Activity Diagrams
+#### Init
+![ActivityDiagram](./UML/images/component-diagram-init.png)
+
+#### Play
+![ActivityDiagram](./UML/images/component-diagram-play.png)
+
+#### Choose Players
+![ActivityDiagram](./UML/images/component-diagram-choose-players.png)
+
+#### Choose Column
+![ActivityDiagram](./UML/images/component-diagram-choose-column.png)

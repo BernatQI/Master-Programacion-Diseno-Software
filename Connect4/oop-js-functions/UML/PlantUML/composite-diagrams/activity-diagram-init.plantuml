@@ -1,0 +1,9 @@
+@startuml "Activity Diagram - Init"
+
+start
+repeat
+:Play;
+repeat while (Play again) is (true)
+:Show game over;
+stop
+@enduml
