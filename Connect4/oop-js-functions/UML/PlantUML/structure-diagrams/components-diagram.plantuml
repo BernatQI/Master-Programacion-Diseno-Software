@@ -1,0 +1,11 @@
+@startuml "Component Diagram"
+
+component Frontend
+component Backend
+
+interface Console
+
+Frontend -- Console
+Backend -- Console
+
+@enduml

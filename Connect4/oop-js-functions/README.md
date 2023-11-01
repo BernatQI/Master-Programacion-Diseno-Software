@@ -7,6 +7,7 @@
     * [Class Diagram](#ClassDiagram)
     * [Object Diagram](#ObjectDiagram)
     * [Deployment Diagram](#DeploymentDiagram)
+    * [Component Diagram](#ComponentDiagram)
 
 ## Domain Model  
 
@@ -31,3 +32,6 @@
 
 ### Deployment Diagram
 ![DeploymentDiagram](./UML/images/deployment-diagram.png)
+
+### Component Diagram
+![ComponentDiagram](./UML/images/component-diagram.png)
