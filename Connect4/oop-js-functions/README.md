@@ -7,7 +7,7 @@
 
 ## Domain Model  
 
-![connect4](./images/connect4.jpg)  
+![connect4](../images/connect4.jpg)  
 
 [WIKI](https://es.wikipedia.org/wiki/Conecta_4)
 
