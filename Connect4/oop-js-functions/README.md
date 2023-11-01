@@ -16,4 +16,12 @@
 ## UML
 ### Class Diagram
 
-![vocabulary](./UML/images/class-diagram.png)
+![UML Class Diagram](./UML/images/class-diagram.png)
+
+
+### Object Diagram
+#### Initial Objects (before first move)
+![UML Object Diagram](./UML/images/object-diagram-before-first-move.png)
+
+#### Final Objects (before last move)
+![UML Object Diagram](./UML/images/object-diagram-before-last-move.png)
