@@ -1,18 +1,5 @@
 # Connect4
+## Versions
+### OOP JS Functions
 
-## index
-
-* [domainModel](#domainModel)  
-    * [vocabulary](#vocabulary)   
-
-## Domain Model  
-
-![connect4](./images/connect4.jpg)  
-
-[WIKI](https://es.wikipedia.org/wiki/Conecta_4)
-
-[Youtube](https://www.youtube.com/watch?v=JBSbiilzg9U)
-## UML
-### Class Diagram
-
-![vocabulary](./images/class-diagram.png)
+[OOP JS Functions](./oop-js-functions/)
