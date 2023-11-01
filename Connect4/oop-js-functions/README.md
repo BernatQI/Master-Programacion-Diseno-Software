@@ -38,13 +38,13 @@
 
 ### Activity Diagrams
 #### Init
-![ActivityDiagram](./UML/images/component-diagram-init.png)
+![ActivityDiagram](./UML/images/activity-diagram-init.png)
 
 #### Play
-![ActivityDiagram](./UML/images/component-diagram-play.png)
+![ActivityDiagram](./UML/images/activity-diagram-play.png)
 
 #### Choose Players
-![ActivityDiagram](./UML/images/component-diagram-choose-players.png)
+![ActivityDiagram](./UML/images/activity-diagram-choose-players.png)
 
 #### Choose Column
-![ActivityDiagram](./UML/images/component-diagram-choose-column.png)
+![ActivityDiagram](./UML/images/activity-diagram-choose-column.png)
