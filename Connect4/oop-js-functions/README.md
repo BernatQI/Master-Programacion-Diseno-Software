@@ -25,3 +25,6 @@
 
 #### Final Objects (before last move)
 ![UML Object Diagram](./UML/images/object-diagram-before-last-move.png)
+
+### Deployment Diagram
+![UML Deployment Diagram](./UML/images/deployment-diagram.png)

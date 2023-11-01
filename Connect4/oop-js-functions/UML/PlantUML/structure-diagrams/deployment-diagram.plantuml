@@ -1,0 +1,9 @@
+@startuml "Deployment Diagram"
+
+node Console
+node App
+
+App -> Console : "Show"
+Console -> App : "Play"
+
+@enduml
