@@ -4,10 +4,6 @@
 
 * [Domain Model](#Connect4)  
 * [UML](#ClassDiagram)
-    * [Class Diagram](#ClassDiagram)
-    * [Object Diagram](#ObjectDiagram)
-    * [Deployment Diagram](#DeploymentDiagram)
-    * [Component Diagram](#ComponentDiagram)
 
 ## Domain Model  
 
@@ -52,7 +48,7 @@
 ![ActivityDiagram](./UML/images/activity-diagram-choose-column.png)
 
 ### State Diagram
-![StateDiagram](./UML/images/state-diagram.png)
+![StateDiagram](./UML/images/state-diagram-board-states.png)
 
 ### Use Case Diagram
 ![StateDiagram](./UML/images/use-case-diagram-put-token.png)
