@@ -3,7 +3,7 @@
 ## index
 
 * [Domain Model](#Connect4)  
-* [uml](#ClassDiagram)
+* [UML](#uml)
 
 ## Domain Model  
 
