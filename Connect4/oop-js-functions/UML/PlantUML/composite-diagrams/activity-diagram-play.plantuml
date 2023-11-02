@@ -2,7 +2,7 @@
 
 start
 :Reset;
-:Choose players;
+:Choose players type;
 :Set players;
 :Show board;
 repeat

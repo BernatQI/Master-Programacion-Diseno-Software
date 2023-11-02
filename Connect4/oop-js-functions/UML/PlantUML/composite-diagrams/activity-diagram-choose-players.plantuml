@@ -2,10 +2,10 @@
 
 start
 repeat
-:Choose player "R";
+:Choose player type "R";
 repeat while (Is valid player type) is (false)
 repeat
-:Choose player "Y";
+:Choose player type "Y";
 repeat while (Is valid player type) is (false)
 stop
 @enduml
