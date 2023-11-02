@@ -8,4 +8,6 @@ interface Console
 Frontend -- Console
 Backend -- Console
 
+note "Al code is in the same local folders. No chance for more components" as N1
+
 @enduml

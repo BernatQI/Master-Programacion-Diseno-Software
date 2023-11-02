@@ -18,10 +18,10 @@
 [Youtube](https://www.youtube.com/watch?v=JBSbiilzg9U)
 
 ## UML
+### STRUCTURE DIAGRAMS
 ### Class Diagram
 
 ![ClassDiagram](./UML/images/class-diagram.png)
-
 
 ### Object Diagram
 #### Initial Objects (before first move)
@@ -36,6 +36,8 @@
 ### Component Diagram
 ![ComponentDiagram](./UML/images/component-diagram.png)
 
+### COMPOSITE DIAGRAMS
+
 ### Activity Diagrams
 #### Init
 ![ActivityDiagram](./UML/images/activity-diagram-init.png)
@@ -48,3 +50,6 @@
 
 #### Choose Column
 ![ActivityDiagram](./UML/images/activity-diagram-choose-column.png)
+
+### State Diagram
+![StateDiagram](./UML/images/state-diagram.png)

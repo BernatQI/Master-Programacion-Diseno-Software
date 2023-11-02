@@ -1,0 +1,21 @@
+@startuml "State Diagram - Board States"
+
+state Initiated
+state PartialyFull
+state PartialyFullWinner
+state Full
+
+Initiated : Newely Created Board
+PartialyFull : Board with some tokens
+PartialyFull : No winner yet
+Full : Winner or Tied
+
+[*] --> Initiated : ResetBoard
+Initiated --> PartialyFull : PutToken
+PartialyFull --> PartialyFull : PutToken
+PartialyFull --> PartialyFullWinner : PutToken
+PartialyFull --> Full : PutToken
+Full --> [*]
+PartialyFullWinner --> [*]
+
+@enduml

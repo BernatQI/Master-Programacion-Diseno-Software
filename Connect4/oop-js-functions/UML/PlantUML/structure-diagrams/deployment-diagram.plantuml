@@ -6,4 +6,6 @@ node App
 App -> Console : "Show"
 Console -> App : "Play"
 
+note "Al code is in the same local folders. No chance for more nodes" as N1
+
 @enduml
