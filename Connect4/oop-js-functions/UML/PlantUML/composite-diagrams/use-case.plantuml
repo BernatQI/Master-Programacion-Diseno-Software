@@ -1,0 +1,14 @@
+@startuml "Use Case Diagram - Put Token"
+
+actor PlayerR
+actor PlayerY
+actor Board
+
+package Board {
+  usecase PutToken
+}
+
+PlayerR -> (PutToken) : 1...21
+PlayerY -> (PutToken) : 1...21
+
+@enduml

@@ -53,3 +53,6 @@
 
 ### State Diagram
 ![StateDiagram](./UML/images/state-diagram.png)
+
+### Use Case Diagram
+![StateDiagram](./UML/images/use-case-diagram-put-token.png)
