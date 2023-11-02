@@ -3,9 +3,17 @@
 start
 repeat
 :Choose player type "R";
+note left
+  1 = Human
+  2 = Machine
+end note
 repeat while (Is valid player type) is (false)
 repeat
 :Choose player type "Y";
+note left
+  1 = Human
+  2 = Machine
+end note
 repeat while (Is valid player type) is (false)
 stop
 @enduml
