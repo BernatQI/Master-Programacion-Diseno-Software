@@ -55,3 +55,6 @@
 
 ### Collaboration Diagram
 ![StateDiagram](./UML/images/collaboration-diagram.png)
+
+### Sequence Diagram
+![StateDiagram](./UML/images/sequence-diagram-put-token.png)
