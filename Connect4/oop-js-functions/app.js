@@ -261,7 +261,7 @@ function HumanPlayer() {
       return column;
     },
     isValidColumn(column) {
-      return column >= 1 && column <= 7;
+      return column >= 1 && column <= Board().NUMBER_COLUMNS;
     }
   }
 }
@@ -274,7 +274,7 @@ function MachinePlayer() {
       return column;
     },
     randomColumn() {
-      let randomNumber = Math.floor(Math.random() * 7) + 1;
+      let randomNumber = Math.floor(Math.random() * Board().NUMBER_COLUMNS) + 1;
       return randomNumber;
     }
   }

@@ -1,0 +1,30 @@
+@startuml "Collaboration Diagram"
+
+rectangle Connect4 as ":Connect4"
+rectangle Game as ":Game"
+rectangle Board as ":Board"
+rectangle BoardView as ":BoardView"
+rectangle GameView as ":GameView"
+rectangle Players as ":Players"
+rectangle PlayersView as ":PlayersView"
+rectangle Line as ":Line"
+rectangle Messages as ":Messages"
+
+note "These are the most important interactions.\nSome communications have been omitted." as N1
+
+GameView -> Connect4
+Connect4 -> Game
+PlayersView <-- GameView : choosePlayers(colors)
+Game --> Players : setPlayers(players)
+BoardView <-- GameView : showBoard(board)
+Game --> Board : getBoard()
+Game --> Board : reset()
+Game --> Board : chooseColumn(players, board)
+Game --> Board : putToken(column, color)
+Board --> Line : getLine(coordenate, direction, board)
+Board --> Line : isWinner(line)
+Board --> Line : shift(coordenate, direction)
+Game --> Game : isGameOver()
+Messages -> GameView
+
+@enduml

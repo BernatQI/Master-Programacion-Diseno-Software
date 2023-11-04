@@ -52,3 +52,6 @@
 
 ### Use Case Diagram
 ![StateDiagram](./UML/images/use-case-diagram-put-token.png)
+
+### Collaboration Diagram
+![StateDiagram](./UML/images/collaboration-diagram.png)

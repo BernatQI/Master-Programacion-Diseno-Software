@@ -1,0 +1,6 @@
+@startuml "Sequence Diagram"
+
+participant PlayerR
+participant PlayerY
+
+@enduml
