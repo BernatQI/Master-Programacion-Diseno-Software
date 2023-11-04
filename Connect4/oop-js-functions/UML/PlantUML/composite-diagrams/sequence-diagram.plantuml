@@ -1,6 +1,19 @@
-@startuml "Sequence Diagram"
+@startuml "Sequence Diagram - Put Token"
 
-participant PlayerR
-participant PlayerY
+participant Player
+participant Board
+participant NextTurn
+
+loop until is valid column
+    Player -> Board: putToken()
+    activate Board
+    Board -> Board: isValidColumn()
+    Board --> Player: is not valid column
+    Board -> Board: isValidColumn()
+    Player -> Board: putToken()
+    return is valid column
+end
+
+Board -> NextTurn : changeTurn()
 
 @enduml
