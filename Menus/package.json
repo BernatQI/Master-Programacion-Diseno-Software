@@ -1,0 +1,17 @@
+{
+  "name": "menus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "BernatQi",
+  "license": "ISC",
+  "dependencies": {
+    "console-input": "^1.0.2",
+    "console-mpds": "^1.0.4",
+    "enums-js": "^1.0.0"
+  }
+}
