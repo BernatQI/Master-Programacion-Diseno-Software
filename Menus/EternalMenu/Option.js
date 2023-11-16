@@ -1,16 +1,15 @@
-const { Console } = require("./console");
+const { Console } = require('./console');
 
 class Option {
 
   static console = new Console();
-  
   #title;
 
-  constructor(title) {
-      this.#title = title;
+  constructor(string) {
+      this.#title = string;
   }
 
-  interact() {};
+  interact() {}
 
   showTitle(index) {
       Option.console.writeln(index + ". " + this.getTitle());
@@ -19,7 +18,6 @@ class Option {
   getTitle() {
       return this.#title;
   }
-
 }
 
 class QuitOption extends Option {
@@ -27,18 +25,17 @@ class QuitOption extends Option {
   #executed;
 
   constructor() {
-      super("Salir");
+      super('Exit');
       this.#executed = false;
   }
 
   interact() {
-      this.#executed = true;
+    this.#executed = true;
   }
 
   isExecuted() {
       return this.#executed;
   }
-
 }
 
 module.exports.Option = Option;
