@@ -1,5 +1,6 @@
+const { Menu } = require('./Menu');
 const { Option } = require('./Option');
+const { ModelMenu } = require('./ModelMenu');
+const { Model } = require('./Model');
 
-const option = new Option("Hello World!");
-
-Option.console.writeln(option.showTitle('X'));
+Option.console.writeln("***");
