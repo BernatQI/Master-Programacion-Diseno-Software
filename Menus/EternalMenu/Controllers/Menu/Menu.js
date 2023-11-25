@@ -1,5 +1,4 @@
-const { Console } = require('./console');
-const { QuitOption } = require('./Option');
+const { Console } = require('../../console');
 
 class Menu {
 
@@ -54,7 +53,7 @@ class Menu {
   }
 
   isValidAnswer(answer) {
-    const ok = 0 < answer && answer < this.#options.length;
+    const ok = 0 <= answer && answer < this.#options.length;
 
     if (!ok) {
       Menu.console.writeln('Error: Number not valid!!!');
@@ -75,60 +74,4 @@ class Menu {
   }
 }
 
-class QuitMenu extends Menu {
-
-  #quitOption;
-
-  constructor(title) {
-    super(title);
-    this.#quitOption = new QuitOption();
-  }
-
-  showTitles() {
-    if(!thid.hasOption(this.#quitOption)) {
-      this.add(this.#quitOption);
-    }
-    super.showTitles();
-  }
-
-  isExecutedQuitOption() {
-    return this.#quitOption.isExecuted();
-  }
-
-}
-
-class IterativeMenu extends QuitMenu {
-
-  constructor(title) {
-    super(title);
-  }
-
-  interact() {
-    this.addOptions();
-    do {
-      this.interact_();
-    } while (!this.isExecutedQuitOption());
-  }
-
-}
-
-class DinayicMenu extends IterativeMenu {
-
-  constructor(title) {
-    super(title);
-  }
-
-  interact() {
-    do{
-      this.removeOptions();
-      this.addOptions();
-      super.interact_();
-    }while(!this.isExecutedQuitOption());
-  }
-
-}
-
 module.exports.Menu = Menu;
-module.exports.QuitMenu = QuitMenu;
-module.exports.IterativeMenu = IterativeMenu;
-module.exports.DinayicMenu = DinayicMenu;
