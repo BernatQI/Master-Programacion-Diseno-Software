@@ -1,5 +1,5 @@
-const { RemoveModelOption } = require('../Option/RemoveModelOption');
 const { DynamicMenu } = require('../../Controllers/Menu/DynamicMenu');
+const { RemoveModelOption } = require('../Option/RemoveModelOption');
 
 class ModelDynamicMenu extends DynamicMenu {
 

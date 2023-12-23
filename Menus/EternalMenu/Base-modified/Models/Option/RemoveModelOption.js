@@ -1,6 +1,6 @@
 const { ModelOption } = require('./ModelOption');
 
-class RemoveModelsOption extends ModelOption {
+class RemoveModelOption extends ModelOption {
 
   #index;
   #model;
@@ -21,4 +21,4 @@ class RemoveModelsOption extends ModelOption {
   
 }
 
-module.exports.RemoveModelsOption = RemoveModelsOption;
+module.exports.RemoveModelOption = RemoveModelOption;

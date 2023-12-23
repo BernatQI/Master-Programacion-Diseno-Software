@@ -1,7 +1,7 @@
 const { ModelOption } = require('./ModelOption');
 const { ModelDynamicMenu } = require('../Menu/ModelDynamicMenu');
 
-class RemoveModelOption extends ModelOption {
+class RemoveModelsOption extends ModelOption {
 
   constructor(model) {
     super('Remove', model);
@@ -13,4 +13,4 @@ class RemoveModelOption extends ModelOption {
 
 }
 
-module.exports.RemoveModelOption = RemoveModelOption;
+module.exports.RemoveModelsOption = RemoveModelsOption;
