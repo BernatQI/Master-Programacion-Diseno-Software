@@ -1,5 +1,5 @@
-const { Menu } = require('./Menu');
-const { QuitOption } = require('../Option/QuitOption');
+const { Menu } = require('./Menu.js');
+const { QuitOption } = require('../Option/QuitOption.js');
 
 class QuitMenu extends Menu {
 

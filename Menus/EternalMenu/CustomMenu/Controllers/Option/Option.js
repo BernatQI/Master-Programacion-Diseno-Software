@@ -5,8 +5,8 @@ class Option {
   static console = new Console();
   #title;
 
-  constructor(string) {
-      this.#title = string;
+  constructor(title) {
+      this.#title = title;
   }
 
   interact() {}

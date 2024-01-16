@@ -1,0 +1,211 @@
+@startuml "CustomMenu"
+
+class Console
+
+abstract class Option #crimson {
+    #title
+    +{static} console
+    constructor(title)
+    {abstract} interact()
+    showTitle(index)
+    getTitle() 
+}
+
+class QuitOption #crimson {
+    #executed
+    constructor()
+    interact() 
+    isExecuted()
+}
+
+abstract class Menu #crimson {
+    #title
+    #options
+    constructor(title)
+    interact()
+    {abstract} addOptions()
+    interact_()
+    showTitles()
+    execChoosedOption()
+    add(option)
+    removeOptions()
+    hasOption(option)
+}
+
+abstract class QuitMenu #crimson {
+    #quitOption;
+    constructor(title)
+    showTitles()
+    addquitOption()
+    isExecutedquitOption()
+}
+
+abstract class IterativeMenu #crimson {
+    constructor(title) 
+    interact()
+}
+
+abstract class DynamicMenu #crimson {
+    constructor(title) 
+    interact()
+}
+
+class ModelIterativeHomeMenu  #Lime {
+    #model
+    constructor(model)
+    addOptions()
+}
+
+class ModelIterativeDynamicMenu  #Lime {
+    #model
+    constructor()
+    addOptions()
+}
+
+class ModelIterativeDynamicProductsMenu  #Lime {
+    #model
+    constructor()
+    addOptions()
+}
+
+class ModelIterativeDynamicCategoriesMenu  #Lime {
+    #model
+    constructor()
+    addOptions()
+}
+
+class Model #darkCyan {
+  #productsCategories;
+  static products
+  static categories
+    constructor()
+}
+
+class ModelProducts #darkCyan {
+    #productsCategories
+    constructor()
+    getProducts(category)
+    addProduct(category, product)
+    removeProduct(product, category)
+}
+
+class ModelCategories #darkCyan {
+    #productsCategories
+    constructor()
+    getCategories()
+    addCategory(category)
+    removeCategory(category)
+    size() 
+}
+
+class ModelOption #forestGreen {
+   #model
+    constructor(title, model)
+    {abstract} interact()
+}
+
+class ModelHomeOption #forestGreen {
+    #model
+    constructor(model)
+    {abstract} interact()
+}
+
+class ModelProductsOption #forestGreen {
+    #model
+    constructor(model)
+    {abstract} interact()
+}
+
+class ModelCategoryOption #forestGreen {
+    #model
+    constructor(model)
+    {abstract} interact()
+}
+
+class ModelListProductsOption #forestGreen {
+   #model
+    constructor(model)
+    {abstract} interact()
+}
+
+class ModelAddProductOption #forestGreen {
+   #model
+    constructor(model)
+    {abstract} interact()
+}
+
+class ModelRemoveProductOption #forestGreen {
+   #model
+    constructor(model)
+    {abstract} interact()
+}
+
+class ModelListCategoriesOption #forestGreen {
+   #model
+    constructor(model)
+    {abstract} interact()
+}
+
+class ModelAddCategoryOption #forestGreen {
+   #model
+    constructor(model)
+    {abstract} interact()
+}
+
+class ModelRemoveCategoryOption #forestGreen {
+   #model
+    constructor(model)
+    {abstract} interact()
+}
+
+Option *-down-> Console : {static} console
+
+Option <|-down- QuitOption
+Menu *-down-> "+" Option
+QuitMenu *-down-> QuitOption
+
+Menu <|-down- QuitMenu
+QuitMenu <|-down- IterativeMenu
+IterativeMenu <|-down- DynamicMenu
+
+Option <|-down- ModelOption
+
+ModelOption <|-down- ModelProductsOption
+ModelOption <|-down- ModelCategoryOption
+ModelOption <|-down- ModelHomeOption
+
+ModelOption <|-down- ModelListProductsOption
+ModelOption <|-down- ModelAddProductOption
+ModelOption <|-down- ModelRemoveProductOption
+
+ModelOption <|-down- ModelAddCategoryOption
+ModelOption <|-down- ModelAddCategoryOption
+ModelOption <|-down- ModelListCategoriesOption
+
+IterativeMenu <|-down- ModelIterativeHomeMenu
+DynamicMenu <|-down- ModelIterativeDynamicMenu
+
+ModelIterativeHomeMenu *-down- ModelHomeOption
+ModelIterativeDynamicCategoriesMenu *-down- ModelProductsOption
+ModelIterativeHomeMenu *-down- ModelCategoryOption
+
+ModelIterativeDynamicProductsMenu *-down- ModelListProductsOption
+ModelIterativeDynamicProductsMenu *-down- ModelAddProductOption
+ModelIterativeDynamicProductsMenu *-down- ModelRemoveProductOption
+
+ModelIterativeDynamicCategoriesMenu *-down- ModelListCategoriesOption
+ModelIterativeDynamicCategoriesMenu *-down- ModelAddCategoryOption
+ModelIterativeDynamicCategoriesMenu *-down- ModelRemoveCategoryOption
+
+ModelProductsOption *-down- ModelIterativeDynamicProductsMenu
+ModelCategoryOption *-down- ModelIterativeDynamicCategoriesMenu
+
+ModelIterativeDynamicMenu <|-down- ModelIterativeDynamicProductsMenu
+ModelIterativeDynamicMenu <|-down- ModelIterativeDynamicCategoriesMenu
+
+ModelIterativeHomeMenu -down-> Model
+
+Model *-down- ModelProducts
+Model *-down- ModelCategories
+
+@enduml
