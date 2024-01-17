@@ -62,13 +62,13 @@ class ModelIterativeDynamicMenu  #Lime {
     addOptions()
 }
 
-class ModelIterativeDynamicProductsMenu  #Lime {
+class ModelProductsMenu  #Lime {
     #model
     constructor()
     addOptions()
 }
 
-class ModelIterativeDynamicCategoriesMenu  #Lime {
+class ModelCategoriesMenu  #Lime {
     #model
     constructor()
     addOptions()
@@ -107,7 +107,6 @@ class ModelOption #forestGreen {
 class ModelHomeOption #forestGreen {
     #model
     constructor(model)
-    {abstract} interact()
 }
 
 class ModelProductsOption #forestGreen {
@@ -186,22 +185,22 @@ IterativeMenu <|-down- ModelIterativeHomeMenu
 DynamicMenu <|-down- ModelIterativeDynamicMenu
 
 ModelIterativeHomeMenu *-down- ModelHomeOption
-ModelIterativeDynamicCategoriesMenu *-down- ModelProductsOption
+ModelCategoriesMenu *-down- ModelProductsOption
 ModelIterativeHomeMenu *-down- ModelCategoryOption
 
-ModelIterativeDynamicProductsMenu *-down- ModelListProductsOption
-ModelIterativeDynamicProductsMenu *-down- ModelAddProductOption
-ModelIterativeDynamicProductsMenu *-down- ModelRemoveProductOption
+ModelProductsMenu *-down- ModelListProductsOption
+ModelProductsMenu *-down- ModelAddProductOption
+ModelProductsMenu *-down- ModelRemoveProductOption
 
-ModelIterativeDynamicCategoriesMenu *-down- ModelListCategoriesOption
-ModelIterativeDynamicCategoriesMenu *-down- ModelAddCategoryOption
-ModelIterativeDynamicCategoriesMenu *-down- ModelRemoveCategoryOption
+ModelCategoriesMenu *-down- ModelListCategoriesOption
+ModelCategoriesMenu *-down- ModelAddCategoryOption
+ModelCategoriesMenu *-down- ModelRemoveCategoryOption
 
-ModelProductsOption *-down- ModelIterativeDynamicProductsMenu
-ModelCategoryOption *-down- ModelIterativeDynamicCategoriesMenu
+ModelProductsOption *-down- ModelProductsMenu
+ModelCategoryOption *-down- ModelCategoriesMenu
 
-ModelIterativeDynamicMenu <|-down- ModelIterativeDynamicProductsMenu
-ModelIterativeDynamicMenu <|-down- ModelIterativeDynamicCategoriesMenu
+ModelIterativeDynamicMenu <|-down- ModelProductsMenu
+IterativeMenu <|-down- ModelCategoriesMenu
 
 ModelIterativeHomeMenu -down-> Model
 

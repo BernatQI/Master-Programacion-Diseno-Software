@@ -9,8 +9,6 @@ class ModelHomeOption extends ModelOption {
     this.#model = model;
   }
 
-  interact() {}
-
 }
 
 module.exports.ModelHomeOption = ModelHomeOption;
