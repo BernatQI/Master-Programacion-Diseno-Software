@@ -1,0 +1,16 @@
+{
+  "name": "oop-js-clases",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Connect4.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "BernatQi",
+  "license": "ISC",
+  "dependencies": {
+    "console-mpds": "^1.0.4"
+  }
+}
