@@ -1,4 +1,6 @@
 import Line from './Line.js';
+import { Console } from "console-mpds";
+const console = new Console();
 
 export default class Board {
 
@@ -39,13 +41,15 @@ export default class Board {
   }
 
   isValidColumn(column) {
-    return column >= 1 && column <= 7 && !this.isFullColumn(column);
+    return column >= 1 && column <= Board.NUMBER_COLUMNS && !this.isFullColumn(column);
   }
 
   isFullColumn(column) {
-    const isFull = this.#board[this.NUMBER_ROWS][column] !== this.EMPTY;
+    const isFull = this.#board[Board.NUMBER_ROWS][column] !== Board.EMPTY;
 
-    if (isFull) console.writeln('Column is full, choose another one.');
+    if (isFull) {
+      console.writeln('Column is full, choose another one.');
+    }
 
     return isFull;
   }
@@ -53,8 +57,8 @@ export default class Board {
   isFullBoard() {
     let isFull = true;
 
-    for (let i = 1; i <= this.NUMBER_COLUMNS; i++) {
-      if (this.#board[this.NUMBER_ROWS][i] === this.EMPTY) {
+    for (let i = 1; i <= Board.NUMBER_COLUMNS; i++) {
+      if (this.#board[Board.NUMBER_ROWS][i] === Board.EMPTY) {
         isFull = false;
       }
     }
@@ -67,7 +71,7 @@ export default class Board {
     let emptyRow = false;
 
     do {
-      if (this.#board[row][column] === this.EMPTY) {
+      if (this.#board[row][column] === Board.EMPTY) {
         this.#board[row][column] = color;
         emptyRow = true;
       } else {
@@ -81,7 +85,7 @@ export default class Board {
 
     if (this.isValidColumn(column)) {
 
-      while (this.#board[row][column] !== this.EMPTY) {
+      while (this.#board[row][column] !== Board.EMPTY) {
         row++;
       }
     }

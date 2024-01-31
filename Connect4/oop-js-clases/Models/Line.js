@@ -3,17 +3,17 @@ import Board from './Board.js';
 export default class Line {
 
   #north;
-  #northWast;
+  #northWest;
   #west;
   #southWest;
-  static DIRECTIONS;
+  DIRECTIONS;
 
   constructor() {
     this.#north = [0, 1];
-    this.#northWast = [-1, 1];
+    this.#northWest = [-1, 1];
     this.#west = [-1, 0];
     this.#southWest = [-1, -1];
-    this.DIRECTIONS = [this.#north, this.#northWast, this.#west, this.#southWest];
+    this.DIRECTIONS = [this.#north, this.#northWest, this.#west, this.#southWest];
   }
 
   getLine(coordenate, direction, board) {
@@ -35,7 +35,7 @@ export default class Line {
   }
 
   isValidCoordenate(column, row) {
-    return 0 < row && row <= 6 && 0 < column && column <= 7;
+    return 0 < row && row <= Board.NUMBER_ROWS && 0 < column && column <= Board.NUMBER_COLUMNS;
   }
 
   shift(coordenate, direction) {
@@ -50,11 +50,11 @@ export default class Line {
   }
 
   isWinner(line) {
-    const empty = Board.EMPTY;
+    // const empty = Board.EMPTY;
     let counts = 0;
 
     for (let i = 0; i <= 3; i++) {
-      if (line[i] !== empty && line[i] === line[i + 1]) {
+      if (line[i] !== Board.EMPTY && line[i] === line[i + 1]) {
         counts++;
       }
     }

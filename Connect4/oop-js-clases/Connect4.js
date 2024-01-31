@@ -29,16 +29,16 @@ class Connect4 {
 
   play() {
     this.#game.reset();
-    this.#game.setPlayers(this.#gameView.playersView.choosePlayers(this.#game.COLORS));
+    this.#game.setPlayers(this.#gameView.choosePlayers(this.#game.COLORS));
     let column
 
-    this.#gameView.boardView.show(this.#game.getBoard());
+    this.#gameView.showBoard(this.#game.getBoard());
     do {
       this.#game.changeTurn();
       console.writeln(`Player ${this.#game.COLORS[this.#game.getTurn()]} moves`);
-      column = this.#game.chooseColumn(this.#game.players.getPlayers()[this.#game.getTurn()], this.#game.getBoard());
+      column = this.#game.chooseColumn(this.#game.getPlayers()[this.#game.getTurn()], this.#game.getBoard());
       this.#game.putToken(column, this.#game.COLORS[this.#game.getTurn()]);
-      this.#gameView.boardView.show(this.#game.getBoard());
+      this.#gameView.showBoard(this.#game.getBoard());
     } while (!this.#game.isGameOver(column));
 
     this.#gameView.showMessage(this.#game.isGameOver(column) ? `Player ${this.#game.COLORS[this.#game.getTurn()]} wins!` : `It's a tie!`);

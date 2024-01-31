@@ -1,3 +1,5 @@
+import Board from './Board.js';
+
 export default class MachinePlayer {
 
   constructor() {
@@ -10,7 +12,7 @@ export default class MachinePlayer {
   }
 
   randomColumn() {
-    let randomNumber = Math.floor(Math.random() * Board().NUMBER_COLUMNS) + 1;
+    let randomNumber = Math.floor(Math.random() * Board.NUMBER_COLUMNS) + 1;
     return randomNumber;
   }
 
