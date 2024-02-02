@@ -1,0 +1,123 @@
+@startuml "Classes Diagram"
+
+class Connect4 {
+  - game : Game
+  - gameView : GameView
+  - messages : Messages
+
+  + init() : void
+  + play() : void
+}
+
+class Game {
+  + NUMBER_PLAYERS
+  + COLORS
+  + NUMBER_WINNER_TOKENS
+  - turn
+  - board
+  - players
+  + line
+
+  + reset() : void
+  + getTurn() : number
+  + getBoard() : Array
+  + changeTurn() : void
+  + isConnect4(column) : boolean
+  + isGameOver(column) : boolean
+  + setPlayers(players) : void
+  + getPlayers() : Array
+  + chooseColumn(player) : number
+  + putToken(column, color) : void
+}
+
+class GameView {
+  - boardView : BoardView
+  - playersView : PlayersView
+
+  + playAgain() : boolean
+  + isValidAnswer(answer) : boolean
+  + showMessage(message) : void
+  + showBoard(board) : void
+  + choosePlayers(colors) : Array
+}
+
+class Board {
+  + static NUMBER_ROWS = 6
+  + static NUMBER_COLUMNS = 7
+  + static DELIMITER = ' | '
+  + static EMPTY = ' '
+  - board : Array
+  + line : Line
+
+  + reset() : void
+  + getBoard() : Array
+  + chooseColumn(player) : number
+  + isValidColumn(column) : boolean
+  + isFullColumn(column) : boolean
+  + isFullBoard() : boolean
+  + putToken(column, color) : void
+}
+class BoardView {
+  + show(board) : void
+}
+
+class Players {
+  - players : Array
+
+  setPlayers(choosedPlayers) : Array
+  + getPlayers() : Array
+}
+class PlayersView {
+  + choosePlayers(colors) : Array
+  + isValidPlayerType(playersType) : boolean
+}
+class HumanPlayer {
+  chooseColumn() : number
+  isValidColumn(column) : boolean
+}
+class MachinePlayer {
+  chooseColumn() : number
+  randomColumn() : number
+}
+
+class Line {
+  - north
+  - northWest
+  - west
+  - southWest
+  + DIRECTIONS
+
+  + getLine(coordenate, direction, board) : Array
+  + isValidCoordenate(column, row) : boolean
+  + shift(coordenate, direction) : Array
+  + isWinner(line) : boolean
+  + getOppositeDirection(direction) : Array
+}
+
+class Messages {
+  - messages : JSON
+
+  + get(message) : string
+}
+
+Connect4 *-down-> Game
+Connect4 *-down-> GameView
+Connect4 *-down-> Messages
+
+Game *-down-> Board
+Game *-down-> Players
+Game *-down-> Line
+
+GameView *-down-> BoardView
+GameView *-down-> PlayersView
+GameView .> Messages
+
+Board *-down-> Line
+Board .> Board
+
+BoardView .left.> Board
+
+Players -down-> HumanPlayer : 0..2
+Players -down-> MachinePlayer : 0..2
+
+@enduml

@@ -4,7 +4,7 @@ import Game from "./Models/Game.js";
 import { Console } from "console-mpds";
 const console = new Console();
 
-class Connect4 {
+export default class Connect4 {
 
   #game
   #gameView;
@@ -45,6 +45,3 @@ class Connect4 {
   }
 
 }
-
-const c4 = new Connect4();
-c4.init();

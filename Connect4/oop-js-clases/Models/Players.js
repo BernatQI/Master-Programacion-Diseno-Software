@@ -16,11 +16,11 @@ export default class Players {
       player === 1 ? playersType.push(new HumanPlayer()) : playersType.push(new MachinePlayer());
     });
 
-    this.players = playersType;
+    this.#players = playersType;
   }
 
   getPlayers() {
-    return this.players;
+    return this.#players;
   }
 
 }
