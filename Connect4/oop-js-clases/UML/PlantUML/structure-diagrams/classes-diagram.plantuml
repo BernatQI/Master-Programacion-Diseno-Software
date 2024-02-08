@@ -1,41 +1,59 @@
 @startuml "Classes Diagram"
 
-class Connect4 {
-  - game : Game
-  - gameView : GameView
-  - messages : Messages
+abstract class Connect4 {
+  - game
+  - gameView
+  - players
+  - playersView
 
   + init() : void
-  + play() : void
+  - play() : void
+}
+
+class Connect4Console extends Connect4 {
+  - game : Game
+  - gameView : GameViewConsole
+  - players : Players
+  - playersView : PlayersViewConsole
+
+  + init() : void
+  - play() : void
 }
 
 class Game {
   + NUMBER_PLAYERS
   + COLORS
-  + NUMBER_WINNER_TOKENS
   - turn
   - board
-  - players
-  + line
 
   + reset() : void
   + getTurn() : number
   + getBoard() : Array
   + changeTurn() : void
-  + isConnect4(column) : boolean
   + isGameOver(column) : boolean
-  + setPlayers(players) : void
-  + getPlayers() : Array
   + chooseColumn(player) : number
   + putToken(column, color) : void
 }
 
 class GameView {
   - boardView : BoardView
+  + messages : Messages
   - playersView : PlayersView
 
   + playAgain() : boolean
-  + isValidAnswer(answer) : boolean
+  - isValidAnswer(answer) : boolean
+  + showMessage(message) : void
+  + showBoard(board) : void
+  + choosePlayers(colors) : Array
+}
+
+class GameViewConsole  extends GameView {
+  - boardView : BoardView
+  - playersView : PlayersView
+  - messages : Messages
+
+  + playAgain() : boolean
+  - isValidAnswer(answer) : boolean
   + showMessage(message) : void
   + showBoard(board) : void
   + choosePlayers(colors) : Array
@@ -46,38 +64,56 @@ class Board {
   + static NUMBER_COLUMNS = 7
   + static DELIMITER = ' | '
   + static EMPTY = ' '
+  + static NUMBER_WINNER_TOKENS = 4
   - board : Array
-  + line : Line
+  - line : Array
 
   + reset() : void
   + getBoard() : Array
+  + isConnect4(column) : boolean
   + chooseColumn(player) : number
-  + isValidColumn(column) : boolean
+  - isValidColumn(column) : boolean
   + isFullColumn(column) : boolean
   + isFullBoard() : boolean
   + putToken(column, color) : void
+  + getRow(column) : number
 }
-class BoardView {
+
+abstract class BoardView {
+  + console : Console
+
+  + show(board) : void
+}
+
+class BoardViewConsole extends BoardView {
+  + console : Console
+
   + show(board) : void
 }
 
 class Players {
   - players : Array
 
-  setPlayers(choosedPlayers) : Array
+  + setPlayers(choosedPlayers) : Array
   + getPlayers() : Array
 }
-class PlayersView {
+abstract class PlayersView {
   + choosePlayers(colors) : Array
-  + isValidPlayerType(playersType) : boolean
+  - isValidPlayerType(playersType) : boolean
 }
+
+class PlayersViewConsole extends PlayersView {
+  + choosePlayers(colors) : Array
+  - isValidPlayerType(playersType) : boolean
+}
+
 class HumanPlayer {
-  chooseColumn() : number
-  isValidColumn(column) : boolean
+  + chooseColumn() : number
+  - isValidColumn(column) : boolean
 }
 class MachinePlayer {
-  chooseColumn() : number
-  randomColumn() : number
+  + chooseColumn() : number
+  - randomColumn() : number
 }
 
 class Line {
@@ -100,22 +136,20 @@ class Messages {
   + get(message) : string
 }
 
-Connect4 *-down-> Game
-Connect4 *-down-> GameView
-Connect4 *-down-> Messages
+Connect4Console *--down-> Game
+Connect4Console *--down-> Players
+Connect4Console *--down-> PlayersViewConsole
+Connect4Console *--down-> GameViewConsole
 
 Game *-down-> Board
-Game *-down-> Players
-Game *-down-> Line
 
-GameView *-down-> BoardView
-GameView *-down-> PlayersView
-GameView .> Messages
+GameViewConsole *-down-> BoardViewConsole
+GameView *-> Messages
 
 Board *-down-> Line
 Board .> Board
 
-BoardView .left.> Board
+BoardViewConsole .left.> Board
 
 Players -down-> HumanPlayer : 0..2
 Players -down-> MachinePlayer : 0..2

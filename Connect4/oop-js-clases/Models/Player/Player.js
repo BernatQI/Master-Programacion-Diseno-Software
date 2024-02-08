@@ -1,12 +1,13 @@
 import { Console } from 'console-mpds';
 
-export default class BoardView {
+export default class Player {
+
   console;
 
   constructor() {
     this.console = new Console();
   }
 
-  show(board) {}
+  chooseColumn() {}
 
 }

@@ -1,10 +1,11 @@
 import { Console } from 'console-mpds';
-const console = new Console();
 
 export default class PlayersView {
 
-  constructor() {
+  console;
 
+  constructor() {
+    this.console = new Console();
   }
 
   choosePlayers(colors) {
@@ -13,15 +14,15 @@ export default class PlayersView {
 
     colors.forEach((color) => {
       do {
-        playerChoosed = console.readNumber(`Choose type of player for ${color} (answer 1 for "Human" or 2 for "Machine"):`);
-      } while (!this.isValidPlayerType(playerChoosed));
+        playerChoosed = this.console.readNumber(`Choose type of player for ${color} (answer 1 for "Human" or 2 for "Machine"):`);
+      } while (!this.#isValidPlayerType(playerChoosed));
       playersType.push(playerChoosed);
     });
 
     return playersType;
   }
 
-  isValidPlayerType(playersType) {
+  #isValidPlayerType(playersType) {
     return playersType === 1 || playersType === 2;
   }
   

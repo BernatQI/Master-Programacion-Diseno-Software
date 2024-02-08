@@ -1,4 +1,4 @@
-import Connect4 from './Connect4.js';
+import Connect4Web from './Controllers/Connect4Web.js';
 
-const c4 = new Connect4();
+const c4 = new Connect4Web();
 c4.init();

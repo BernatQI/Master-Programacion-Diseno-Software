@@ -4,7 +4,7 @@ export default class Messages {
 
   constructor() {
     this.#messages = {
-      "head": 'Welcome to Connect4!',
+      "head": 'CONNECT4',
       "gameOver": 'Game Over'
     }
   }

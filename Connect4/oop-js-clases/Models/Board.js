@@ -1,6 +1,5 @@
-import Line from './Line.js';
 import { Console } from "console-mpds";
-const console = new Console();
+import Line from './Line.js';
 
 export default class Board {
 
@@ -8,12 +7,15 @@ export default class Board {
   static NUMBER_COLUMNS = 7;
   static DELIMITER = ' | ';
   static EMPTY = ' ';
+  static NUMBER_WINNER_TOKENS = 4;
   #board;
-  line;
+  #line;
+  console;
 
   constructor() {
     this.#board = [];
-    this.line = new Line();
+    this.#line = new Line();
+    this.console = new Console();
   }
 
   reset() {
@@ -32,15 +34,41 @@ export default class Board {
     return this.#board;
   }
 
+  isConnect4(column) {
+    const coordenateOrigin = [column, this.getRow(column)];
+    let line = [];
+    let coordenate;
+    let count;
+
+    this.#line.DIRECTIONS.forEach(direction => {
+      coordenate = coordenateOrigin;
+      count = 0;
+
+      if (!this.#line.isWinner(line)) {
+        do {
+          line = this.#line.getLine(coordenate, direction, this.#board);
+
+          if (!this.#line.isWinner(line)) {
+            coordenate = this.#line.shift(coordenate, direction);
+          }
+
+          count++;
+        } while (count < Board.NUMBER_WINNER_TOKENS && !this.#line.isWinner(line));
+      }
+    });
+
+    return this.#line.isWinner(line);
+  }
+
   chooseColumn(player) {
     let column;
     do {
       column = player.chooseColumn();
-    } while (!this.isValidColumn(column));
+    } while (!this.#isValidColumn(column));
     return column;
   }
 
-  isValidColumn(column) {
+  #isValidColumn(column) {
     return column >= 1 && column <= Board.NUMBER_COLUMNS && !this.isFullColumn(column);
   }
 
@@ -48,7 +76,7 @@ export default class Board {
     const isFull = this.#board[Board.NUMBER_ROWS][column] !== Board.EMPTY;
 
     if (isFull) {
-      console.writeln('Column is full, choose another one.');
+      this.console.writeln('Column is full, choose another one.');
     }
 
     return isFull;
@@ -83,7 +111,7 @@ export default class Board {
   getRow(column) {
     let row = 1;
 
-    if (this.isValidColumn(column)) {
+    if (this.#isValidColumn(column)) {
 
       while (this.#board[row][column] !== Board.EMPTY) {
         row++;

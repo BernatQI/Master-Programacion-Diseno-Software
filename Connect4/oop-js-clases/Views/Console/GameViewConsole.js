@@ -1,17 +1,9 @@
-import BoardView from "./Console/BoardViewConsole.js";
-import Messages from "./Messages.js";
-import { Console } from "console-mpds";
+import GameView from "../GameView.js";
 
-export default class GameView {
-
-  boardView;
-  messages;
-  console;
+export default class GameViewConsole extends GameView {
 
   constructor() {
-    this.boardView = new BoardView();
-    this.messages = new Messages();
-    this.console = new Console();
+    super();
   }
 
   playAgain() {

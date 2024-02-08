@@ -50,23 +50,22 @@ export default class Line {
   }
 
   isWinner(line) {
-    // const empty = Board.EMPTY;
     let counts = 0;
-
-    for (let i = 0; i <= 3; i++) {
-      if (line[i] !== Board.EMPTY && line[i] === line[i + 1]) {
+    
+    for (let i = 0; i < Board.NUMBER_WINNER_TOKENS - 1; i++) {
+      if ((line[i] !== Board.EMPTY && line[i] !== undefined) && line[i] === line[i + 1]) {
         counts++;
       }
     }
 
-    return counts === 3;
+    return counts === Board.NUMBER_WINNER_TOKENS - 1;
   }
 
   getOppositeDirection(direction) {
     let oppositeDirection = [];
-
+    
     direction.forEach(coordenate => {
-      oppositeDirection.push(coordenate * -1);
+      oppositeDirection.push(coordenate === 0 ? coordenate : coordenate * -1);
     });
 
     return oppositeDirection;
