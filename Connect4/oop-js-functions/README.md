@@ -17,7 +17,7 @@
 ### STRUCTURE DIAGRAMS
 ### Class Diagram
 
-![ClassDiagram](./UML/images/Classes-Diagram.svg)
+![ClassDiagram](./UML/images/class-diagram.png)
 
 ### Object Diagram
 #### Initial Objects (before first move)
