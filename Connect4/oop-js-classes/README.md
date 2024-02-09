@@ -17,4 +17,4 @@
 ### STRUCTURE DIAGRAMS
 ### Class Diagram
 
-![ClassDiagram](./UML/images/class-diagram.png)
+![ClassDiagram](./UML/images/class-diagram.svg)
