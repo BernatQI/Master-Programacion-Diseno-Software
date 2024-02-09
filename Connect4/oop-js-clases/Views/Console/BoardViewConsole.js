@@ -1,10 +1,13 @@
 import BoardView from '../BoardView.js';
 import Board from '../../Models/Board.js';
+import { Console } from 'console-mpds';
 
 export default class BoardViewConsole extends BoardView {
+  console;
 
   constructor() {
     super();
+    this.console = new Console();
   }
 
   show(board) {

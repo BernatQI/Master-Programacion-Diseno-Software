@@ -1,6 +1,8 @@
 @startuml "Classes Diagram"
 
-abstract class Connect4 {
+skinparam backGroundColor #69696936
+
+abstract class Connect4 #ff00004f {
   - game
   - gameView
   - players
@@ -10,11 +12,21 @@ abstract class Connect4 {
   - play() : void
 }
 
-class Connect4Console extends Connect4 {
+class Connect4Console #ffea0054 extends Connect4 {
   - game : Game
   - gameView : GameViewConsole
-  - players : Players
+  - players : PlayersConsole
   - playersView : PlayersViewConsole
+
+  + init() : void
+  - play() : void
+}
+
+class Connect4Web #4e90ff54 extends Connect4 {
+  - game : Game
+  - gameView : GameViewWeb
+  - players : PlayersWeb
+  - playersView : PlayersViewWeb
 
   + init() : void
   - play() : void
@@ -35,7 +47,7 @@ class Game {
   + putToken(column, color) : void
 }
 
-class GameView {
+abstract class GameView #ff00004f {
   - boardView : BoardView
   + messages : Messages
   - playersView : PlayersView
@@ -47,7 +59,19 @@ class GameView {
   + choosePlayers(colors) : Array
 }
 
-class GameViewConsole  extends GameView {
+class GameViewConsole #ffea0054 extends GameView {
+  - boardView : BoardView
+  - playersView : PlayersView
+  - messages : Messages
+
+  + playAgain() : boolean
+  - isValidAnswer(answer) : boolean
+  + showMessage(message) : void
+  + showBoard(board) : void
+  + choosePlayers(colors) : Array
+}
+
+class GameViewWeb #4e90ff54 extends GameView {
   - boardView : BoardView
   - playersView : PlayersView
   - messages : Messages
@@ -79,39 +103,84 @@ class Board {
   + getRow(column) : number
 }
 
-abstract class BoardView {
+abstract class BoardView #ff00004f {
   + console : Console
 
   + show(board) : void
 }
 
-class BoardViewConsole extends BoardView {
+class BoardViewConsole #ffea0054 extends BoardView {
   + console : Console
 
   + show(board) : void
 }
 
-class Players {
+class BoardViewWeb #4e90ff54 extends BoardView {
+  + console : Console
+
+  + show(board) : void
+}
+
+abstract class Players #ff00004f {
   - players : Array
 
   + setPlayers(choosedPlayers) : Array
   + getPlayers() : Array
 }
-abstract class PlayersView {
+
+class PlayersConsole #ffea0054 extends Players {
+  - players : Array
+
+  + setPlayers(choosedPlayers) : Array
+  + getPlayers() : Array
+}
+
+class PlayersWeb #4e90ff54 extends Players {
+  - players : Array
+
+  + setPlayers(choosedPlayers) : Array
+  + getPlayers() : Array
+}
+
+abstract class PlayersView #ff00004f {
   + choosePlayers(colors) : Array
   - isValidPlayerType(playersType) : boolean
 }
 
-class PlayersViewConsole extends PlayersView {
+class PlayersViewConsole #ffea0054 extends PlayersView {
   + choosePlayers(colors) : Array
   - isValidPlayerType(playersType) : boolean
 }
 
-class HumanPlayer {
+class PlayersViewWeb #4e90ff54 extends PlayersView {
+  + choosePlayers(colors) : Array
+  - isValidPlayerType(playersType) : boolean
+}
+
+abstract class Player #ff00004f {
+  + chooseColumn() : void
+}
+
+abstract class PlayerHuman #ff00004f extends Player {
   + chooseColumn() : number
   - isValidColumn(column) : boolean
 }
-class MachinePlayer {
+
+class PlayerHumanConsole #ffea0054 extends PlayerHuman {
+  + console : Object
+
+  + chooseColumn() : number
+  - isValidColumn(column) : boolean
+}
+
+class PlayerHumanWeb #4e90ff54 extends PlayerHuman {
+  + console : Object
+
+  + chooseColumn() : number
+  - isValidColumn(column) : boolean
+}
+
+class PlayerMachine extends Player {
   + chooseColumn() : number
   - randomColumn() : number
 }
@@ -136,22 +205,35 @@ class Messages {
   + get(message) : string
 }
 
-Connect4Console *--down-> Game
-Connect4Console *--down-> Players
-Connect4Console *--down-> PlayersViewConsole
-Connect4Console *--down-> GameViewConsole
+Connect4 *--down-> Game
 
 Game *-down-> Board
 
-GameViewConsole *-down-> BoardViewConsole
 GameView *-> Messages
 
 Board *-down-> Line
 Board .> Board
 
+Connect4Console *--down-> PlayersConsole
+Connect4Console *--down-> PlayersViewConsole
+Connect4Console *--down-> GameViewConsole
+
+Connect4Web *--down-> PlayersWeb
+Connect4Web *--down-> PlayersViewWeb
+Connect4Web *--down-> GameViewWeb
+
+GameViewConsole *-down-> BoardViewConsole
+
+GameViewWeb *-down-> BoardViewWeb
+
 BoardViewConsole .left.> Board
 
-Players -down-> HumanPlayer : 0..2
-Players -down-> MachinePlayer : 0..2
+BoardViewWeb .left.> Board
+
+PlayersConsole *--down-> PlayerHumanConsole : 0..2
+PlayersConsole *-down-> PlayerMachine : 0..2
+
+PlayersWeb *--down-> PlayerHumanWeb : 0..2
+PlayersWeb *-down-> PlayerMachine : 0..2
 
 @enduml

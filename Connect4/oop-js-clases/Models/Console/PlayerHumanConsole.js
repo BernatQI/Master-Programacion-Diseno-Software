@@ -1,10 +1,14 @@
 import PlayerHuman from '../Player/PlayerHuman.js';
 import Board from '../Board.js';
+import { Console } from 'console-mpds';
 
 export default class PlayerHumanConsole extends PlayerHuman {
 
+  console;
+
   constructor() {
     super();
+    this.console = new Console();
   }
 
   chooseColumn() {

@@ -1,7 +1,7 @@
 import Player from './Player.js';
 import Board from '../Board.js';
 
-export default class PlayerHuman extends Player{
+export default class PlayerHuman extends Player {
 
   constructor() {
     super();

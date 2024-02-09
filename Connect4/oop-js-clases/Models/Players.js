@@ -1,6 +1,6 @@
 export default class Players {
 
-  #players;
+  players;
 
   constructor() {
     this.players = [];
