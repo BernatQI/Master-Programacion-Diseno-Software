@@ -91,7 +91,7 @@ abstract class GameView #ff00004f {
 
 class GameViewConsole #ffea0054 extends GameView {
   + boardView : BoardView
-  + playersView : PlayersView
+  + playersView : PlayersViewConsole
   + messages : Messages
 
   + playAgain() : boolean
@@ -103,7 +103,7 @@ class GameViewConsole #ffea0054 extends GameView {
 
 class GameViewWeb #4e90ff54 extends GameView {
   + boardView : BoardView
-  + playersView : PlayersView
+  + playersView : PlayersViewWeb
   + messages : Messages
 
   + playAgain() : boolean

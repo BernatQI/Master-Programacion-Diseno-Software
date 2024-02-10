@@ -1,0 +1,73 @@
+@startuml "Object Diagram Console Before First Move"
+
+skinparam backGroundColor #69696936
+
+object c4 {
+  - game = GameConsole()
+  - gameView = GameViewConsole()
+  - players = PlayersViewConsole()
+  - playersView = PlayersViewConsole()
+}
+
+object game {
+  + NUMBER_PLAYERS = 2
+  + COLORS = [`R`, `Y`]
+  - board = Board()
+  - turn
+}
+
+object gameView {
+  + boardView = BoardView()
+  + messages = Messages()
+  + console = Console()
+}
+
+object playersView {
+  
+}
+
+object boardView {
+  + console
+}
+
+object messages {
+  + messages = {}
+}
+
+object board {
+  - board = [
+    [` `, `1`, `2`, `3`, `4`, `5`, `6`, `7`],
+    [ `1`, `_`, `_`, `_`, `_`, `_`, `_`, `_`],
+    [ `2`, `_`, `_`, `_`, `_`, `_`, `_`, `_`],
+    [ `3`, `_`, `_`, `_`, `_`, `_`, `_`, `_`],
+    [ `4`, `_`, `_`, `_`, `_`, `_`, `_`, `_`],
+    [ `5`, `_`, `_`, `_`, `_`, `_`, `_`, `_`],
+    [ `6`, `_`, `_`, `_`, `_`, `_`, `_`, `_`]
+    ]
+  + NUMBER_ROWS = 6
+  + NUMBER_COLUMNS = 7
+  + DELIMITER = `|`
+  + EMPTY_CELL = `_`
+  + line = Line()
+}
+
+object players {
+  - players = [HumanPlayer, HumanPlayer]
+}
+
+object console {
+  
+}
+
+c4 *--> game
+c4 *--> gameView
+c4 *--> players
+c4 *--> playersView
+
+game *--> board
+
+gameView *--> boardView
+gameView *--> console
+gameView *--> messages
+
+@enduml
