@@ -10,12 +10,10 @@ export default class Board {
   static NUMBER_WINNER_TOKENS = 4;
   #board;
   #line;
-  console;
 
   constructor() {
     this.#board = [];
     this.#line = new Line();
-    this.console = new Console();
   }
 
   reset() {
@@ -76,11 +74,13 @@ export default class Board {
     const isFull = this.#board[Board.NUMBER_ROWS][column] !== Board.EMPTY;
 
     if (isFull) {
-      this.console.writeln('Column is full, choose another one.');
+      this.shoowFullColumnMessage();
     }
 
     return isFull;
   }
+
+  shoowFullColumnMessage() {}
 
   isFullBoard() {
     let isFull = true;
