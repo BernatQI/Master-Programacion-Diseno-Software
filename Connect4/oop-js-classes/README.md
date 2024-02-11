@@ -36,3 +36,7 @@
 
 ![ActivityDiagram](./UML/images/activity-diagram-choose-column.svg)
 
+### Sequence Diagram
+
+![SequenceDiagram](./UML/images/equence-diagram-put-token.svg)
+
