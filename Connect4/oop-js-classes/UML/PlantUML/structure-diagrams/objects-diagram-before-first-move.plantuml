@@ -48,7 +48,7 @@ object board {
   + NUMBER_COLUMNS = 7
   + DELIMITER = `|`
   + EMPTY_CELL = `_`
-  + line = Line()
+  - line = Line()
 }
 
 object players {

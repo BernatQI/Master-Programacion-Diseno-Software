@@ -22,3 +22,7 @@
 ### Object Diagram
 
 ![ObjectDiagram](./UML/images/object-diagram-console-before-first-move.svg)
+
+### Deployment Diagram
+
+![DeploymentDiagram](./UML/images/deployment-diagram-deployment.svg)

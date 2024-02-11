@@ -1,0 +1,17 @@
+@startuml "Deployment Diagram"
+
+skinparam backGroundColor #69696936
+
+node App
+node Web
+node Console
+node Terminal
+node Browser
+
+App <-up-> Terminal : play
+App <-up-> Browser : play
+
+App <-down-> Console
+App <-down-> Web
+
+@enduml

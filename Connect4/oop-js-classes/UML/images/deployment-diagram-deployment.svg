@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="299px" preserveAspectRatio="none" style="width:264px;height:299px;background:#69696936;" version="1.1" viewBox="0 0 264 299" width="264px" zoomAndPan="magnify"><defs/><g><!--MD5=[6e8f311b0aa23032184ffba0ef926f91]
+entity App--><g id="elem_App"><polygon fill="#F1F1F1" points="97,139,107,129,164,129,164,165.2969,154,175.2969,97,175.2969,97,139" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="154" x2="164" y1="139" y2="129"/><line style="stroke:#181818;stroke-width:0.5;" x1="97" x2="154" y1="139" y2="139"/><line style="stroke:#181818;stroke-width:0.5;" x1="154" x2="154" y1="139" y2="175.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="27" x="112" y="161.9951">App</text></g><!--MD5=[3193059314a247eafe92785e7a6ac74f]
+entity Web--><g id="elem_Web"><polygon fill="#F1F1F1" points="36,246,46,236,107,236,107,272.2969,97,282.2969,36,282.2969,36,246" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="97" x2="107" y1="246" y2="236"/><line style="stroke:#181818;stroke-width:0.5;" x1="36" x2="97" y1="246" y2="246"/><line style="stroke:#181818;stroke-width:0.5;" x1="97" x2="97" y1="246" y2="282.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="31" x="51" y="268.9951">Web</text></g><!--MD5=[5183cb2edb5cf492c7a53635436e61b6]
+entity Console--><g id="elem_Console"><polygon fill="#F1F1F1" points="142,246,152,236,239,236,239,272.2969,229,282.2969,142,282.2969,142,246" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="229" x2="239" y1="246" y2="236"/><line style="stroke:#181818;stroke-width:0.5;" x1="142" x2="229" y1="246" y2="246"/><line style="stroke:#181818;stroke-width:0.5;" x1="229" x2="229" y1="246" y2="282.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="57" x="157" y="268.9951">Console</text></g><!--MD5=[f86d083f7526329011f4b6f057bca77a]
+entity Terminal--><g id="elem_Terminal"><polygon fill="#F1F1F1" points="148,16,158,6,247,6,247,42.2969,237,52.2969,148,52.2969,148,16" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="237" x2="247" y1="16" y2="6"/><line style="stroke:#181818;stroke-width:0.5;" x1="148" x2="237" y1="16" y2="16"/><line style="stroke:#181818;stroke-width:0.5;" x1="237" x2="237" y1="16" y2="52.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="163" y="38.9951">Terminal</text></g><!--MD5=[e9dede37b31fdda9664526f66258b036]
+entity Browser--><g id="elem_Browser"><polygon fill="#F1F1F1" points="16,16,26,6,113,6,113,42.2969,103,52.2969,16,52.2969,16,16" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="103" x2="113" y1="16" y2="6"/><line style="stroke:#181818;stroke-width:0.5;" x1="16" x2="103" y1="16" y2="16"/><line style="stroke:#181818;stroke-width:0.5;" x1="103" x2="103" y1="16" y2="52.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="57" x="31" y="38.9951">Browser</text></g><!--MD5=[452bb6df39843f3094e2bffdfea18d4c]
+link Terminal to App--><g id="link_Terminal_App"><path d="M182.72,56.69 C171.56,76.85 156.3,104.4 145.16,124.52 " fill="none" id="Terminal-App" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="142.71,128.95,150.5626,123.0055,145.1273,124.5732,143.5596,119.1379,142.71,128.95" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="185.21,52.19,177.3426,58.1148,182.7818,56.5608,184.3358,62,185.21,52.19" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="26" x="168.5" y="95.0669">play</text></g><!--MD5=[f53504bbe31778be1ce551133702dcc8]
+link Browser to App--><g id="link_Browser_App"><path d="M79.06,56.69 C90.06,76.85 105.08,104.4 116.05,124.52 " fill="none" id="Browser-App" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="118.47,128.95,117.6585,119.1346,116.0697,124.5638,110.6406,122.9751,118.47,128.95" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="76.61,52.19,77.4081,62.0065,79.0043,56.5795,84.4313,58.1757,76.61,52.19" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="26" x="102.5" y="95.0669">play</text></g><!--MD5=[d0d8d8a92958fb1f38b1a6210d5e8433]
+link App to Console--><g id="link_App_Console"><path d="M145.79,179.75 C154.74,195.43 166.03,215.18 175.02,230.91 " fill="none" id="App-Console" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="177.73,235.66,176.7551,225.8595,175.257,231.3144,169.8021,229.8163,177.73,235.66" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="143.08,175.01,144.0792,184.808,145.5638,179.3495,151.0223,180.834,143.08,175.01" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[1544721a2979048a324c2978be5b6912]
+link App to Web--><g id="link_App_Web"><path d="M115.47,179.75 C106.66,195.43 95.56,215.18 86.72,230.91 " fill="none" id="App-Web" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="84.06,235.66,91.9504,229.7658,86.5052,231.2987,84.9723,225.8535,84.06,235.66" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="118.13,175.01,110.2249,180.8845,115.6739,179.3652,117.1933,184.8142,118.13,175.01" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[4736f4ba5542948dec0e401cf99002ab]
+@startuml "Deployment Diagram"
+
+skinparam backGroundColor #69696936
+
+node App
+node Web
+node Console
+node Terminal
+node Browser
+
+App <-up-> Terminal : play
+App <-up-> Browser : play
+
+App <-down-> Console
+App <-down-> Web
+
+@enduml
+
+PlantUML version 1.2022.7(Mon Aug 22 17:01:30 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: es
+Country: ES
+--></g></svg>
