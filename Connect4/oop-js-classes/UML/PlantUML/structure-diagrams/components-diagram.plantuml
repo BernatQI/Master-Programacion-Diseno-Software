@@ -1,0 +1,21 @@
+@startuml "Component Diagram"
+
+skinparam backGroundColor #69696936
+
+component FrontendWeb
+component BackendWeb
+
+component FrontendConsole
+component BackendConsole
+
+interface Terminal
+interface Browser
+
+Terminal <--> FrontendConsole
+FrontendConsole <-> BackendConsole
+
+Browser <--> FrontendWeb
+FrontendWeb <-> BackendWeb
+
+
+@enduml

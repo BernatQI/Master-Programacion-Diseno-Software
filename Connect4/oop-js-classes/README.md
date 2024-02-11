@@ -26,3 +26,7 @@
 ### Deployment Diagram
 
 ![DeploymentDiagram](./UML/images/deployment-diagram-deployment.svg)
+
+### Deployment Diagram
+
+![ComponentDiagram](./UML/images/component-diagram.svg)

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="155px" preserveAspectRatio="none" style="width:702px;height:155px;background:#69696936;" version="1.1" viewBox="0 0 702 155" width="702px" zoomAndPan="magnify"><defs/><g><!--MD5=[c17b9bba54452dd9425db4349dd2601a]
+entity FrontendWeb--><g id="elem_FrontendWeb"><rect fill="#F1F1F1" height="46.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="134" x="395" y="103"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="509" y="108"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="507" y="110"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="507" y="114"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="94" x="410" y="135.9951">FrontendWeb</text></g><!--MD5=[0ea1c40d5389bbabe7cb64e8ea9e4962]
+entity BackendWeb--><g id="elem_BackendWeb"><rect fill="#F1F1F1" height="46.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="132" x="564" y="103"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="676" y="108"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="674" y="110"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="674" y="114"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92" x="579" y="135.9951">BackendWeb</text></g><!--MD5=[e28ec68bff354690ed467babd1f695bc]
+entity FrontendConsole--><g id="elem_FrontendConsole"><rect fill="#F1F1F1" height="46.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="160" x="7" y="103"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="147" y="108"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="145" y="110"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="145" y="114"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="120" x="22" y="135.9951">FrontendConsole</text></g><!--MD5=[038498f86b4f421f74e6d2be647cdb46]
+entity BackendConsole--><g id="elem_BackendConsole"><rect fill="#F1F1F1" height="46.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="158" x="202" y="103"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="340" y="108"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="338" y="110"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="338" y="114"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="118" x="217" y="135.9951">BackendConsole</text></g><!--MD5=[f86d083f7526329011f4b6f057bca77a]
+entity Terminal--><g id="elem_Terminal"><ellipse cx="87" cy="14" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="57.5" y="43.9951">Terminal</text></g><!--MD5=[e9dede37b31fdda9664526f66258b036]
+entity Browser--><g id="elem_Browser"><ellipse cx="462" cy="14" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="57" x="433.5" y="43.9951">Browser</text></g><!--MD5=[e3a174f4739fdb42b400fccb68e6464d]
+link Terminal to FrontendConsole--><g id="link_Terminal_FrontendConsole"><path d="M87,28.5 C87,45.63 87,75.58 87,97.58 " fill="none" id="Terminal-FrontendConsole" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="87,102.71,91,93.71,87,97.71,83,93.71,87,102.71" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="87,23.27,83,32.27,87,28.27,91,32.27,87,23.27" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[0996996e1d28e26a6eab5c4b9d4de407]
+link FrontendConsole to BackendConsole--><g id="link_FrontendConsole_BackendConsole"><path d="M172.47,126 C180.61,126 188.75,126 196.89,126 " fill="none" id="FrontendConsole-BackendConsole" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="201.96,126,192.96,122,196.96,126,192.96,130,201.96,126" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="167.33,126,176.33,130,172.33,126,176.33,122,167.33,126" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[9dc79293e08c22b894197bd64c8de3d4]
+link Browser to FrontendWeb--><g id="link_Browser_FrontendWeb"><path d="M462,28.5 C462,45.63 462,75.58 462,97.58 " fill="none" id="Browser-FrontendWeb" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="462,102.71,466,93.71,462,97.71,458,93.71,462,102.71" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="462,23.27,458,32.27,462,28.27,466,32.27,462,23.27" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[2a87f062a652c5e3de251c27320fd6e3]
+link FrontendWeb to BackendWeb--><g id="link_FrontendWeb_BackendWeb"><path d="M534.41,126 C542.55,126 550.69,126 558.82,126 " fill="none" id="FrontendWeb-BackendWeb" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="563.89,126,554.89,122,558.89,126,554.89,130,563.89,126" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="529.27,126,538.27,130,534.27,126,538.27,122,529.27,126" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[b6a49700c93b691142c7553c7d91e059]
+@startuml "Component Diagram"
+
+skinparam backGroundColor #69696936
+
+component FrontendWeb
+component BackendWeb
+
+component FrontendConsole
+component BackendConsole
+
+interface Terminal
+interface Browser
+
+Terminal <- -> FrontendConsole
+FrontendConsole <-> BackendConsole
+
+Browser <- -> FrontendWeb
+FrontendWeb <-> BackendWeb
+
+
+@enduml
+
+PlantUML version 1.2022.7(Mon Aug 22 17:01:30 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: es
+Country: ES
+--></g></svg>
