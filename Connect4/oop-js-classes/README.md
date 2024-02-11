@@ -30,3 +30,9 @@
 ### Deployment Diagram
 
 ![ComponentDiagram](./UML/images/component-diagram.svg)
+
+### STRUCTURE DIAGRAMS
+### Activity Diagram
+
+![ComponentDiagram](./UML/images/activity-diagram-choose-column.svg)
+

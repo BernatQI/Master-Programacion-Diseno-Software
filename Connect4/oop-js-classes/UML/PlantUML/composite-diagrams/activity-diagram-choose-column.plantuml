@@ -1,0 +1,10 @@
+@startuml "Activity Diagram - Choose column"
+
+skinparam backGroundColor #69696936
+
+start
+repeat
+:Choose column;
+repeat while (Is valid column) is (false)
+stop
+@enduml
