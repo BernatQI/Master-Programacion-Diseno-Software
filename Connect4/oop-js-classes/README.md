@@ -34,5 +34,5 @@
 ### STRUCTURE DIAGRAMS
 ### Activity Diagram
 
-![ComponentDiagram](./UML/images/activity-diagram-choose-column.svg)
+![ActivityDiagram](./UML/images/activity-diagram-choose-column.svg)
 
