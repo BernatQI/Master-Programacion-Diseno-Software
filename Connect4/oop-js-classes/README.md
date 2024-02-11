@@ -38,5 +38,5 @@
 
 ### Sequence Diagram
 
-![SequenceDiagram](./UML/images/equence-diagram-put-token.svg)
+![SequenceDiagram](./UML/images/sequence-diagram-put-token.svg)
 
