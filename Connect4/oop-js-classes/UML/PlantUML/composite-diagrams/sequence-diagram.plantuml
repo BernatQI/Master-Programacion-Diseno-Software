@@ -1,0 +1,18 @@
+@startuml "Sequence Diagram - Put Token"
+
+skinparam backGroundColor #69696936
+
+participant Player1
+participant Board
+participant Player2
+
+loop until is valid column
+    activate Board
+    Player1 -> Board: putToken()
+    Board --> Player1: isValidColumn() : false
+    Player1 -> Board: putToken()
+    Board --> Board: isValidColumn() : true
+end
+    Board -> Player2 : changeTurn()
+
+@enduml
