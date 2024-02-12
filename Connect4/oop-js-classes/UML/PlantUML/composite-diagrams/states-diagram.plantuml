@@ -1,0 +1,28 @@
+@startuml "State Diagram - Board"
+
+skinparam backGroundColor #69696936
+
+state NewBoard
+state PartialyFull
+state WinnerTied <<fork>>
+state PartialyFullWinner
+state Full
+state PlayAgain <<choice>>
+
+NewBoard : New empty Board
+PartialyFull : Board with some tokens
+PartialyFull : No winner yet
+Full : Winner or Tied
+
+[*] --> NewBoard : resetBoard
+NewBoard --> PartialyFull : putToken
+PartialyFull --> WinnerTied
+PartialyFull --> PartialyFull : putToken
+WinnerTied --> PartialyFullWinner : putToken
+WinnerTied --> Full : putToken
+Full --> PlayAgain
+PartialyFullWinner --> PlayAgain
+PlayAgain --> NewBoard : playAgain : yes
+PlayAgain --> [*] : playAgain : no
+
+@enduml

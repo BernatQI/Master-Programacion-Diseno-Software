@@ -44,3 +44,8 @@
 
 ![UseCaseDiagram](./UML/images/use-case-diagram-put-token.svg)
 
+### State Diagram
+
+![UseCaseDiagram](./UML/images/state-diagram-board.svg)
+
+
