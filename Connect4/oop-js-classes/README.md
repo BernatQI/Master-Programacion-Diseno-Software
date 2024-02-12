@@ -1,6 +1,6 @@
 # Connect4
 
-## index
+## Index
 
 * [Domain Model](#Connect4)  
 * [UML](#uml)
@@ -47,5 +47,4 @@
 ### State Diagram
 
 ![UseCaseDiagram](./UML/images/state-diagram-board.svg)
-
 
