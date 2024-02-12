@@ -40,3 +40,6 @@
 
 ![SequenceDiagram](./UML/images/sequence-diagram-put-token.svg)
 
+### Use Case Diagram
+
+![UseCaseDiagram](./UML/images/use-case-diagram-put-token.svg)

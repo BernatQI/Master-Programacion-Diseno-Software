@@ -1,0 +1,43 @@
+@startuml "Use Case Diagram - Put Token"
+
+skinparam backGroundColor #69696936
+
+actor Player
+actor PlayerHuman
+actor PlayerMachine
+
+package GameConsole {
+  usecase PutTokenConsole
+}
+
+package BoardConsole {
+  useCase chooseColumnConsole
+  useCase isValidColumnConsole
+}
+
+package GameMachine {
+  usecase PutTokenMachine
+}
+
+package BoardMachine {
+  usecase chooseColumnMachine
+  useCase isValidColumnMachine
+  useCase randomColumn
+}
+
+left to right direction
+Player <|-- PlayerHuman
+Player <|-- PlayerMachine
+
+PlayerHuman --> (PutTokenConsole) : 4...21
+(PutTokenConsole) -- (chooseColumnConsole) : 1...n
+
+(PutTokenMachine) -- (chooseColumnMachine)
+PlayerMachine --> (PutTokenMachine) : 3...21
+
+(chooseColumnConsole) -right-(isValidColumnConsole)
+
+(chooseColumnMachine) -right-(randomColumn)
+(randomColumn) - (isValidColumnMachine)
+
+@enduml

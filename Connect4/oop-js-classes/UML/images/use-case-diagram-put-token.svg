@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="456px" preserveAspectRatio="none" style="width:788px;height:456px;background:#69696936;" version="1.1" viewBox="0 0 788 456" width="788px" zoomAndPan="magnify"><defs/><g><!--MD5=[b143df5392cd6d556b2e234c06ae41c3]
+cluster GameConsole--><g id="cluster_GameConsole"><path d="M293.5,108 L403.5,108 A3.75,3.75 0 0 1 406,110.5 L413,130.2969 L485.5,130.2969 A2.5,2.5 0 0 1 488,132.7969 L488,194.5 A2.5,2.5 0 0 1 485.5,197 L293.5,197 A2.5,2.5 0 0 1 291,194.5 L291,110.5 A2.5,2.5 0 0 1 293.5,108 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="291" x2="413" y1="130.2969" y2="130.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="109" x="295" y="122.9951">GameConsole</text></g><!--MD5=[3ef2566fa7924e217826c37c99273200]
+cluster BoardConsole--><g id="cluster_BoardConsole"><path d="M553,6 L664,6 A3.75,3.75 0 0 1 666.5,8.5 L673.5,28.2969 L778,28.2969 A2.5,2.5 0 0 1 780.5,30.7969 L780.5,177.5 A2.5,2.5 0 0 1 778,180 L553,180 A2.5,2.5 0 0 1 550.5,177.5 L550.5,8.5 A2.5,2.5 0 0 1 553,6 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="550.5" x2="673.5" y1="28.2969" y2="28.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="110" x="554.5" y="20.9951">BoardConsole</text></g><!--MD5=[2c5e2a475813ecfc0229a123fb0bc5c4]
+cluster GameMachine--><g id="cluster_GameMachine"><path d="M293.5,298 L404.5,298 A3.75,3.75 0 0 1 407,300.5 L414,320.2969 L485.5,320.2969 A2.5,2.5 0 0 1 488,322.7969 L488,384.5 A2.5,2.5 0 0 1 485.5,387 L293.5,387 A2.5,2.5 0 0 1 291,384.5 L291,300.5 A2.5,2.5 0 0 1 293.5,298 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="291" x2="414" y1="320.2969" y2="320.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="110" x="295" y="312.9951">GameMachine</text></g><!--MD5=[a0dfa281abdb2245f846989cad44a138]
+cluster BoardMachine--><g id="cluster_BoardMachine"><path d="M552.5,204 L664.5,204 A3.75,3.75 0 0 1 667,206.5 L674,226.2969 L778.5,226.2969 A2.5,2.5 0 0 1 781,228.7969 L781,446.5 A2.5,2.5 0 0 1 778.5,449 L552.5,449 A2.5,2.5 0 0 1 550,446.5 L550,206.5 A2.5,2.5 0 0 1 552.5,204 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="550" x2="674" y1="226.2969" y2="226.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="111" x="554" y="218.9951">BoardMachine</text></g><g id="elem_PutTokenConsole"><ellipse cx="389.288" cy="161.8576" fill="#F1F1F1" rx="82.288" ry="18.8576" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="124" x="326.4505" y="164.9838">PutTokenConsole</text></g><g id="elem_chooseColumnConsole"><ellipse cx="665.5673" cy="142.2135" fill="#F1F1F1" rx="99.0673" ry="22.2135" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="162" x="584.5673" y="145.0601">chooseColumnConsole</text></g><g id="elem_isValidColumnConsole"><ellipse cx="665.5118" cy="62.9024" fill="#F1F1F1" rx="95.0118" ry="21.4024" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="153" x="589.0118" y="65.749">isValidColumnConsole</text></g><g id="elem_PutTokenMachine"><ellipse cx="389.712" cy="351.9424" fill="#F1F1F1" rx="82.712" ry="18.9424" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="125" x="326.5208" y="355.0215">PutTokenMachine</text></g><g id="elem_chooseColumnMachine"><ellipse cx="665.5203" cy="409.8041" fill="#F1F1F1" rx="99.5203" ry="22.3041" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="163" x="584.0203" y="412.6507">chooseColumnMachine</text></g><g id="elem_isValidColumnMachine"><ellipse cx="665.4604" cy="260.9921" fill="#F1F1F1" rx="95.4604" ry="21.4921" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="154" x="588.4604" y="263.8388">isValidColumnMachine</text></g><g id="elem_randomColumn"><ellipse cx="665.4948" cy="334.899" fill="#F1F1F1" rx="74.9948" ry="17.399" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="106" x="609.4948" y="338.6465">randomColumn</text></g><!--MD5=[de2effd8dc5bf946a609466312d0f75f]
+entity Player--><g id="elem_Player"><ellipse cx="26.5" cy="208.5" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M26.5,216.5 L26.5,243.5 M13.5,224.5 L39.5,224.5 M26.5,243.5 L13.5,258.5 M26.5,243.5 L39.5,258.5 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="41" x="6" y="272.9951">Player</text></g><!--MD5=[0c5331d93d96d60d5a67f16c3b4d5c6d]
+entity PlayerHuman--><g id="elem_PlayerHuman"><ellipse cx="157.5" cy="142.5" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M157.5,150.5 L157.5,177.5 M144.5,158.5 L170.5,158.5 M157.5,177.5 L144.5,192.5 M157.5,177.5 L170.5,192.5 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="90" x="112.5" y="206.9951">PlayerHuman</text></g><!--MD5=[27232df794e297740a80c247dc2da1de]
+entity PlayerMachine--><g id="elem_PlayerMachine"><ellipse cx="157.5" cy="263.5" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M157.5,271.5 L157.5,298.5 M144.5,279.5 L170.5,279.5 M157.5,298.5 L144.5,313.5 M157.5,298.5 L170.5,313.5 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="99" x="108" y="327.9951">PlayerMachine</text></g><!--MD5=[c9f2d68781d356d5a82e33bc48995301]
+reverse link Player to PlayerHuman--><g id="link_Player_PlayerHuman"><path d="M64.91,218.86 C79.75,211.27 96.92,202.48 112.36,194.58 " fill="none" id="Player-backto-PlayerHuman" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="68.09,225.1,47.09,227.98,61.71,212.63,68.09,225.1" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[2f62fd006ce6b17eedb2d8282819503c]
+reverse link Player to PlayerMachine--><g id="link_Player_PlayerMachine"><path d="M65.51,254.2 C78.81,259.87 93.93,266.32 107.97,272.31 " fill="none" id="Player-backto-PlayerMachine" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="62.74,260.64,47.09,246.35,68.24,247.76,62.74,260.64" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[24715f99a0fafa2348fb9f71c404b9bc]
+link PlayerHuman to PutTokenConsole--><g id="link_PlayerHuman_PutTokenConsole"><path d="M202.57,170.08 C231.04,168.85 269.03,167.19 303.24,165.71 " fill="none" id="PlayerHuman-to-PutTokenConsole" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="308.26,165.49,299.0965,161.8802,303.2646,165.7047,299.4401,169.8728,308.26,165.49" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="36" x="238" y="163.0669">4...21</text></g><!--MD5=[4ee868aad42df80261c14ccf5a142b6b]
+link PutTokenConsole to chooseColumnConsole--><g id="link_PutTokenConsole_chooseColumnConsole"><path d="M468.28,156.32 C500.24,153.99 537.53,151.27 570.96,148.83 " fill="none" id="PutTokenConsole-chooseColumnConsole" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="28" x="505" y="148.0669">1...n</text></g><!--MD5=[9ad32b176e385b975ce231f53a6ed708]
+link PutTokenMachine to chooseColumnMachine--><g id="link_PutTokenMachine_chooseColumnMachine"><path d="M450.97,364.8 C492.58,373.61 548.05,385.35 592.02,394.66 " fill="none" id="PutTokenMachine-chooseColumnMachine" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[e38a2b86d231b896d9262f9d1c092c25]
+link PlayerMachine to PutTokenMachine--><g id="link_PlayerMachine_PutTokenMachine"><path d="M207.28,305.51 C242.74,314.61 290.94,326.97 328.72,336.67 " fill="none" id="PlayerMachine-to-PutTokenMachine" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="333.75,337.95,326.0268,331.8383,328.9069,336.7071,324.0382,339.5872,333.75,337.95" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="36" x="238" y="310.0669">3...21</text></g><!--MD5=[a7497247956a9c48b7de4ba79f01d075]
+link chooseColumnConsole to isValidColumnConsole--><g id="link_chooseColumnConsole_isValidColumnConsole"><path d="M665.5,119.78 C665.5,108.1 665.5,96.42 665.5,84.74 " fill="none" id="chooseColumnConsole-isValidColumnConsole" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[61c39c67ec4ae56fd89e50828e365793]
+link chooseColumnMachine to randomColumn--><g id="link_chooseColumnMachine_randomColumn"><path d="M665.5,387.44 C665.5,375.83 665.5,364.23 665.5,352.62 " fill="none" id="chooseColumnMachine-randomColumn" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[feb7869652ef36781c2a6d324b3028a9]
+link randomColumn to isValidColumnMachine--><g id="link_randomColumn_isValidColumnMachine"><path d="M665.5,317.37 C665.5,305.77 665.5,294.17 665.5,282.58 " fill="none" id="randomColumn-isValidColumnMachine" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[da612b62079d85e578024338a6b89d9f]
+@startuml "Use Case Diagram - Put Token"
+
+skinparam backGroundColor #69696936
+
+actor Player
+actor PlayerHuman
+actor PlayerMachine
+
+package GameConsole {
+  usecase PutTokenConsole
+}
+
+package BoardConsole {
+  useCase chooseColumnConsole
+  useCase isValidColumnConsole
+}
+
+package GameMachine {
+  usecase PutTokenMachine
+}
+
+package BoardMachine {
+  usecase chooseColumnMachine
+  useCase isValidColumnMachine
+  useCase randomColumn
+}
+
+left to right direction
+Player <|- - PlayerHuman
+Player <|- - PlayerMachine
+
+PlayerHuman - -> (PutTokenConsole) : 4...21
+(PutTokenConsole) - - (chooseColumnConsole) : 1...n
+
+(PutTokenMachine) - - (chooseColumnMachine)
+PlayerMachine - -> (PutTokenMachine) : 3...21
+
+(chooseColumnConsole) -right-(isValidColumnConsole)
+
+(chooseColumnMachine) -right-(randomColumn)
+(randomColumn) - (isValidColumnMachine)
+
+@enduml
+
+PlantUML version 1.2022.7(Mon Aug 22 17:01:30 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: es
+Country: ES
+--></g></svg>
